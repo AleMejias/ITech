@@ -1,3 +1,33 @@
-.prueba{
-    color: red;
+@import "colores";
+
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.menu-secundario {
+    background-color: #08acaf;
+  .menu-secundario__contenedor {
+    .menu-secundario__lista {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 0;
+    }
+    .menu-secundario__enlaces {
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 1rem;
+      color: $secundario_barraNavegacion;
+    }
+  }
+  .menu-secundario__icono{
+    color: $secundario_barraNavegacion;
+    margin-left: 6px;
+    font-size: 30px;
+  }
 }

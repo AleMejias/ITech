@@ -1,2 +1,24 @@
-.prueba {
-  color: red; }
+* {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.menu-secundario {
+  background-color: #08acaf; }
+  .menu-secundario .menu-secundario__contenedor .menu-secundario__lista {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0; }
+  .menu-secundario .menu-secundario__contenedor .menu-secundario__enlaces {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1rem;
+    color: #e9ecef; }
+  .menu-secundario .menu-secundario__icono {
+    color: #e9ecef;
+    margin-left: 6px;
+    font-size: 30px; }
