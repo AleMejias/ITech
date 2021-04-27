@@ -7,6 +7,11 @@ a {
 li {
   list-style: none; }
 
+/* 
+**************************************************************************************
+Menu secundario disponible a < 768px
+**************************************************************************************
+*/
 .menu-secundario {
   background-color: #08acaf; }
   .menu-secundario .menu-secundario__contenedor .menu-secundario__lista {
@@ -22,3 +27,30 @@ li {
     color: #e9ecef;
     margin-left: 6px;
     font-size: 30px; }
+
+/* 
+**************************************************************************************
+Menu primario disponible a > 768px
+**************************************************************************************
+*/
+.menu-primario {
+  background-color: #08acaf;
+  padding: 5px; }
+  .menu-primario .menu-primario__contenedor {
+    display: flex;
+    justify-content: space-around; }
+    .menu-primario .menu-primario__contenedor .menu-primario__enlaces {
+      font-size: 1.1rem;
+      font-family: "Roboto";
+      color: #e9ecef; }
+  .menu-primario .menu-primario__icono {
+    color: #e9ecef;
+    font-size: 2.5rem; }
+
+/* 
+**************************************************************************************
+Clase para mostrar/quitar elementos segun corresponda
+**************************************************************************************
+*/
+.activada {
+  display: none; }

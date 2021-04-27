@@ -16,7 +16,22 @@
   </head>
   <body>
     <header>
-      <div class="pos-f-t menu-secundario">
+      <!-- BARRA DE NAVEGACION PARA PANTALLAS > 768 PX -->
+      <div class="container-fluid d-none d-md-block ">
+        <div class="row">
+          <div class="col-sm-12 menu-primario">
+            <nav class=" navbar navbar-light menu-primario__contenedor">
+              <i class="fab fa-apple menu-primario__icono"></i>
+              <a href="" class="menu-primario__enlaces">Home</a>
+              <a href="" class="menu-primario__enlaces">Celulares</a>
+              <a href="" class="menu-primario__enlaces">Tablets</a>
+              <a href="#" class="menu-primario__enlaces">Apple Watch</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!-- BARRA DE NAVEGACION PARA PANTALLAS < 768 PX -->
+      <div class="pos-f-t menu-secundario  d-md-none">
         <div class="collapse menu-secundario__contenedor" id="navbarToggleExternalContent">
           <div class="py-4">
             <ul class="menu-secundario__lista">
