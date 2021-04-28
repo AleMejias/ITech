@@ -1,5 +1,8 @@
+/* COLOR PARA LOS LINKS DEL MENU */
+/* COLORES PRINCIPALES */
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Open Sans"; }
 
 a {
   text-decoration: none; }
@@ -46,6 +49,22 @@ Menu primario disponible a > 768px
   .menu-primario .menu-primario__icono {
     color: #e9ecef;
     font-size: 2.5rem; }
+
+/* 
+**************************************************************************************
+Enlace al shop de nuestra pagina
+**************************************************************************************
+*/
+.shop {
+  background-color: #fafafa;
+  padding: 10px;
+  font-size: 14px;
+  color: #7c7c7c; }
+  .shop .shop__contenedor {
+    display: flex;
+    justify-content: center; }
+  .shop .shop__enlace {
+    color: #08acaf; }
 
 /* 
 **************************************************************************************

@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Open Sans";
 }
 a {
   text-decoration: none;
@@ -16,7 +17,7 @@ Menu secundario disponible a < 768px
 **************************************************************************************
 */
 .menu-secundario {
-    background-color: #08acaf;
+    background-color: $verde_principal;
   .menu-secundario__contenedor {
     .menu-secundario__lista {
       display: flex;
@@ -27,11 +28,11 @@ Menu secundario disponible a < 768px
       font-family: "Roboto";
       font-weight: 400;
       font-size: 1rem;
-      color: $secundario_barraNavegacion;
+      color: $links__menuNavegacion;
     }
   }
   .menu-secundario__icono{
-    color: $secundario_barraNavegacion;
+    color: $links__menuNavegacion;
     margin-left: 6px;
     font-size: 30px;
   }
@@ -42,7 +43,7 @@ Menu primario disponible a > 768px
 **************************************************************************************
 */
 .menu-primario{
-  background-color: #08acaf;
+  background-color: $verde_principal;
   padding: 5px;
   .menu-primario__contenedor{
     display: flex;
@@ -50,15 +51,32 @@ Menu primario disponible a > 768px
     .menu-primario__enlaces{
       font-size: 1.1rem;
       font-family: "Roboto";
-      color: $secundario_barraNavegacion;
+      color: $links__menuNavegacion;
     }
   }
   .menu-primario__icono{
-    color: $secundario_barraNavegacion;
+    color: $links__menuNavegacion;
     font-size: 2.5rem;
   }
 }
-
+/* 
+**************************************************************************************
+Enlace al shop de nuestra pagina
+**************************************************************************************
+*/
+.shop{
+  background-color: #fafafa;
+  padding: 10px;
+  font-size: 14px;
+  color: #7c7c7c;
+  .shop__contenedor{
+    display: flex;
+    justify-content: center;
+  }
+  .shop__enlace{
+    color: $verde_principal;
+  }
+}
 /* 
 **************************************************************************************
 Clase para mostrar/quitar elementos segun corresponda
