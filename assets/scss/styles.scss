@@ -77,6 +77,49 @@ Enlace al shop de nuestra pagina
     color: $verde_principal;
   }
 }
+
+/* 
+**************************************************************************************
+CONTENIDO/BODY DEL SITIO
+**************************************************************************************
+*/
+.iphone-12Pro{
+  background-color: #000000;
+  color: $links__menuNavegacion;
+  height: auto;
+  .iphone-12Pro__filaUno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    .iphone-12Pro__filaUno--titulo{
+      text-align: center;
+      h2{
+        font-size: 50px;
+        font-family: "Roboto";
+        font-weight: 600;
+      }
+    }
+    .iphone-12Pro__filaUno--tienda{
+      text-align: center;
+      h4{
+        font-size: 26px;
+        font-family: "Roboto";
+      }
+      .iphone-12Pro__filaUno--enlace{
+        font-family: "Roboto";
+        font-size: 17px;
+        color: $verde_principal;
+        border-bottom: 1px solid $verde_principal;
+      }
+      .iphone-12Pro__filaUno--icono{
+        margin-left: 3px;
+        color: $links__menuNavegacion;
+        font-size: 14px;
+      }
+    }
+  }
+}
 /* 
 **************************************************************************************
 Clase para mostrar/quitar elementos segun corresponda

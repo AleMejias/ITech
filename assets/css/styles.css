@@ -68,6 +68,41 @@ Enlace al shop de nuestra pagina
 
 /* 
 **************************************************************************************
+CONTENIDO/BODY DEL SITIO
+**************************************************************************************
+*/
+.iphone-12Pro {
+  background-color: #000000;
+  color: #e9ecef;
+  height: auto; }
+  .iphone-12Pro .iphone-12Pro__filaUno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; }
+    .iphone-12Pro .iphone-12Pro__filaUno .iphone-12Pro__filaUno--titulo {
+      text-align: center; }
+      .iphone-12Pro .iphone-12Pro__filaUno .iphone-12Pro__filaUno--titulo h2 {
+        font-size: 50px;
+        font-family: "Roboto";
+        font-weight: 600; }
+    .iphone-12Pro .iphone-12Pro__filaUno .iphone-12Pro__filaUno--tienda {
+      text-align: center; }
+      .iphone-12Pro .iphone-12Pro__filaUno .iphone-12Pro__filaUno--tienda h4 {
+        font-size: 26px;
+        font-family: "Roboto"; }
+      .iphone-12Pro .iphone-12Pro__filaUno .iphone-12Pro__filaUno--tienda .iphone-12Pro__filaUno--enlace {
+        font-family: "Roboto";
+        font-size: 17px;
+        color: #08acaf;
+        border-bottom: 1px solid #08acaf; }
+      .iphone-12Pro .iphone-12Pro__filaUno .iphone-12Pro__filaUno--tienda .iphone-12Pro__filaUno--icono {
+        margin-left: 3px;
+        color: #e9ecef;
+        font-size: 14px; }
+
+/* 
+**************************************************************************************
 Clase para mostrar/quitar elementos segun corresponda
 **************************************************************************************
 */
