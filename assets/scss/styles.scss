@@ -10,6 +10,9 @@ a {
 li {
   list-style: none;
 }
+h2,h3,h4,a{
+  font-family: "Roboto";
+}
 
 /* 
 **************************************************************************************
@@ -25,7 +28,6 @@ Menu secundario disponible a < 768px
       padding: 0 0;
     }
     .menu-secundario__enlaces {
-      font-family: "Roboto";
       font-weight: 400;
       font-size: 1rem;
       color: $links__menuNavegacion;
@@ -50,7 +52,6 @@ Menu primario disponible a > 768px
     justify-content: space-around;
     .menu-primario__enlaces{
       font-size: 1.1rem;
-      font-family: "Roboto";
       color: $links__menuNavegacion;
     }
   }
@@ -83,40 +84,87 @@ Enlace al shop de nuestra pagina
 CONTENIDO/BODY DEL SITIO
 **************************************************************************************
 */
-.iphone-12Pro{
+.iphone-12pro{
   background-color: #000000;
-  color: $links__menuNavegacion;
   height: auto;
-  .iphone-12Pro__filaUno{
+  .iphone-12pro__contenedor{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    .iphone-12Pro__filaUno--titulo{
+    .iphone-12pro__titulo{
+      color: $links__menuNavegacion;
+      font-size: 52px;
+      font-weight: 600;
       text-align: center;
-      h2{
-        font-size: 50px;
-        font-family: "Roboto";
-        font-weight: 600;
-      }
     }
-    .iphone-12Pro__filaUno--tienda{
-      text-align: center;
-      h4{
+    .iphone-12pro__tienda{
+      display: flex;
+      flex-direction: inherit;
+      align-items: center;
+      .iphone-12pro__descripcion{
+        @extend .iphone-12pro__titulo;
         font-size: 26px;
-        font-family: "Roboto";
+        font-weight: 400;
       }
-      .iphone-12Pro__filaUno--enlace{
-        font-family: "Roboto";
-        font-size: 17px;
+      .iphone-12pro__enlaceTienda{
+        @extend .iphone-12pro__titulo;
         color: $verde_principal;
         border-bottom: 1px solid $verde_principal;
+        font-size: 16px;
       }
-      .iphone-12Pro__filaUno--icono{
-        margin-left: 3px;
+      .iphone-12pro--icono{
+        margin-left: 2px;
         color: $links__menuNavegacion;
-        font-size: 14px;
+        font-size: 16px;
       }
+    }
+  }
+  .iphone-12pro__img{
+    height: 300px;
+    background-image: url(../img/home/iphone-12pro-home4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.collage{
+  border: 2px solid red;
+  height: auto;
+  .collage__filaUno{
+    display: flex;
+    justify-content: space-between;
+    .collage__filaUno--AppleWatch{
+      padding: 0 0;
+      background-color:#000000;
+      height:auto;
+      border: 2px solid orange;
+      width: 49.4%;
+    }
+    .collage__filaUno--tituloAppleWatchContenedor{
+      font-weight: 600;
+      padding: 5px;
+      text-align: center;
+      color: $links__menuNavegacion;
+    }
+    .collage__filaUno--iconoAppleWatch{
+      font-size: 35px;
+      padding: 0 9px;
+    }
+    .collage__filaUno--img{
+      width: 100%; 
+      height: 350px;
+    }
+    .collage__filaUno--Ipad{
+      padding: 0 0;
+      width: 49.4%;
+      height:auto;
+      border: 2px solid orange;
+    }
+    .collage__filaUno--tituloIpadContenedor{
+      @extend .collage__filaUno--tituloAppleWatchContenedor;
+      color: #000000;
+    }
+    .collage__filaUno--tituloIpad{
+      @extend .collage__filaUno--iconoAppleWatch;
     }
   }
 }
