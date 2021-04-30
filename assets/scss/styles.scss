@@ -126,45 +126,63 @@ CONTENIDO/BODY DEL SITIO
     background-repeat: no-repeat;
   }
 }
-.collage{
-  border: 2px solid red;
+.collageUno{
   height: auto;
-  .collage__filaUno{
+  .collageUno__filaUno{
     display: flex;
     justify-content: space-between;
-    .collage__filaUno--AppleWatch{
+    .collageUno__filaUno--AppleWatch{
       padding: 0 0;
       background-color:#000000;
       height:auto;
-      border: 2px solid orange;
       width: 49.4%;
     }
-    .collage__filaUno--tituloAppleWatchContenedor{
+    .collageUno__filaUno--tituloAppleWatchContenedor{
       font-weight: 600;
       padding: 5px;
       text-align: center;
       color: $links__menuNavegacion;
     }
-    .collage__filaUno--iconoAppleWatch{
+    .collageUno__filaUno--iconoAppleWatch{
       font-size: 35px;
       padding: 0 9px;
     }
-    .collage__filaUno--img{
+    .collageUno__filaUno--img{
       width: 100%; 
       height: 350px;
     }
-    .collage__filaUno--Ipad{
+    .collageUno__filaUno--Ipad{
       padding: 0 0;
       width: 49.4%;
       height:auto;
-      border: 2px solid orange;
     }
-    .collage__filaUno--tituloIpadContenedor{
-      @extend .collage__filaUno--tituloAppleWatchContenedor;
+    .collageUno__filaUno--tituloIpadContenedor{
+      @extend .collageUno__filaUno--tituloAppleWatchContenedor;
       color: #000000;
     }
-    .collage__filaUno--tituloIpad{
-      @extend .collage__filaUno--iconoAppleWatch;
+    .collageUno__filaUno--tituloIpad{
+      @extend .collageUno__filaUno--iconoAppleWatch;
+    }
+  }
+}
+
+.collageDos{
+  @extend .collageUno;
+  .collageDos__filaDos{
+    @extend .collageUno__filaUno;
+    .collageDos__filaDos--Iphone11{
+      @extend .collageUno__filaUno--AppleWatch;
+      background-color: #fafafa;
+    }
+    .collageDos__filaDos--tituloIphone11Contenedor{
+      @extend .collageUno__filaUno--tituloAppleWatchContenedor;
+      color: #000000;
+    }
+    .collageDos__filaDos--img{
+      @extend .collageUno__filaUno--img;
+    }
+    .collageDos__filaDos--iconoIphone11{
+      @extend .collageUno__filaUno--iconoAppleWatch;
     }
   }
 }

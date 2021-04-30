@@ -105,36 +105,39 @@ CONTENIDO/BODY DEL SITIO
     background-size: cover;
     background-repeat: no-repeat; }
 
-.collage {
-  border: 2px solid red;
+.collageUno, .collageDos {
   height: auto; }
-  .collage .collage__filaUno {
+  .collageUno .collageUno__filaUno, .collageDos .collageUno__filaUno, .collageDos .collageDos__filaDos {
     display: flex;
     justify-content: space-between; }
-    .collage .collage__filaUno .collage__filaUno--AppleWatch {
+    .collageUno .collageUno__filaUno .collageUno__filaUno--AppleWatch, .collageDos .collageUno__filaUno .collageUno__filaUno--AppleWatch, .collageDos .collageDos__filaDos .collageUno__filaUno--AppleWatch, .collageDos .collageDos__filaDos .collageDos__filaDos--Iphone11 {
       padding: 0 0;
       background-color: #000000;
       height: auto;
-      border: 2px solid orange;
       width: 49.4%; }
-    .collage .collage__filaUno .collage__filaUno--tituloAppleWatchContenedor, .collage .collage__filaUno .collage__filaUno--tituloIpadContenedor {
+    .collageUno .collageUno__filaUno .collageUno__filaUno--tituloAppleWatchContenedor, .collageDos .collageUno__filaUno .collageUno__filaUno--tituloAppleWatchContenedor, .collageDos .collageDos__filaDos .collageUno__filaUno--tituloAppleWatchContenedor, .collageUno .collageUno__filaUno .collageUno__filaUno--tituloIpadContenedor, .collageDos .collageUno__filaUno .collageUno__filaUno--tituloIpadContenedor, .collageDos .collageDos__filaDos .collageUno__filaUno--tituloIpadContenedor, .collageDos .collageDos__filaDos .collageDos__filaDos--tituloIphone11Contenedor {
       font-weight: 600;
       padding: 5px;
       text-align: center;
       color: #e9ecef; }
-    .collage .collage__filaUno .collage__filaUno--iconoAppleWatch, .collage .collage__filaUno .collage__filaUno--tituloIpad {
+    .collageUno .collageUno__filaUno .collageUno__filaUno--iconoAppleWatch, .collageDos .collageUno__filaUno .collageUno__filaUno--iconoAppleWatch, .collageDos .collageDos__filaDos .collageUno__filaUno--iconoAppleWatch, .collageUno .collageUno__filaUno .collageUno__filaUno--tituloIpad, .collageDos .collageUno__filaUno .collageUno__filaUno--tituloIpad, .collageDos .collageDos__filaDos .collageUno__filaUno--tituloIpad, .collageDos .collageDos__filaDos .collageDos__filaDos--iconoIphone11 {
       font-size: 35px;
       padding: 0 9px; }
-    .collage .collage__filaUno .collage__filaUno--img {
+    .collageUno .collageUno__filaUno .collageUno__filaUno--img, .collageDos .collageUno__filaUno .collageUno__filaUno--img, .collageDos .collageDos__filaDos .collageUno__filaUno--img, .collageDos .collageDos__filaDos .collageDos__filaDos--img {
       width: 100%;
       height: 350px; }
-    .collage .collage__filaUno .collage__filaUno--Ipad {
+    .collageUno .collageUno__filaUno .collageUno__filaUno--Ipad, .collageDos .collageUno__filaUno .collageUno__filaUno--Ipad, .collageDos .collageDos__filaDos .collageUno__filaUno--Ipad {
       padding: 0 0;
       width: 49.4%;
-      height: auto;
-      border: 2px solid orange; }
-    .collage .collage__filaUno .collage__filaUno--tituloIpadContenedor {
+      height: auto; }
+    .collageUno .collageUno__filaUno .collageUno__filaUno--tituloIpadContenedor, .collageDos .collageUno__filaUno .collageUno__filaUno--tituloIpadContenedor, .collageDos .collageDos__filaDos .collageUno__filaUno--tituloIpadContenedor {
       color: #000000; }
+
+.collageDos .collageDos__filaDos .collageDos__filaDos--Iphone11 {
+  background-color: #fafafa; }
+
+.collageDos .collageDos__filaDos .collageDos__filaDos--tituloIphone11Contenedor {
+  color: #000000; }
 
 /* 
 **************************************************************************************
