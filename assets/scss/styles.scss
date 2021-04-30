@@ -143,6 +143,10 @@ CONTENIDO/BODY DEL SITIO
       text-align: center;
       color: $links__menuNavegacion;
     }
+    .collageUno__filaUno--tituloAppleWatch{
+      font-size: 35px;
+      font-weight: 600;
+    }
     .collageUno__filaUno--iconoAppleWatch{
       font-size: 35px;
       padding: 0 9px;
@@ -161,7 +165,7 @@ CONTENIDO/BODY DEL SITIO
       color: #000000;
     }
     .collageUno__filaUno--tituloIpad{
-      @extend .collageUno__filaUno--iconoAppleWatch;
+      @extend .collageUno__filaUno--tituloAppleWatch;
     }
   }
 }
@@ -178,12 +182,48 @@ CONTENIDO/BODY DEL SITIO
       @extend .collageUno__filaUno--tituloAppleWatchContenedor;
       color: #000000;
     }
-    .collageDos__filaDos--img{
-      @extend .collageUno__filaUno--img;
+    .collageDos__filaDos--tituloIphone11{
+      @extend .collageUno__filaUno--tituloAppleWatch;
     }
     .collageDos__filaDos--iconoIphone11{
       @extend .collageUno__filaUno--iconoAppleWatch;
     }
+    .collageDos__filaDos--IphoneSE{
+      @extend .collageUno__filaUno--AppleWatch;
+    }
+    .collage__filaDos--tituloIphoneSEContenedor{
+      @extend .collageUno__filaUno--tituloAppleWatchContenedor;
+    }
+    .collage__filaDos--tituloIphoneSE{
+      @extend .collageUno__filaUno--tituloAppleWatch;
+    }
+    .collageDos__filaDos--iconoIphoneSE{
+      @extend .collageUno__filaUno--iconoAppleWatch;
+    }
+    .collageDos__filaDos--img{
+      @extend .collageUno__filaUno--img;
+    }
+  }
+}
+/* 
+**************************************************************************************
+SECCION DE SUSCRIPCION
+**************************************************************************************
+*/
+.suscripcion{
+  height: 200px;
+  border: 2px solid green;
+  .suscripcion__anuncio{
+    padding: 10px;
+    .suscripcion__anuncio--titulo{
+      text-align: center;
+      font-size: 40px;
+      font-weight: 600;
+    }
+  }
+  .suscripcion__formulario{
+    height: 200px;
+    border: 2px solid green;
   }
 }
 /* 
