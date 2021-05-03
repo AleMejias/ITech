@@ -14,6 +14,11 @@ h2,h3,h4,a{
   font-family: "Roboto";
 }
 
+/* FIJAMOS NUESTRO MENU A LA PANTALLA AL HACER SCROLL */
+header{
+  position: sticky;
+  top: 0;
+}
 /* 
 **************************************************************************************
 Menu secundario disponible a < 768px
@@ -85,7 +90,7 @@ CONTENIDO/BODY DEL SITIO
 **************************************************************************************
 */
 .iphone-12pro{
-  background-color: #000000;
+  background-color: $negro;
   height: auto;
   .iphone-12pro__contenedor{
     display: flex;
@@ -133,7 +138,7 @@ CONTENIDO/BODY DEL SITIO
     justify-content: space-between;
     .collageUno__filaUno--AppleWatch{
       padding: 0 0;
-      background-color:#000000;
+      background-color:$negro;
       height:auto;
       width: 49.4%;
     }
@@ -162,10 +167,11 @@ CONTENIDO/BODY DEL SITIO
     }
     .collageUno__filaUno--tituloIpadContenedor{
       @extend .collageUno__filaUno--tituloAppleWatchContenedor;
-      color: #000000;
+      color: $negro;
     }
     .collageUno__filaUno--tituloIpad{
       @extend .collageUno__filaUno--tituloAppleWatch;
+      color: $negro_opaco;
     }
   }
 }
@@ -180,7 +186,7 @@ CONTENIDO/BODY DEL SITIO
     }
     .collageDos__filaDos--tituloIphone11Contenedor{
       @extend .collageUno__filaUno--tituloAppleWatchContenedor;
-      color: #000000;
+      color: $negro_opaco;
     }
     .collageDos__filaDos--tituloIphone11{
       @extend .collageUno__filaUno--tituloAppleWatch;
@@ -211,19 +217,48 @@ SECCION DE SUSCRIPCION
 **************************************************************************************
 */
 .suscripcion{
-  height: 200px;
-  border: 2px solid green;
+  background-image: url(../img/textura.png);
+  height: auto;
   .suscripcion__anuncio{
     padding: 10px;
+    height: auto;
     .suscripcion__anuncio--titulo{
-      text-align: center;
+      padding: 5px;
       font-size: 40px;
       font-weight: 600;
+      text-align: center;
+      color: #393939;
+    }
+    .suscripcion__anuncio--mensaje{
+      margin-bottom: 0;
+      padding: 4px 15px;
+      color: $negro;
+      font-size: 17px;
     }
   }
   .suscripcion__formulario{
-    height: 200px;
-    border: 2px solid green;
+    height: auto;
+    align-self: center;
+    padding: 15px;
+    .suscripcion__formulario--contenedor{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      input[type="email"],
+      input[type="submit"]{
+        margin: 5px;
+        padding: 5px;
+        width: 80%;
+        border-radius: 2px;
+        border-color: transparent;
+        outline: none;
+      }
+      input[type="submit"]{
+        background-color: $verde_principal;
+        color: $links__menuNavegacion;
+        font-weight: 600;
+      }
+    }
   }
 }
 /* 

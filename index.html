@@ -21,7 +21,7 @@
      -->
     <header>
       <!-- BARRA DE NAVEGACION PARA PANTALLAS > 768 PX -->
-      <div class="container-fluid d-none d-md-block ">
+      <section class="container-fluid d-none d-md-block ">
         <div class="row">
           <div class="col-md-12 menu-primario">
             <nav class=" navbar navbar-light menu-primario__contenedor">
@@ -33,9 +33,9 @@
             </nav>
           </div>
         </div>
-      </div>
+      </section>
       <!-- BARRA DE NAVEGACION PARA PANTALLAS < 768 PX -->
-      <div class="pos-f-t menu-secundario  d-md-none">
+      <section class="pos-f-t menu-secundario  d-md-none">
         <div class="collapse menu-secundario__contenedor" id="navbarToggleExternalContent">
           <div class="py-4">
             <ul class="menu-secundario__lista">
@@ -52,20 +52,23 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </nav>
-      </div>
-       <!-- CONTENEDOR PARA EL LINK A NUESTRO SHOP -->
-      <section class="container-fluid shop">
+      </section>
+
+    </header>
+    <!--
+      CONTENIDO DE MI SITIO WEB
+     -->
+    <main>
+      <!-- 
+        CONTENEDOR PARA EL LINK A NUESTRO SHOP 
+      -->
+        <section class="container-fluid shop">
         <div class="row mx-0">
           <div class="col-md-12 shop__contenedor">
             <span class="shop__span"><a href="#" class="shop__enlace">Visita nuestro shop</a> y disfruta de envío gratis por tu compra online.</span>
           </div>
         </div>
       </section>
-    </header>
-    <!--
-      CONTENIDO DE MI SITIO WEB
-     -->
-    <main>
       <!-- 
         IPHONE 12 PRO
        -->
@@ -124,21 +127,27 @@
         <!-- 
           SECCION DE SUBCRIPCION
          -->
-         <section class="container-fluid mt-2 suscripcion">
+         <section class="container-fluid mt-3 suscripcion">
            <div class="row">
              <div class="col-md-7 suscripcion__anuncio">
               <h2 class="suscripcion__anuncio--titulo">Se parte de nuestra familia</h2>
-              <p>Suscribite a nuestra tienda dejando su direccion de correo para acceder a descuentos exclusicos.</p>
+              <p class="suscripcion__anuncio--mensaje">Suscribite a nuestra tienda dejando tu dirección de correo para acceder a descuentos exclusicos.</p>
             </div>
              <div class="col-md-5 suscripcion__formulario">
-              <form action="#">
-                <input type="email" name="correo" id="correo">
-                <input type="submit" value="enviarCorreo">
+              <form class="suscripcion__formulario--contenedor" action="#">
+                <input type="email" name="correo" id="correo" placeholder="ejemplo@ejemplo.com">
+                <input type="submit" value="SUSCRIBIRME">
               </form>
             </div>
            </div>
          </section>
     </main>
+    <!-- 
+      PIE DE PAGINA
+     -->
+    <footer>
+      
+    </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>

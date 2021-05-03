@@ -13,6 +13,11 @@ li {
 h2, h3, h4, a {
   font-family: "Roboto"; }
 
+/* FIJAMOS NUESTRO MENU A LA PANTALLA AL HACER SCROLL */
+header {
+  position: sticky;
+  top: 0; }
+
 /* 
 **************************************************************************************
 Menu secundario disponible a < 768px
@@ -135,12 +140,14 @@ CONTENIDO/BODY DEL SITIO
       height: auto; }
     .collageUno .collageUno__filaUno .collageUno__filaUno--tituloIpadContenedor, .collageDos .collageUno__filaUno .collageUno__filaUno--tituloIpadContenedor, .collageDos .collageDos__filaDos .collageUno__filaUno--tituloIpadContenedor {
       color: #000000; }
+    .collageUno .collageUno__filaUno .collageUno__filaUno--tituloIpad, .collageDos .collageUno__filaUno .collageUno__filaUno--tituloIpad, .collageDos .collageDos__filaDos .collageUno__filaUno--tituloIpad {
+      color: #393939; }
 
 .collageDos .collageDos__filaDos .collageDos__filaDos--Iphone11 {
   background-color: #fafafa; }
 
 .collageDos .collageDos__filaDos .collageDos__filaDos--tituloIphone11Contenedor {
-  color: #000000; }
+  color: #393939; }
 
 /* 
 **************************************************************************************
@@ -148,17 +155,42 @@ SECCION DE SUSCRIPCION
 **************************************************************************************
 */
 .suscripcion {
-  height: 200px;
-  border: 2px solid green; }
+  background-image: url(../img/textura.png);
+  height: auto; }
   .suscripcion .suscripcion__anuncio {
-    padding: 10px; }
+    padding: 10px;
+    height: auto; }
     .suscripcion .suscripcion__anuncio .suscripcion__anuncio--titulo {
-      text-align: center;
+      padding: 5px;
       font-size: 40px;
-      font-weight: 600; }
+      font-weight: 600;
+      text-align: center;
+      color: #393939; }
+    .suscripcion .suscripcion__anuncio .suscripcion__anuncio--mensaje {
+      margin-bottom: 0;
+      padding: 4px 15px;
+      color: #000000;
+      font-size: 17px; }
   .suscripcion .suscripcion__formulario {
-    height: 200px;
-    border: 2px solid green; }
+    height: auto;
+    align-self: center;
+    padding: 15px; }
+    .suscripcion .suscripcion__formulario .suscripcion__formulario--contenedor {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .suscripcion .suscripcion__formulario .suscripcion__formulario--contenedor input[type="email"],
+      .suscripcion .suscripcion__formulario .suscripcion__formulario--contenedor input[type="submit"] {
+        margin: 5px;
+        padding: 5px;
+        width: 80%;
+        border-radius: 2px;
+        border-color: transparent;
+        outline: none; }
+      .suscripcion .suscripcion__formulario .suscripcion__formulario--contenedor input[type="submit"] {
+        background-color: #08acaf;
+        color: #e9ecef;
+        font-weight: 600; }
 
 /* 
 **************************************************************************************
