@@ -16,7 +16,8 @@ h2, h3, h4, a {
 /* FIJAMOS NUESTRO MENU A LA PANTALLA AL HACER SCROLL */
 header {
   position: sticky;
-  top: 0; }
+  top: 0;
+  z-index: 1; }
 
 /* 
 **************************************************************************************
@@ -148,6 +149,17 @@ CONTENIDO/BODY DEL SITIO
 
 .collageDos .collageDos__filaDos .collageDos__filaDos--tituloIphone11Contenedor {
   color: #393939; }
+
+.collageTres {
+  height: auto; }
+  .collageTres .collageTres__filaTres {
+    height: 600px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 85%;
+    background-image: url(../img/home/macbook-portada-1300x731.jpg);
+    position: relative; }
 
 /* 
 **************************************************************************************

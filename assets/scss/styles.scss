@@ -18,6 +18,7 @@ h2,h3,h4,a{
 header{
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 /* 
 **************************************************************************************
@@ -211,6 +212,19 @@ CONTENIDO/BODY DEL SITIO
     }
   }
 }
+
+.collageTres{
+  height: auto;
+  .collageTres__filaTres{
+    height:600px;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size:100% 85%;
+    background-image: url(../img/home/macbook-portada-1300x731.jpg);
+    position: relative;
+  }
+}
 /* 
 **************************************************************************************
 SECCION DE SUSCRIPCION
@@ -317,18 +331,19 @@ PIE DE PAGINA
     }
   }
 }
-  .derechos-autor{
-    padding: 20px 10px;
-    .derechos-autor__contenedor{
-      display: flex;
-      justify-content: center;
-      padding: 7px;
-      .derechos-autor__contenedor--desarrollador{
-        font-size: 15px;
-        color: #393939;
-      }
+.derechos-autor{
+  padding: 20px 10px;
+  .derechos-autor__contenedor{
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+    .derechos-autor__contenedor--desarrollador{
+      font-size: 15px;
+      color: #393939;
     }
   }
+}
+
 /* 
 **************************************************************************************
 Clase para mostrar/quitar elementos segun corresponda
