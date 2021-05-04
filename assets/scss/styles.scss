@@ -263,6 +263,74 @@ SECCION DE SUSCRIPCION
 }
 /* 
 **************************************************************************************
+PIE DE PAGINA
+**************************************************************************************
+*/
+.footer{
+  height: 200px;
+  .footer__contenedor{
+    border-bottom: 1px solid $links__menuNavegacion;
+    div{
+      height: 200px;
+    }
+    .footer__contenedor--img{
+      background-image: url(../img/logo.jpeg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    .footer__contenedor--informacion{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 15px 8px;
+      border-right: 1px solid $links__menuNavegacion;
+      i{
+        font-size: 15px;
+        margin-right: 4px;
+        color: $verde_principal;
+      }
+      span{
+        padding: 0 2px;
+        font-size: 15px;
+        color: $negro_opaco;
+      }
+    }
+    .footer__contenedor--menu{
+      display: flex;
+      align-items: center;
+      padding: 15px 8px;
+      ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      li{
+        width: 50%;
+        padding: 7px 1px;
+      }
+      a{
+        font-size: 15px;
+        color: $negro_opaco;
+      }
+    }
+  }
+}
+  .derechos-autor{
+    padding: 20px 10px;
+    .derechos-autor__contenedor{
+      display: flex;
+      justify-content: center;
+      padding: 7px;
+      .derechos-autor__contenedor--desarrollador{
+        font-size: 15px;
+        color: #393939;
+      }
+    }
+  }
+/* 
+**************************************************************************************
 Clase para mostrar/quitar elementos segun corresponda
 **************************************************************************************
 */
