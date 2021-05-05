@@ -290,3 +290,14 @@ Clase para mostrar/quitar elementos segun corresponda
 */
 .activada {
   display: none; }
+
+/* 
+**************************************************************************************
+Clase para validar/novalidar el contenido de un input
+**************************************************************************************
+*/
+.valido {
+  border: 1px solid #2ad714e0; }
+
+.noValido {
+  border: 1px solid #eb0b0b; }
