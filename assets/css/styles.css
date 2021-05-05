@@ -35,9 +35,8 @@ Menu secundario disponible a < 768px
     font-size: 1rem;
     color: #e9ecef; }
   .menu-secundario .menu-secundario__icono {
-    color: #e9ecef;
-    margin-left: 6px;
-    font-size: 30px; }
+    height: 50px;
+    border-radius: 20px; }
 
 /* 
 **************************************************************************************
@@ -54,8 +53,8 @@ Menu primario disponible a > 768px
       font-size: 1.1rem;
       color: #e9ecef; }
   .menu-primario .menu-primario__icono {
-    color: #e9ecef;
-    font-size: 2.5rem; }
+    height: 50px;
+    border-radius: 20px; }
 
 /* 
 **************************************************************************************
@@ -150,16 +149,40 @@ CONTENIDO/BODY DEL SITIO
 .collageDos .collageDos__filaDos .collageDos__filaDos--tituloIphone11Contenedor {
   color: #393939; }
 
-.collageTres {
-  height: auto; }
-  .collageTres .collageTres__filaTres {
-    height: 600px;
+/* .collageTres{
+  height: auto;
+  .collageTres__filaTres{
+    height:600px;
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
     background-position: center;
-    background-size: 100% 85%;
+    background-size:100% 85%;
     background-image: url(../img/home/macbook-portada-1300x731.jpg);
-    position: relative; }
+    position: relative;
+  }
+} */
+.collageTres {
+  padding: 30px;
+  height: 400px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 85%;
+  background-image: url(../img/home/macbook-portada-1300x731.jpg);
+  position: relative; }
+  .collageTres .collageTres__contenedorPropaganda {
+    padding: 10px; }
+    .collageTres .collageTres__contenedorPropaganda h2 {
+      font-size: 35px;
+      font-weight: 600;
+      color: #ffffff; }
+    .collageTres .collageTres__contenedorPropaganda span {
+      font-size: 17px;
+      font-weight: 400;
+      color: #ffffff; }
+    .collageTres .collageTres__contenedorPropaganda i {
+      font-size: 25px;
+      margin-left: 5px; }
 
 /* 
 **************************************************************************************

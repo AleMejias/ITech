@@ -40,9 +40,8 @@ Menu secundario disponible a < 768px
     }
   }
   .menu-secundario__icono{
-    color: $links__menuNavegacion;
-    margin-left: 6px;
-    font-size: 30px;
+    height: 50px;
+    border-radius: 20px;
   }
 }
 /* 
@@ -62,8 +61,8 @@ Menu primario disponible a > 768px
     }
   }
   .menu-primario__icono{
-    color: $links__menuNavegacion;
-    font-size: 2.5rem;
+    height: 50px;
+    border-radius: 20px
   }
 }
 /* 
@@ -213,7 +212,7 @@ CONTENIDO/BODY DEL SITIO
   }
 }
 
-.collageTres{
+/* .collageTres{
   height: auto;
   .collageTres__filaTres{
     height:600px;
@@ -223,6 +222,33 @@ CONTENIDO/BODY DEL SITIO
     background-size:100% 85%;
     background-image: url(../img/home/macbook-portada-1300x731.jpg);
     position: relative;
+  }
+} */
+.collageTres{
+  padding: 30px;
+  height: 400px;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size:100% 85%;
+  background-image: url(../img/home/macbook-portada-1300x731.jpg);
+  position: relative;
+  .collageTres__contenedorPropaganda{
+    padding: 10px;
+    h2{
+      font-size: 35px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    span{
+      font-size: 17px;
+      font-weight: 400;
+      color: #ffffff;
+    }
+    i{
+      font-size: 25px;
+      margin-left: 5px;
+    }
   }
 }
 /* 
