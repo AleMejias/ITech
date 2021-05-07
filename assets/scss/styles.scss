@@ -212,18 +212,6 @@ CONTENIDO/BODY DEL SITIO
   }
 }
 
-/* .collageTres{
-  height: auto;
-  .collageTres__filaTres{
-    height:600px;
-    background-attachment: fixed;
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size:100% 85%;
-    background-image: url(../img/home/macbook-portada-1300x731.jpg);
-    position: relative;
-  }
-} */
 .collageTres{
   padding: 30px;
   height: 400px;
@@ -256,6 +244,22 @@ CONTENIDO/BODY DEL SITIO
 SECCION DE SUSCRIPCION
 **************************************************************************************
 */
+/* 
+**************************************************************************************
+Clase para validar/novalidar el contenido de un input
+**************************************************************************************
+*/
+.valido{
+  border: 1px solid #2ad714e0;
+/*   border-color: #2ad714e0; */
+}
+.noValido{
+  border: 1px solid #eb0b0b;
+/*   border-color: #eb0b0b; */
+}
+.submitDesactivado{
+  opacity: .4;
+}
 .suscripcion{
   background-image: url(../img/textura.png);
   height: auto;
@@ -280,20 +284,28 @@ SECCION DE SUSCRIPCION
     height: auto;
     align-self: center;
     padding: 15px;
-    .suscripcion__formulario--contenedor{
+    .suscripcion__formularioContenedor{
       display: flex;
       flex-direction: column;
       align-items: center;
-      input[type="email"],
+      .suscripcion__formulario--input{
+        margin: 5px;
+        padding: 5px;
+        width: 80%;
+        border-radius: 4px;
+        outline: none;
+      }
+/*       input[type="email"],
       input[type="submit"]{
         margin: 5px;
         padding: 5px;
         width: 80%;
         border-radius: 2px;
-        border-color: transparent;
+        border: 1px solid $links__menuNavegacion;
         outline: none;
-      }
-      input[type="submit"]{
+      } */
+      .suscripcion__formulario--btnEnviar{
+        @extend .suscripcion__formulario--input;
         background-color: $verde_principal;
         color: $links__menuNavegacion;
         font-weight: 600;
@@ -377,15 +389,4 @@ Clase para mostrar/quitar elementos segun corresponda
 */
 .activada{
   display: none;
-}
-/* 
-**************************************************************************************
-Clase para validar/novalidar el contenido de un input
-**************************************************************************************
-*/
-.valido{
-  border: 1px solid #2ad714e0;
-}
-.noValido{
-  border: 1px solid #eb0b0b;
 }

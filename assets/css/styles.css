@@ -149,18 +149,6 @@ CONTENIDO/BODY DEL SITIO
 .collageDos .collageDos__filaDos .collageDos__filaDos--tituloIphone11Contenedor {
   color: #393939; }
 
-/* .collageTres{
-  height: auto;
-  .collageTres__filaTres{
-    height:600px;
-    background-attachment: fixed;
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size:100% 85%;
-    background-image: url(../img/home/macbook-portada-1300x731.jpg);
-    position: relative;
-  }
-} */
 .collageTres {
   padding: 30px;
   height: 400px;
@@ -189,6 +177,22 @@ CONTENIDO/BODY DEL SITIO
 SECCION DE SUSCRIPCION
 **************************************************************************************
 */
+/* 
+**************************************************************************************
+Clase para validar/novalidar el contenido de un input
+**************************************************************************************
+*/
+.valido {
+  border: 1px solid #2ad714e0;
+  /*   border-color: #2ad714e0; */ }
+
+.noValido {
+  border: 1px solid #eb0b0b;
+  /*   border-color: #eb0b0b; */ }
+
+.submitDesactivado {
+  opacity: .4; }
+
 .suscripcion {
   background-image: url(../img/textura.png);
   height: auto; }
@@ -210,19 +214,26 @@ SECCION DE SUSCRIPCION
     height: auto;
     align-self: center;
     padding: 15px; }
-    .suscripcion .suscripcion__formulario .suscripcion__formulario--contenedor {
+    .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor {
       display: flex;
       flex-direction: column;
-      align-items: center; }
-      .suscripcion .suscripcion__formulario .suscripcion__formulario--contenedor input[type="email"],
-      .suscripcion .suscripcion__formulario .suscripcion__formulario--contenedor input[type="submit"] {
+      align-items: center;
+      /*       input[type="email"],
+      input[type="submit"]{
         margin: 5px;
         padding: 5px;
         width: 80%;
         border-radius: 2px;
-        border-color: transparent;
+        border: 1px solid $links__menuNavegacion;
+        outline: none;
+      } */ }
+      .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--input, .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--btnEnviar {
+        margin: 5px;
+        padding: 5px;
+        width: 80%;
+        border-radius: 4px;
         outline: none; }
-      .suscripcion .suscripcion__formulario .suscripcion__formulario--contenedor input[type="submit"] {
+      .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--btnEnviar {
         background-color: #08acaf;
         color: #e9ecef;
         font-weight: 600; }
@@ -290,14 +301,3 @@ Clase para mostrar/quitar elementos segun corresponda
 */
 .activada {
   display: none; }
-
-/* 
-**************************************************************************************
-Clase para validar/novalidar el contenido de un input
-**************************************************************************************
-*/
-.valido {
-  border: 1px solid #2ad714e0; }
-
-.noValido {
-  border: 1px solid #eb0b0b; }
