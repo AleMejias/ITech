@@ -36,7 +36,8 @@ Menu secundario disponible a < 768px
     color: #e9ecef; }
   .menu-secundario .menu-secundario__icono {
     height: 50px;
-    border-radius: 20px; }
+    border-radius: 20px;
+    margin-left: 5px; }
 
 /* 
 **************************************************************************************

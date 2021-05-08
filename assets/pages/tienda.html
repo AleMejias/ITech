@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>ITech | Tienda</title>
+  </head>
+  <body>
+    <!-- 
+      CABECERA
+    -->
+    <header>
+      <!-- BARRA DE NAVEGACION PARA PANTALLAS > 768 PX -->
+      <section class="container-fluid d-none d-md-block">
+        <div class="row">
+          <div class="col-md-12 menu-primario">
+            <nav class="navbar navbar-light menu-primario__contenedor">
+              <img src="../img/icono.jpg" class="menu-primario__icono" alt="Somos iTech"/>
+              <a href="../../index.html" class="menu-primario__enlaces">Home</a>
+              <a href="" class="menu-primario__enlaces">Celulares</a>
+              <a href="" class="menu-primario__enlaces">Tablets</a>
+              <a href="#" class="menu-primario__enlaces">Apple Watch</a>
+            </nav>
+          </div>
+        </div>
+      </section>
+      <!-- BARRA DE NAVEGACION PARA PANTALLAS < 768 PX -->
+      <section class="pos-f-t menu-secundario d-md-none">
+        <div class="collapse menu-secundario__contenedor" id="navbarToggleExternalContent">
+          <div class="py-4">
+            <ul class="menu-secundario__lista">
+              <li><a href="../../index.html" class="menu-secundario__enlaces">Home</a></li>
+              <li>
+                <a href="#" class="menu-secundario__enlaces">Celulares</a>
+              </li>
+              <li><a href="#" class="menu-secundario__enlaces">Tablets</a></li>
+              <li>
+                <a href="#" class="menu-secundario__enlaces">Apple Watch</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav class="navbar navbar-light">
+          <!-- <i class="fab fa-apple menu-secundario__icono"></i> -->
+          <img src="../img/icono.jpg" class="menu-secundario__icono" alt="Somos iTech"/>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </section>
+    </header>
+    <!--
+      CONTENIDO DE MI SITIO WEB
+     -->
+    <main>
+        <!-- 
+        CONTENEDOR PARA EL LINK A NUESTRO SHOP 
+        -->
+        <section class="container-fluid shop">
+            <div class="row mx-0">
+                <div class="col-md-12 shop__contenedor">
+                    <span class="shop__span"><a href="#" class="shop__enlace">Visita nuestro shop</a> y disfruta de envío gratis por tu compra online.<span>
+                </div>
+            </div>
+        </section>
+        <section class="container mt-3"style="height:400px; border:1px solid red;">
+            <div class="row">
+                <aside class="col-md-3" style="border: 2px solid blue;height: 200px;">
+                    <div style="border: 2px solid orange;">
+                        <form action="">
+                            <input type="text" name="" id="">
+                        </form>
+                    </div>
+                    <div>
+                        <h4>Categorias</h4>
+                        <form action="">
+                        </form>
+                    </div>
+                </aside>
+                <div class="col-md-9" style="border: 2px solid green;height: 200px;">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 
+    PIE DE PAGINA
+    -->
+    <footer>
+      <section class="container-fluid mt-5 footer">
+        <div class="row footer__contenedor">
+          <div class="col-md-4 footer__contenedor--img">
+            <!-- LOGO DE MI TIENDA -->
+          </div>
+          <div class="col-md-4 footer__contenedor--informacion">
+            <span><i class="fas fa-map-marker-alt"></i>Capital Federal. Buenos Aires, Argentina.</span>
+            <span><i class="far fa-envelope"></i>alejandro20452@gmail.com</span>
+            <span><i class="fas fa-phone"></i>4322-7777</span>
+          </div>
+          <div class="col-md-4 footer__contenedor--menu">
+            <ul class="px-0">
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="#">AppleWatch</a></li>
+              <li><a href="#">Celulares</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Tablets</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="derechos-autor">
+        <div class="derechos-autor__contenedor">
+          <p class="mb-0 derechos-autor__contenedor--desarrollador">
+            Alejandro Mejias-Desarrollador Web Jr &copy;
+          </p>
+        </div>
+      </section>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
