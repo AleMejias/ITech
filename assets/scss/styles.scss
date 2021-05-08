@@ -59,6 +59,9 @@ Menu primario disponible a > 768px
       font-size: 1.1rem;
       color: $links__menuNavegacion;
     }
+    .menu-primario__enlaces:hover{
+      color: #ffffff;
+    }
   }
   .menu-primario__icono{
     height: 50px;
@@ -81,6 +84,9 @@ Enlace al shop de nuestra pagina
   }
   .shop__enlace{
     color: $verde_principal;
+  }
+  .shop__enlace:hover{
+    border-bottom: 1px solid $verde_principal;
   }
 }
 
@@ -295,19 +301,21 @@ Clase para validar/novalidar el contenido de un input
         border-radius: 4px;
         outline: none;
       }
-/*       input[type="email"],
-      input[type="submit"]{
-        margin: 5px;
-        padding: 5px;
-        width: 80%;
-        border-radius: 2px;
-        border: 1px solid $links__menuNavegacion;
-        outline: none;
-      } */
       .suscripcion__formulario--btnEnviar{
         @extend .suscripcion__formulario--input;
         background-color: $verde_principal;
         color: $links__menuNavegacion;
+        font-weight: 600;
+      }
+      .suscripcion__formulario--loadingImg{
+        background-color: #08acaf;
+        border-radius: 20px;
+        opacity: 0.4;
+      }
+      .suscripcion__formulario--suscripcionExitosa{
+        color: #ff7e7e;
+        padding: 7px;
+        font-size: 14px;
         font-weight: 600;
       }
     }
@@ -365,6 +373,9 @@ PIE DE PAGINA
       a{
         font-size: 15px;
         color: $negro_opaco;
+      }
+      a:hover{
+        color:#08acaf;
       }
     }
   }

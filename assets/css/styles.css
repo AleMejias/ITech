@@ -52,6 +52,8 @@ Menu primario disponible a > 768px
     .menu-primario .menu-primario__contenedor .menu-primario__enlaces {
       font-size: 1.1rem;
       color: #e9ecef; }
+    .menu-primario .menu-primario__contenedor .menu-primario__enlaces:hover {
+      color: #ffffff; }
   .menu-primario .menu-primario__icono {
     height: 50px;
     border-radius: 20px; }
@@ -71,6 +73,8 @@ Enlace al shop de nuestra pagina
     justify-content: center; }
   .shop .shop__enlace {
     color: #08acaf; }
+  .shop .shop__enlace:hover {
+    border-bottom: 1px solid #08acaf; }
 
 /* 
 **************************************************************************************
@@ -217,16 +221,7 @@ Clase para validar/novalidar el contenido de un input
     .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      /*       input[type="email"],
-      input[type="submit"]{
-        margin: 5px;
-        padding: 5px;
-        width: 80%;
-        border-radius: 2px;
-        border: 1px solid $links__menuNavegacion;
-        outline: none;
-      } */ }
+      align-items: center; }
       .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--input, .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--btnEnviar {
         margin: 5px;
         padding: 5px;
@@ -236,6 +231,15 @@ Clase para validar/novalidar el contenido de un input
       .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--btnEnviar {
         background-color: #08acaf;
         color: #e9ecef;
+        font-weight: 600; }
+      .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--loadingImg {
+        background-color: #08acaf;
+        border-radius: 20px;
+        opacity: 0.4; }
+      .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--suscripcionExitosa {
+        color: #ff7e7e;
+        padding: 7px;
+        font-size: 14px;
         font-weight: 600; }
 
 /* 
@@ -283,6 +287,8 @@ PIE DE PAGINA
       .footer .footer__contenedor .footer__contenedor--menu a {
         font-size: 15px;
         color: #393939; }
+      .footer .footer__contenedor .footer__contenedor--menu a:hover {
+        color: #08acaf; }
 
 .derechos-autor {
   padding: 20px 10px; }

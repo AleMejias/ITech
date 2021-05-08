@@ -14,10 +14,23 @@ inputCorreo.addEventListener("input",(e) => {
         inputCorreo.classList.add("valido");
         btnSubmit.removeAttribute("disabled");
         btnSubmit.classList.remove("submitDesactivado");
-        form.addEventListener("submit", () => {
-            let email = `mailto:${e.target.value}`;
-            form.setAttribute("action",email);
-        })
+        form.addEventListener("submit", (evento) => {
+            evento.preventDefault();
+            let loadingImg = document.querySelector("#loadingImg");
+            let suscripcionExitosa = document.querySelector("#suscripcionExitosa");
+            loadingImg.classList.remove("activada");
+            inputCorreo.classList.remove("valido");
+            btnSubmit.setAttribute("disabled","");
+            btnSubmit.classList.add("submitDesactivado");
+            setTimeout(() => {
+                loadingImg.classList.add("activada");
+                suscripcionExitosa.classList.remove("activada");
+                form.reset();
+                setTimeout(() =>{
+                    suscripcionExitosa.classList.add("activada");
+                },2000);
+            },1600);
+        });
     }else{
         btnSubmit.setAttribute("disabled","");
         btnSubmit.classList.add("submitDesactivado");
