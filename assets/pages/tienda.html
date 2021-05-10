@@ -69,21 +69,27 @@
         <section class="container-fluid shop">
             <div class="row mx-0">
                 <div class="col-md-12 shop__contenedor">
-                    <span class="shop__span"><a href="#" class="shop__enlace">Visita nuestro shop</a> y disfruta de envío gratis por tu compra online.<span>
+                    <span class="shop__span"><a href="tienda.html" class="shop__enlace">Visita nuestro shop</a> y disfruta de envío gratis por tu compra online.<span>
                 </div>
             </div>
         </section>
-        <section class="container mt-3"style="height:400px; border:1px solid red;">
+        <section class="container mt-3 productos">
             <div class="row">
-                <aside class="col-md-3" style="border: 2px solid blue;height: 200px;">
-                    <div style="border: 2px solid orange;">
+                <aside class="col-md-3">
+                    <div class="productos__barraBusqueda">
                         <form action="">
-                            <input type="text" name="" id="">
+                            <input type="text" name="busqueda" id="">
                         </form>
                     </div>
-                    <div>
+                    <div class="productos__categorias">
                         <h4>Categorias</h4>
-                        <form action="">
+                        <form action="" class="productos__categorias--form">
+                          <input type="radio" name="categoria" id="">
+                          <label for="Celulares" class="label">Celulares</label>
+                          <input type="radio" name="categoria" id="">
+                          <label for="Tablets" class="label">Tablets</label>
+                          <input type="radio" name="categoria" id="">
+                          <label for="Watches" class="label">Watches</label>                 
                         </form>
                     </div>
                 </aside>

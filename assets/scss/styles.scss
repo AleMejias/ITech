@@ -393,7 +393,49 @@ PIE DE PAGINA
     }
   }
 }
-
+.productos{
+  height:400px;
+  border:1px solid red;
+  aside{
+    border: 2px solid blue;
+    height: 200px;
+    .productos__barraBusqueda{
+      border: 2px solid orange;
+    } 
+  }
+  .productos__categorias{
+    .productos__categorias--form{
+      display: flex;
+      flex-direction: column;
+      input[type="radio"]{
+        display: none;
+      }
+      label{
+        position: relative;
+        font-size: 1em;
+        padding: 5px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+      }
+      label:before{
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
+        display:inline-block;
+        border:2px solid blue;
+        position:absolute;
+        left: 90px;
+        top: 11px;
+      }
+      input[type="radio"]:checked + label:before{
+        background-color: $verde_principal;
+      }
+    }
+  }
+}
 /* 
 **************************************************************************************
 Clase para mostrar/quitar elementos segun corresponda
