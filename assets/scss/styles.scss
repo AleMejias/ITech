@@ -79,6 +79,7 @@ Enlace al shop de nuestra pagina
   padding: 10px;
   font-size: 14px;
   color: #7c7c7c;
+  box-shadow: 0px 2px 4px rgba(219, 219, 219,0.8);
   .shop__contenedor{
     display: flex;
     justify-content: center;
@@ -394,42 +395,69 @@ PIE DE PAGINA
   }
 }
 
+/* 
+**************************************************************************************
+ESTILOS PARA LA TIENDA
+**************************************************************************************
+*/
 .productos{
   height:400px;
-  aside{
-    height: 200px;
-    .productos__barraBusqueda{
-      border: 2px solid orange;
+  height: 200px;
+  .productos__barraBusqueda{
+    padding: 10px;
+    form{
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
-    .productos__categorias{
-      .productos__categorias--form{
-        display: flex;
-        flex-direction: column;
-        input[type="radio"]{
-          display: none;
-        }
-        label{
-          /* display: inline-block; */
-          color: $negro_opaco;
-          padding: 5px 15px 5px 45px;
-          position: relative;
-          cursor: pointer;
-        }
-        label:before{
-          content: "";
-          width: 15px;
-          height: 15px;
-          /* display: inline-block; */
-          border-radius: 20px;
-          background: none;
-          border: 2px solid gray;
-          position: absolute;
-          left: 20px;
-          bottom: 9px;
-        }
-        input[type="radio"]:checked + label:before{
-          background: $verde_principal;
-        }
+    input{
+      width: 90%;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      border: none;
+      box-shadow: 0px 2px 4px rgba(219, 219, 219,0.8);
+      padding: 10px;
+      border-radius: 6px;
+      outline: none;
+    }
+  }
+  .productos__categorias{
+    .productos__categorias--titulo{
+      padding: 4px 5px;
+      font-family: "Roboto";
+      font-size: 17px;
+      font-weight: 600;
+      border-left: 3px solid $verde_principal;
+    }
+    .productos__categorias--form{
+      display: flex;
+      flex-direction: column;
+      input[type="radio"]{
+        display: none;
+      }
+      label{
+        /* display: inline-block; */
+        font-family: "Roboto";
+        color: $negro_opaco;
+        padding: 5px 15px 5px 45px;
+        position: relative;
+        cursor: pointer;
+      }
+      label:before{
+        content: "";
+        width: 15px;
+        height: 15px;
+        /* display: inline-block; */
+        border-radius: 20px;
+        background: none;
+        border: 2px solid gray;
+        position: absolute;
+        left: 20px;
+        bottom: 9px;
+      }
+      input[type="radio"]:checked + label:before{
+        background: $verde_principal;
       }
     }
   }

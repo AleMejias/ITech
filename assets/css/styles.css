@@ -68,7 +68,8 @@ Enlace al shop de nuestra pagina
   background-color: #fafafa;
   padding: 10px;
   font-size: 14px;
-  color: #7c7c7c; }
+  color: #7c7c7c;
+  box-shadow: 0px 2px 4px rgba(219, 219, 219, 0.8); }
   .shop .shop__contenedor {
     display: flex;
     justify-content: center; }
@@ -301,36 +302,61 @@ PIE DE PAGINA
       font-size: 15px;
       color: #393939; }
 
+/* 
+**************************************************************************************
+ESTILOS PARA LA TIENDA
+**************************************************************************************
+*/
 .productos {
-  height: 400px; }
-  .productos aside {
-    height: 200px; }
-    .productos aside .productos__barraBusqueda {
-      border: 2px solid orange; }
-    .productos aside .productos__categorias .productos__categorias--form {
+  height: 400px;
+  height: 200px; }
+  .productos .productos__barraBusqueda {
+    padding: 10px; }
+    .productos .productos__barraBusqueda form {
       display: flex;
-      flex-direction: column; }
-      .productos aside .productos__categorias .productos__categorias--form input[type="radio"] {
-        display: none; }
-      .productos aside .productos__categorias .productos__categorias--form label {
-        /* display: inline-block; */
-        color: #393939;
-        padding: 5px 15px 5px 45px;
-        position: relative;
-        cursor: pointer; }
-      .productos aside .productos__categorias .productos__categorias--form label:before {
-        content: "";
-        width: 15px;
-        height: 15px;
-        /* display: inline-block; */
-        border-radius: 20px;
-        background: none;
-        border: 2px solid gray;
-        position: absolute;
-        left: 20px;
-        bottom: 9px; }
-      .productos aside .productos__categorias .productos__categorias--form input[type="radio"]:checked + label:before {
-        background: #08acaf; }
+      justify-content: center;
+      width: 100%; }
+    .productos .productos__barraBusqueda input {
+      width: 90%;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      border: none;
+      box-shadow: 0px 2px 4px rgba(219, 219, 219, 0.8);
+      padding: 10px;
+      border-radius: 6px;
+      outline: none; }
+  .productos .productos__categorias .productos__categorias--titulo {
+    padding: 4px 5px;
+    font-family: "Roboto";
+    font-size: 17px;
+    font-weight: 600;
+    border-left: 3px solid #08acaf; }
+  .productos .productos__categorias .productos__categorias--form {
+    display: flex;
+    flex-direction: column; }
+    .productos .productos__categorias .productos__categorias--form input[type="radio"] {
+      display: none; }
+    .productos .productos__categorias .productos__categorias--form label {
+      /* display: inline-block; */
+      font-family: "Roboto";
+      color: #393939;
+      padding: 5px 15px 5px 45px;
+      position: relative;
+      cursor: pointer; }
+    .productos .productos__categorias .productos__categorias--form label:before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      /* display: inline-block; */
+      border-radius: 20px;
+      background: none;
+      border: 2px solid gray;
+      position: absolute;
+      left: 20px;
+      bottom: 9px; }
+    .productos .productos__categorias .productos__categorias--form input[type="radio"]:checked + label:before {
+      background: #08acaf; }
 
 /* 
 **************************************************************************************

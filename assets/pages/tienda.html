@@ -73,17 +73,17 @@
                 </div>
             </div>
         </section>
-        <section class="container mt-3 productos">
+        <section class="container mt-3 productos mt-5">
             <div class="row">
                 <aside class="col-md-3">
-                    <div class="productos__barraBusqueda">
-                        <form action="">
-                            <input type="text" name="busqueda" id="">
+                    <div class="productos__barraBusqueda mb-4">
+                        <form action="" class="productos__barraBusqueda--form">
+                            <input type="text" name="busqueda" placeholder = "BUSCAR" id="">
                         </form>
                     </div>
                     <div class="productos__categorias">
-                        <h4 class="productos__categorias--titulo">Categorias</h4>
-                        <form action="" class="productos__categorias--form">
+                        <h4 class="productos__categorias--titulo">CATEGORIAS</h4>
+                        <form action="" class="productos__categorias--form mt-3">
                           <input type="radio" name="categoria" id="celulares">
                           <label for="celulares">Celulares</label>
 
@@ -95,9 +95,18 @@
                         </form>
                     </div>
                 </aside>
-                <div class="col-md-9" style="border: 2px solid green;height: 200px;">
-
-                </div>
+                <section class="col-md-9" style="border: 2px solid green;height: 200px;">
+                  <div style="border: 2px solid red;">
+                    <nav>
+                      <span>
+                        <i class="fas fa-th-large"></i>
+                      </span>
+                      <span>
+                        <i class="fas fa-grip-lines-vertical"></i>
+                      </span>
+                    </nav>
+                  </div>
+                </section>
             </div>
         </section>
     </main>
