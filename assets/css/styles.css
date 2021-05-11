@@ -301,28 +301,35 @@ PIE DE PAGINA
       font-size: 15px;
       color: #393939; }
 
+.radioButton {
+  background-color: #08acaf; }
+
 .productos {
   height: 400px; }
   .productos aside {
     height: 200px; }
     .productos aside .productos__barraBusqueda {
       border: 2px solid orange; }
-  .productos .productos__categorias .productos__categorias--lista {
-    padding: 3px 5px; }
-  .productos .productos__categorias li {
-    position: relative;
-    margin: 4px;
-    color: #393939;
-    font-family: "Roboto";
-    font-size: 15px; }
-  .productos .productos__categorias i {
-    position: absolute;
-    font-size: 14px;
-    cursor: pointer;
-    padding: -5px;
-    border-radius: 20px;
-    right: 77px;
-    bottom: 3px; }
+  .productos .productos__categorias {
+    /*     li{
+      position: relative;
+      margin: 4px;
+      color: $negro_opaco;
+      font-family: "Roboto";
+      font-size: 15px;
+
+    }
+    i{
+      position: absolute;
+      font-size: 14px;
+      cursor: pointer;
+      padding: -5px;
+      border-radius: 20px;
+      right: 77px;
+      bottom: 3px;
+    } */ }
+    .productos .productos__categorias .productos__categorias--lista {
+      padding: 3px 5px; }
 
 /* 
 **************************************************************************************
@@ -331,6 +338,3 @@ Clase para mostrar/quitar elementos segun corresponda
 */
 .activada {
   display: none; }
-
-.radioButton {
-  border-color: #08acaf; }

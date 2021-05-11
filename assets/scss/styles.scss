@@ -393,6 +393,10 @@ PIE DE PAGINA
     }
   }
 }
+
+.radioButton{
+  background-color: $verde_principal;
+}
 .productos{
   height:400px;
   aside{
@@ -405,7 +409,7 @@ PIE DE PAGINA
     .productos__categorias--lista{
       padding: 3px 5px;
     }
-    li{
+/*     li{
       position: relative;
       margin: 4px;
       color: $negro_opaco;
@@ -421,7 +425,7 @@ PIE DE PAGINA
       border-radius: 20px;
       right: 77px;
       bottom: 3px;
-    }
+    } */
   }
 }
 /* 
@@ -431,7 +435,4 @@ Clase para mostrar/quitar elementos segun corresponda
 */
 .activada{
   display: none;
-}
-.radioButton{
-  border-color: $verde_principal;
 }
