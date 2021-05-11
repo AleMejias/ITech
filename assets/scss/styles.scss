@@ -394,38 +394,44 @@ PIE DE PAGINA
   }
 }
 
-.radioButton{
-  background-color: $verde_principal;
-}
 .productos{
   height:400px;
   aside{
     height: 200px;
     .productos__barraBusqueda{
       border: 2px solid orange;
-    } 
-  }
-  .productos__categorias{
-    .productos__categorias--lista{
-      padding: 3px 5px;
     }
-/*     li{
-      position: relative;
-      margin: 4px;
-      color: $negro_opaco;
-      font-family: "Roboto";
-      font-size: 15px;
-
+    .productos__categorias{
+      .productos__categorias--form{
+        display: flex;
+        flex-direction: column;
+        input[type="radio"]{
+          display: none;
+        }
+        label{
+          /* display: inline-block; */
+          color: $negro_opaco;
+          padding: 5px 15px 5px 45px;
+          position: relative;
+          cursor: pointer;
+        }
+        label:before{
+          content: "";
+          width: 15px;
+          height: 15px;
+          /* display: inline-block; */
+          border-radius: 20px;
+          background: none;
+          border: 2px solid gray;
+          position: absolute;
+          left: 20px;
+          bottom: 9px;
+        }
+        input[type="radio"]:checked + label:before{
+          background: $verde_principal;
+        }
+      }
     }
-    i{
-      position: absolute;
-      font-size: 14px;
-      cursor: pointer;
-      padding: -5px;
-      border-radius: 20px;
-      right: 77px;
-      bottom: 3px;
-    } */
   }
 }
 /* 
