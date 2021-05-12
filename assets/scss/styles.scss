@@ -461,6 +461,36 @@ ESTILOS PARA LA TIENDA
       }
     }
   }
+  .productos__ordenamiento{
+    border: 1px solid green;
+    .productos__ordenamiento--contenedor{
+      display: flex;
+      border: 1px solid blue;
+      padding: 7px 7px;
+      .productos__ordenamiento--SpanCuadriculas{
+        padding: 4px 7px;
+        cursor: pointer;
+      }
+      .productos__ordenamiento--SpanCuadricula{
+        @extend .productos__ordenamiento--SpanCuadriculas;
+        padding: 4px 11px;
+        margin-left: 7px;
+      }
+      .productos__ordenamiento--iconoCuadriculas{
+        margin-left: 1px;
+        font-size: 18px;
+      }
+      .productos__ordenamiento--iconoCuadricula{
+        @extend .productos__ordenamiento--iconoCuadriculas;
+        margin-left: 1px;
+        margin-top: 4px;
+      }
+      .productos__ordenamiento--form{
+        margin-left: 30px;
+        border: 1px solid red;
+      }
+    }
+  }
 }
 /* 
 **************************************************************************************
@@ -469,4 +499,7 @@ Clase para mostrar/quitar elementos segun corresponda
 */
 .activada{
   display: none;
+}
+.cuadriculaActiva{
+  border: 1px solid $verde_principal;
 }

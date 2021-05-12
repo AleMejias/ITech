@@ -95,16 +95,21 @@
                         </form>
                     </div>
                 </aside>
-                <section class="col-md-9" style="border: 2px solid green;height: 200px;">
-                  <div style="border: 2px solid red;">
-                    <nav>
-                      <span>
-                        <i class="fas fa-th-large"></i>
-                      </span>
-                      <span>
-                        <i class="fas fa-grip-lines-vertical"></i>
-                      </span>
-                    </nav>
+                <section class="col-md-9 productos__ordenamiento">
+                  <div class="productos__ordenamiento--contenedor">
+                    <span class="productos__ordenamiento--SpanCuadriculas cuadriculaActiva">
+                      <i class="fas fa-th-large productos__ordenamiento--iconoCuadriculas"></i>
+                    </span>
+                    <span class="productos__ordenamiento--SpanCuadricula">
+                      <i class="fas fa-grip-lines-vertical productos__ordenamiento--iconoCuadricula"></i>
+                    </span>
+                    <form action="#" class="productos__ordenamiento--form">
+                      <select name="ordenamiento" id="ordenamiento">
+                        <option value="default">Orden predeterminado</option>
+                        <option value="default">Por menor precio</option>
+                        <option value="default">Por mayor precio</option>
+                      </select>
+                    </form>
                   </div>
                 </section>
             </div>
