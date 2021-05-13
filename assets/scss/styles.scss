@@ -437,7 +437,6 @@ ESTILOS PARA LA TIENDA
         display: none;
       }
       label{
-        /* display: inline-block; */
         font-family: "Roboto";
         color: $negro_opaco;
         padding: 5px 15px 5px 45px;
@@ -448,7 +447,6 @@ ESTILOS PARA LA TIENDA
         content: "";
         width: 15px;
         height: 15px;
-        /* display: inline-block; */
         border-radius: 20px;
         background: none;
         border: 2px solid gray;
@@ -462,34 +460,40 @@ ESTILOS PARA LA TIENDA
     }
   }
   .productos__ordenamiento{
-    border: 1px solid green;
-    .productos__ordenamiento--contenedor{
+    display: flex;
+    padding: 11px;
+    .productos__ordenamiento--contenedorCuadriculas,
+    .productos__ordenamiento--contenedorCuadricula{
       display: flex;
-      border: 1px solid blue;
-      padding: 7px 7px;
-      .productos__ordenamiento--SpanCuadriculas{
-        padding: 4px 7px;
-        cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
+    .productos__ordenamiento--form{
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+      padding: 3px 3px;
+      width: 100%;
+      height: 35px;
+      box-shadow: 0px 2px 4px rgba(219 ,219 ,219,0.8);
+      select,
+      option{
+        border: none;
+        color: $negro_opaco;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: 'Roboto';
       }
-      .productos__ordenamiento--SpanCuadricula{
-        @extend .productos__ordenamiento--SpanCuadriculas;
-        padding: 4px 11px;
-        margin-left: 7px;
-      }
-      .productos__ordenamiento--iconoCuadriculas{
-        margin-left: 1px;
-        font-size: 18px;
-      }
-      .productos__ordenamiento--iconoCuadricula{
-        @extend .productos__ordenamiento--iconoCuadriculas;
-        margin-left: 1px;
-        margin-top: 4px;
-      }
-      .productos__ordenamiento--form{
-        margin-left: 30px;
-        border: 1px solid red;
+      option{
+        font-weight: 400;
       }
     }
+  }
+  .productos__contenedor{
+    border: 1px solid red;
   }
 }
 /* 
