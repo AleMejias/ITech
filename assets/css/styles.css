@@ -308,8 +308,7 @@ ESTILOS PARA LA TIENDA
 **************************************************************************************
 */
 .productos {
-  height: 400px;
-  height: 200px; }
+  height: auto; }
   .productos .productos__barraBusqueda {
     padding: 10px; }
     .productos .productos__barraBusqueda form {
@@ -357,6 +356,7 @@ ESTILOS PARA LA TIENDA
       background: #08acaf; }
   .productos .productos__ordenamiento {
     display: flex;
+    flex-wrap: wrap;
     padding: 11px; }
     .productos .productos__ordenamiento .productos__ordenamiento--contenedorCuadriculas,
     .productos .productos__ordenamiento .productos__ordenamiento--contenedorCuadricula {
@@ -371,7 +371,7 @@ ESTILOS PARA LA TIENDA
       align-items: center;
       margin-left: 30px;
       padding: 3px 3px;
-      width: 100%;
+      width: 80%;
       height: 35px;
       box-shadow: 0px 2px 4px rgba(219, 219, 219, 0.8); }
       .productos .productos__ordenamiento .productos__ordenamiento--form select,
@@ -384,7 +384,21 @@ ESTILOS PARA LA TIENDA
       .productos .productos__ordenamiento .productos__ordenamiento--form option {
         font-weight: 400; }
   .productos .productos__contenedor {
-    border: 1px solid red; }
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 5px 0px; }
+    .productos .productos__contenedor .productos__contenedor--article {
+      border: 1px solid blue;
+      width: 47%; }
+      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg {
+        display: flex;
+        justify-content: center;
+        width: 100%; }
+        .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg img {
+          width: 190px;
+          height: 210px; }
 
 /* 
 **************************************************************************************
