@@ -384,11 +384,13 @@ ESTILOS PARA LA TIENDA
       .productos .productos__ordenamiento .productos__ordenamiento--form option {
         font-weight: 400; }
   .productos .productos__contenedor {
-    border: 1px solid red;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
-    padding: 5px 0px; }
+    padding: 5px 0px;
+    /*     border: 1px solid red; */
+    box-shadow: 1px 2px 6px 3px rgba(219, 219, 219, 0.5); }
     .productos .productos__contenedor .productos__contenedor--article {
       border: 1px solid blue;
       width: 47%; }
@@ -399,6 +401,30 @@ ESTILOS PARA LA TIENDA
         .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg img {
           width: 190px;
           height: 210px; }
+      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3px; }
+        .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion h4,
+        .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion span {
+          color: #393939;
+          font-weight: 600; }
+      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorBoton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px; }
+        .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorBoton button {
+          padding: 8px;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+          background-color: #08acaf;
+          color: #e9ecef;
+          font-size: 17px;
+          font-family: "Roboto";
+          font-weight: 400; }
 
 /* 
 **************************************************************************************
