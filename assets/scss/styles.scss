@@ -470,6 +470,7 @@ ESTILOS PARA LA TIENDA
       width: 30px;
       height: 30px;
       margin-right: 5px;
+      cursor: pointer;
     }
     .productos__ordenamiento--form{
       display: flex;
@@ -502,7 +503,7 @@ ESTILOS PARA LA TIENDA
     box-shadow: 1px 2px 6px 3px rgba(219,219,219,0.5);
     .productos__contenedor--article{
       border: 1px solid blue;
-      width: 47%;
+      /* width: 47%; */
       .productos__contenedor--contenedorImg{
         display: flex;
         justify-content: center;
@@ -554,4 +555,10 @@ Clase para mostrar/quitar elementos segun corresponda
 }
 .cuadriculaActiva{
   border: 1px solid $verde_principal;
+}
+.cuadriculaMultiple{
+  width: 47%;
+}
+.cuadriculaUnica{
+  width: 100%;
 }

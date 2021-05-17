@@ -85,22 +85,22 @@
                         <h4 class="productos__categorias--titulo">CATEGORIAS</h4>
                         <form action="" class="productos__categorias--form mt-3">
                           <input type="radio" name="categoria" id="celulares">
-                          <label for="celulares">Celulares</label>
+                          <label for="celulares" class="btn__categorias">Celulares</label>
 
                           <input type="radio" name="categoria" id="tablets">
-                          <label for="tablets">Tablets</label>
+                          <label for="tablets" class="btn__categorias">Tablets</label>
 
                           <input type="radio" name="categoria" id="appleWatch">
-                          <label for="appleWatch">Apple Watch</label>
+                          <label for="appleWatch"  class="btn__categorias">Apple Watch</label>
                         </form>
                     </div>
                 </aside>
                 <section class="col-md-9 productos__ordenamiento">
-                  <div class="productos__ordenamiento--contenedorCuadriculas">
-                    <i class="fas fa-th-large"></i>
+                  <div class="productos__ordenamiento--contenedorCuadriculas cuadriculaActiva tipoDeCuadricula" id ="cuadriculaMultiple" data-cuadricula = "multiple">
+                    <i class="fas fa-th-large" data-cuadricula = "multiple"></i>
                   </div>
-                  <div class="productos__ordenamiento--contenedorCuadricula">
-                    <i class="fas fa-grip-lines-vertical"></i>
+                  <div class="productos__ordenamiento--contenedorCuadricula tipoDeCuadricula" id ="cuadriculaUnica" data-cuadricula = "unica">
+                    <i class="fas fa-grip-lines-vertical" data-cuadricula = "unica"></i>
                   </div>
                   <form action="#" class="productos__ordenamiento--form">
                     <select name="ordenamiento" id="ordenamiento">
@@ -109,8 +109,8 @@
                       <option value="mayor">Por mayor precio</option>
                     </select>
                   </form>
-                  <section class="productos__contenedor mt-4">
-                    <article class="productos__contenedor--article mt-4">
+                  <section class="productos__contenedor mt-4" id = "productosContenedor">
+                    <article class="productos__contenedor--article cuadriculaMultiple mt-4" data-categorias = "Celulares">
                       <div class="productos__contenedor--contenedorImg">
                         <img class="productos__contenedor--img" src="../img/home/iphone12pro-1.jpg" alt="">
                       </div>
@@ -122,7 +122,7 @@
                         <button>Agregar al carrito</button>
                       </div>
                     </article>
-                    <article class="productos__contenedor--article mt-4">
+                    <article class="productos__contenedor--article cuadriculaMultiple mt-4" data-categorias = "Celulares">
                       <div class="productos__contenedor--contenedorImg">
                         <img class="productos__contenedor--img" src="../img/home/iphonese-2.jpg" alt="">
                       </div>
@@ -134,7 +134,7 @@
                         <button>Agregar al carrito</button>
                       </div>
                     </article>
-                    <article class="productos__contenedor--article mt-4">
+                    <article class="productos__contenedor--article cuadriculaMultiple mt-4"  data-categorias = "Tablets">
                       <div class="productos__contenedor--contenedorImg">
                         <img class="productos__contenedor--img" src="../img/home/ipadpro-2.jpg" alt="">
                       </div>
@@ -146,7 +146,7 @@
                         <button>Agregar al carrito</button>
                       </div>
                     </article>
-                    <article class="productos__contenedor--article mt-4">
+                    <article class="productos__contenedor--article cuadriculaMultiple mt-4"  data-categorias = "Apple Watch">
                       <div class="productos__contenedor--contenedorImg">
                         <img class="productos__contenedor--img" src="../img/home/watch-1.jpg" alt="">
                       </div>
