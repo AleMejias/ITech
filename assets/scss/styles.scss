@@ -499,19 +499,12 @@ ESTILOS PARA LA TIENDA
     justify-content: space-evenly;
     width: 100%;
     padding: 5px 0px;
-/*     border: 1px solid red; */
     box-shadow: 1px 2px 6px 3px rgba(219,219,219,0.5);
     .productos__contenedor--article{
-      border: 1px solid blue;
-      /* width: 47%; */
       .productos__contenedor--contenedorImg{
         display: flex;
         justify-content: center;
         width: 100%;
-        img{
-          width: 190px;
-          height: 210px;
-        }
       }
       .productos__contenedor--contenedorDescripcion{
         display: flex;
@@ -558,7 +551,15 @@ Clase para mostrar/quitar elementos segun corresponda
 }
 .cuadriculaMultiple{
   width: 47%;
+  img{
+    width: 190px;
+    height: 210px;
+  }
 }
 .cuadriculaUnica{
   width: 100%;
+  img{
+    width: 250px;
+    height: 290px;
+  }
 }
