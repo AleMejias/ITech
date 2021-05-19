@@ -402,26 +402,8 @@ ESTILOS PARA LA TIENDA
 */
 .productos{
   height: auto;
-  .productos__barraBusqueda{
-    padding: 10px;
-    form{
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-    input{
-      width: 90%;
-      text-align: center;
-      font-size: 12px;
-      font-weight: 600;
-      border: none;
-      box-shadow: 0px 2px 4px rgba(219, 219, 219,0.8);
-      padding: 10px;
-      border-radius: 6px;
-      outline: none;
-    }
-  }
   .productos__categorias{
+    margin-top: 7px;
     .productos__categorias--titulo{
       padding: 4px 5px;
       font-family: "Roboto";
@@ -475,21 +457,20 @@ ESTILOS PARA LA TIENDA
     .productos__ordenamiento--form{
       display: flex;
       align-items: center;
-      margin-left: 30px;
+      margin-left: 15px;
       padding: 3px 3px;
-      width: 80%;
-      height: 35px;
+      width: 70%;
+      height: 32px;
       box-shadow: 0px 2px 4px rgba(219 ,219 ,219,0.8);
-      select,
-      option{
+      input{
+        width: 100%;
+        outline: none;
         border: none;
-        color: $negro_opaco;
-        font-size: 15px;
+        border-radius: 9px;
+        text-align: center;
+        font-size: 13px;
         font-weight: 600;
         font-family: 'Roboto';
-      }
-      option{
-        font-weight: 400;
       }
     }
   }

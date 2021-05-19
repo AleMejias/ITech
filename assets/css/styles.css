@@ -309,51 +309,37 @@ ESTILOS PARA LA TIENDA
 */
 .productos {
   height: auto; }
-  .productos .productos__barraBusqueda {
-    padding: 10px; }
-    .productos .productos__barraBusqueda form {
-      display: flex;
-      justify-content: center;
-      width: 100%; }
-    .productos .productos__barraBusqueda input {
-      width: 90%;
-      text-align: center;
-      font-size: 12px;
-      font-weight: 600;
-      border: none;
-      box-shadow: 0px 2px 4px rgba(219, 219, 219, 0.8);
-      padding: 10px;
-      border-radius: 6px;
-      outline: none; }
-  .productos .productos__categorias .productos__categorias--titulo {
-    padding: 4px 5px;
-    font-family: "Roboto";
-    font-size: 17px;
-    font-weight: 600;
-    border-left: 3px solid #08acaf; }
-  .productos .productos__categorias .productos__categorias--form {
-    display: flex;
-    flex-direction: column; }
-    .productos .productos__categorias .productos__categorias--form input[type="radio"] {
-      display: none; }
-    .productos .productos__categorias .productos__categorias--form label {
+  .productos .productos__categorias {
+    margin-top: 7px; }
+    .productos .productos__categorias .productos__categorias--titulo {
+      padding: 4px 5px;
       font-family: "Roboto";
-      color: #393939;
-      padding: 5px 15px 5px 45px;
-      position: relative;
-      cursor: pointer; }
-    .productos .productos__categorias .productos__categorias--form label:before {
-      content: "";
-      width: 15px;
-      height: 15px;
-      border-radius: 20px;
-      background: none;
-      border: 2px solid gray;
-      position: absolute;
-      left: 20px;
-      bottom: 9px; }
-    .productos .productos__categorias .productos__categorias--form input[type="radio"]:checked + label:before {
-      background: #08acaf; }
+      font-size: 17px;
+      font-weight: 600;
+      border-left: 3px solid #08acaf; }
+    .productos .productos__categorias .productos__categorias--form {
+      display: flex;
+      flex-direction: column; }
+      .productos .productos__categorias .productos__categorias--form input[type="radio"] {
+        display: none; }
+      .productos .productos__categorias .productos__categorias--form label {
+        font-family: "Roboto";
+        color: #393939;
+        padding: 5px 15px 5px 45px;
+        position: relative;
+        cursor: pointer; }
+      .productos .productos__categorias .productos__categorias--form label:before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
+        background: none;
+        border: 2px solid gray;
+        position: absolute;
+        left: 20px;
+        bottom: 9px; }
+      .productos .productos__categorias .productos__categorias--form input[type="radio"]:checked + label:before {
+        background: #08acaf; }
   .productos .productos__ordenamiento {
     display: flex;
     flex-wrap: wrap;
@@ -370,20 +356,20 @@ ESTILOS PARA LA TIENDA
     .productos .productos__ordenamiento .productos__ordenamiento--form {
       display: flex;
       align-items: center;
-      margin-left: 30px;
+      margin-left: 15px;
       padding: 3px 3px;
-      width: 80%;
-      height: 35px;
+      width: 70%;
+      height: 32px;
       box-shadow: 0px 2px 4px rgba(219, 219, 219, 0.8); }
-      .productos .productos__ordenamiento .productos__ordenamiento--form select,
-      .productos .productos__ordenamiento .productos__ordenamiento--form option {
+      .productos .productos__ordenamiento .productos__ordenamiento--form input {
+        width: 100%;
+        outline: none;
         border: none;
-        color: #393939;
-        font-size: 15px;
+        border-radius: 9px;
+        text-align: center;
+        font-size: 13px;
         font-weight: 600;
         font-family: 'Roboto'; }
-      .productos .productos__ordenamiento .productos__ordenamiento--form option {
-        font-weight: 400; }
   .productos .productos__contenedor {
     display: flex;
     flex-wrap: wrap;

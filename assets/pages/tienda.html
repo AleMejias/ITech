@@ -76,11 +76,11 @@
         <section class="container mt-3 productos mt-5">
             <div class="row">
                 <aside class="col-md-3">
-                    <div class="productos__barraBusqueda mb-4">
+<!--                     <div class="productos__barraBusqueda mb-4">
                         <form action="" class="productos__barraBusqueda--form">
                             <input type="text" name="busqueda" placeholder = "BUSCAR" id="">
                         </form>
-                    </div>
+                    </div> -->
                     <div class="productos__categorias">
                         <h4 class="productos__categorias--titulo">CATEGORIAS</h4>
                         <form action="" class="productos__categorias--form mt-3">
@@ -104,17 +104,22 @@
                   <div class="productos__ordenamiento--contenedorCuadricula tipoDeCuadricula" id ="cuadriculaUnica" data-cuadricula = "unica">
                     <i class="fas fa-grip-lines-vertical" data-cuadricula = "unica"></i>
                   </div>
-                  <form action="#" class="productos__ordenamiento--form">
+                  <form action="" class="productos__ordenamiento--form">
+                      <input type="text" name="busqueda" placeholder = "BUSCAR" id="">
+                  </form>
+                
+<!--                   <form action="#" class="productos__ordenamiento--form">
                     <select name="ordenamiento" id="ordenamiento">
                       <option value="default">Orden predeterminado</option>
                       <option value="menor">Por menor precio</option>
                       <option value="mayor">Por mayor precio</option>
                     </select>
-                  </form>
+                  </form> -->
                   <section class="productos__contenedor mt-4" id = "productosContenedor">
                     <!-- 
                       SE CARGARAN DINAMICAMENTE LAS CARDS DE PRODUCTOS DESDE JAVASCRIPT
                      -->
+                  </section>
                 </section>
             </div>
         </section>

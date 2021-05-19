@@ -73,7 +73,7 @@ btnCuadricula.forEach((boton) => {
     });
 });
 /* ORDENAMIENTO MEDIANTE LA ETIQUETA SELECT */
-const ordenarProductos = (tipoDeOrden,arrProductos) => {
+/* const ordenarProductos = (tipoDeOrden,arrProductos) => {
     console.log(tipoDeOrden)
 
     if(tipoDeOrden == "menor"){
@@ -86,6 +86,7 @@ let select = document.querySelector("#ordenamiento");
 select.addEventListener("change",(e) => {
     ordenarProductos(e.target.value,DATA);
 }); 
+ */
 /* EVENTO PARA CAMBIO DINAMICO DE IMAGEN AL HACER HOVER */
 let img = document.querySelectorAll(".productos__contenedor--img");
 img.forEach((data) => {
