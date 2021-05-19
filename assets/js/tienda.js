@@ -30,7 +30,6 @@ const mostrarCards = (categoria) => {
     console.log(categoria)
     cardsProductos.forEach((cards) => {
         let tipoDeCard = cards.getAttribute("data-categorias");
-        console.warn(tipoDeCard)
         if(categoria == "Todos"){
             if(cards.classList.contains("activada")){
                 cards.classList.remove("activada");
@@ -55,7 +54,6 @@ btnCuadricula.forEach((boton) => {
         let cuadriculaUnica = document.querySelector("#cuadriculaUnica");
         let cuadriculaMultiple = document.querySelector("#cuadriculaMultiple");
         cardsProductos.forEach((card) => {
-            console.log(card);
             switch(seleccion){
                 case "multiple":
                     cuadriculaUnica.classList.remove("cuadriculaActiva");
@@ -63,7 +61,6 @@ btnCuadricula.forEach((boton) => {
                     if(card.classList.contains("cuadriculaUnica")){
                         card.classList.remove("cuadriculaUnica");
                         card.classList.add("cuadriculaMultiple");
-                        console.log("Entro a la opcion 1");
                     }
                     break;
                 default:
@@ -71,7 +68,6 @@ btnCuadricula.forEach((boton) => {
                     cuadriculaUnica.classList.add("cuadriculaActiva");
                     card.classList.remove("cuadriculaMultiple");
                     card.classList.add("cuadriculaUnica");
-                    console.log("Entro a la opcion 2");
             }
         });
     });
@@ -79,13 +75,12 @@ btnCuadricula.forEach((boton) => {
 /* ORDENAMIENTO MEDIANTE LA ETIQUETA SELECT */
 const ordenarProductos = (tipoDeOrden,arrProductos) => {
     console.log(tipoDeOrden)
-    contenedorProductos.innerHTML = " ";
+
     if(tipoDeOrden == "menor"){
         arrProductos.sort((a,b) => a.precio - b.precio);
     }else if(tipoDeOrden == "mayor"){
         arrProductos.sort((a,b) => b.precio - a.precio);
     }
-    imprimirDatos();
 };
 let select = document.querySelector("#ordenamiento");
 select.addEventListener("change",(e) => {
