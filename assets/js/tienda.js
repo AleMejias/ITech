@@ -2,32 +2,34 @@ let contenedorProductos = document.querySelector("#productosContenedor");
 let btnCategorias = document.querySelectorAll(".btn__categorias");
 let btnCuadricula = document.querySelectorAll(".tipoDeCuadricula");
 
-const imprimirDatos = () => {
+const crearPlantilla = (producto) => {
+    contenedorProductos.innerHTML += `
+    <article class="productos__contenedor--article cuadriculaMultiple mt-4" data-categorias = "${producto.categoria}">
+        <div class="productos__contenedor--contenedorImg">
+            <img class="productos__contenedor--img" src="${producto.ruta}" alt="${producto.nombre}">
+        </div>
+        <div class="productos__contenedor--contenedorDescripcion">
+            <h4>${producto.nombre}</h4>
+            <span>$${producto.precio}</span>
+        </div>
+        <div class="productos__contenedor--contenedorBoton">
+            <button>Agregar al carrito</button>
+        </div>
+    </article>
+    `;
+}
+const cargarCardsPorDefecto = () => {
     for(const productos of DATA){
-        contenedorProductos.innerHTML += `
-        <article class="productos__contenedor--article cuadriculaMultiple mt-4" data-categorias = "${productos.categoria}">
-            <div class="productos__contenedor--contenedorImg">
-                <img class="productos__contenedor--img" src="${productos.ruta}" alt="${productos.nombre}">
-            </div>
-            <div class="productos__contenedor--contenedorDescripcion">
-                <h4>${productos.nombre}</h4>
-                <span>$${productos.precio}</span>
-            </div>
-            <div class="productos__contenedor--contenedorBoton">
-                <button>Agregar al carrito</button>
-            </div>
-        </article>
-        `;
+        crearPlantilla(productos);
     }
 };
 
 /* FUNCION AUTO INVOCADA QUE ME PINTARA LAS CARDS CON LOS DATOS TRAIDOS DEL ARRAYS DE PRODUCTOS */
 (() => { 
-    imprimirDatos();
+    cargarCardsPorDefecto();
 })();
 let cardsProductos = document.querySelectorAll(".productos__contenedor--article");
 const mostrarCards = (categoria) => {
-    console.log(categoria)
     cardsProductos.forEach((cards) => {
         let tipoDeCard = cards.getAttribute("data-categorias");
         if(categoria == "Todos"){
@@ -104,3 +106,18 @@ img.forEach((data) => {
     });
   });
 });
+
+/* EVENTO PARA CAPTURAR LOS VALOS DE LA BARRA DE BUSQUEDA */
+let busqueda = document.querySelector("#barra-busqueda");
+let form = document.querySelector("#form");
+let buscar = document.querySelector("#buscar");
+
+busqueda.addEventListener("input",(e) =>{
+    /* ANULO EL ENVIO DEL FORMULARIO CON LA TECLA ENTER */
+    form.addEventListener("keypress",(tecla) => {
+        tecla.key == "Enter" ? tecla.preventDefault() : "";
+    })
+    buscar.addEventListener("click",() =>{
+        let valorDelInput = e.target.value;
+    });
+})

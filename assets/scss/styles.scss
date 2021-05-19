@@ -472,6 +472,11 @@ ESTILOS PARA LA TIENDA
         font-weight: 600;
         font-family: 'Roboto';
       }
+      i{
+        padding: 5px 0px;
+        cursor: pointer;
+        color: $negro_opaco;
+      }
     }
   }
   .productos__contenedor{

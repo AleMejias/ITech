@@ -370,6 +370,10 @@ ESTILOS PARA LA TIENDA
         font-size: 13px;
         font-weight: 600;
         font-family: 'Roboto'; }
+      .productos .productos__ordenamiento .productos__ordenamiento--form i {
+        padding: 5px 0px;
+        cursor: pointer;
+        color: #393939; }
   .productos .productos__contenedor {
     display: flex;
     flex-wrap: wrap;
