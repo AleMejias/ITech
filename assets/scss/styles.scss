@@ -454,6 +454,10 @@ ESTILOS PARA LA TIENDA
       margin-right: 5px;
       cursor: pointer;
     }
+    .productos__ordenamiento--contenedorCuadriculas:hover,
+    .productos__ordenamiento--contenedorCuadricula:hover{
+      border: 1px solid $verde_principal;
+    }
     .productos__ordenamiento--form{
       display: flex;
       align-items: center;
@@ -486,6 +490,29 @@ ESTILOS PARA LA TIENDA
     width: 100%;
     padding: 5px 0px;
     box-shadow: 1px 2px 6px 3px rgba(219,219,219,0.5);
+    .productos__contenedor--seccionError{
+      width: 100%;
+      height: 200px;
+      border: 1px solid red;
+      padding: 10px 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      div{
+        display: flex;
+        justify-content: center;
+      }
+      h3{
+        color: $negro_opaco;
+        font-family: "Roboto";
+      }
+      span{
+        color: $negro_opaco;
+        font-family: "Roboto";
+        border: 1px solid green;
+        text-align: center;
+      }
+    }
     .productos__contenedor--article{
       .productos__contenedor--contenedorImg{
         display: flex;

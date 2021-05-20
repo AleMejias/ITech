@@ -353,6 +353,9 @@ ESTILOS PARA LA TIENDA
       height: 30px;
       margin-right: 5px;
       cursor: pointer; }
+    .productos .productos__ordenamiento .productos__ordenamiento--contenedorCuadriculas:hover,
+    .productos .productos__ordenamiento .productos__ordenamiento--contenedorCuadricula:hover {
+      border: 1px solid #08acaf; }
     .productos .productos__ordenamiento .productos__ordenamiento--form {
       display: flex;
       align-items: center;
@@ -381,6 +384,25 @@ ESTILOS PARA LA TIENDA
     width: 100%;
     padding: 5px 0px;
     box-shadow: 1px 2px 6px 3px rgba(219, 219, 219, 0.5); }
+    .productos .productos__contenedor .productos__contenedor--seccionError {
+      width: 100%;
+      height: 200px;
+      border: 1px solid red;
+      padding: 10px 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .productos .productos__contenedor .productos__contenedor--seccionError div {
+        display: flex;
+        justify-content: center; }
+      .productos .productos__contenedor .productos__contenedor--seccionError h3 {
+        color: #393939;
+        font-family: "Roboto"; }
+      .productos .productos__contenedor .productos__contenedor--seccionError span {
+        color: #393939;
+        font-family: "Roboto";
+        border: 1px solid green;
+        text-align: center; }
     .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg {
       display: flex;
       justify-content: center;

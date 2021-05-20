@@ -1,81 +1,107 @@
-let contenedorProductos = document.querySelector("#productosContenedor");
-let btnCategorias = document.querySelectorAll(".btn__categorias");
-let btnCuadricula = document.querySelectorAll(".tipoDeCuadricula");
+(() => {
+  let contenedorProductos = document.querySelector("#productosContenedor");
 
-const crearPlantilla = (producto) => {
+  const crearPlantilla = (producto) => {
     contenedorProductos.innerHTML += `
-    <article class="productos__contenedor--article cuadriculaMultiple mt-4" data-categorias = "${producto.categoria}">
-        <div class="productos__contenedor--contenedorImg">
-            <img class="productos__contenedor--img" src="${producto.ruta}" alt="${producto.nombre}">
-        </div>
-        <div class="productos__contenedor--contenedorDescripcion">
-            <h4>${producto.nombre}</h4>
-            <span>$${producto.precio}</span>
-        </div>
-        <div class="productos__contenedor--contenedorBoton">
-            <button>Agregar al carrito</button>
-        </div>
-    </article>
-    `;
-}
-const cargarCardsPorDefecto = () => {
-    for(const productos of DATA){
-        crearPlantilla(productos);
-    }
-};
-
-/* FUNCION AUTO INVOCADA QUE ME PINTARA LAS CARDS CON LOS DATOS TRAIDOS DEL ARRAYS DE PRODUCTOS */
-(() => { 
-    cargarCardsPorDefecto();
-})();
-let cardsProductos = document.querySelectorAll(".productos__contenedor--article");
-const mostrarCards = (categoria) => {
-    cardsProductos.forEach((cards) => {
-        let tipoDeCard = cards.getAttribute("data-categorias");
-        if(categoria == "Todos"){
-            if(cards.classList.contains("activada")){
-                cards.classList.remove("activada");
-            }
-        }else if(categoria != tipoDeCard){
-            cards.classList.add("activada");
-        }
-        else{
-            cards.classList.remove("activada");
-        }
-    });
-};
-
-btnCategorias.forEach((boton) => {
-    boton.addEventListener("click",(e) => {
-        mostrarCards(e.target.innerHTML);
-    });
-});
-btnCuadricula.forEach((boton) => {
-    boton.addEventListener("click",(e) =>{
-        let seleccion = e.target.getAttribute("data-cuadricula");
-        let cuadriculaUnica = document.querySelector("#cuadriculaUnica");
-        let cuadriculaMultiple = document.querySelector("#cuadriculaMultiple");
-        cardsProductos.forEach((card) => {
-            switch(seleccion){
-                case "multiple":
-                    cuadriculaUnica.classList.remove("cuadriculaActiva");
-                    cuadriculaMultiple.classList.add("cuadriculaActiva");
-                    if(card.classList.contains("cuadriculaUnica")){
-                        card.classList.remove("cuadriculaUnica");
-                        card.classList.add("cuadriculaMultiple");
-                    }
-                    break;
-                default:
-                    cuadriculaMultiple.classList.remove("cuadriculaActiva");
-                    cuadriculaUnica.classList.add("cuadriculaActiva");
-                    card.classList.remove("cuadriculaMultiple");
-                    card.classList.add("cuadriculaUnica");
-            }
+        <article class="productos__contenedor--article cuadriculaMultiple mt-4" data-categorias = "${producto.categoria}">
+            <div class="productos__contenedor--contenedorImg">
+                <img class="productos__contenedor--img" src="${producto.ruta}" alt="${producto.nombre}">
+            </div>
+            <div class="productos__contenedor--contenedorDescripcion">
+                <h4>${producto.nombre}</h4>
+                <span>$${producto.precio}</span>
+            </div>
+            <div class="productos__contenedor--contenedorBoton">
+                <button>Agregar al carrito</button>
+            </div>
+        </article>
+        `;
+    /* EVENTO PARA CAMBIO DINAMICO DE IMAGEN AL HACER HOVER */
+    let img = document.querySelectorAll(".productos__contenedor--img");
+    img.forEach((data) => {
+        //CAMBIO LA IMAGEN AL PASAR EL MOUSE POR ARRIBA
+        data.addEventListener("mouseover", (e) => {
+            let viejaURL = e.target.src;
+            let indice = viejaURL.indexOf("-");
+            let valorIndice = parseInt(viejaURL.slice(indice + 1, indice + 2)) + 1;
+            let rutaDefinitiva = viejaURL.split("-", 1);
+            rutaDefinitiva = `${rutaDefinitiva}-${valorIndice}.jpg`;
+            data.src = rutaDefinitiva;
+            //VUELVO A COLOCAR LA IMAGEN ANTERIOR
+            data.addEventListener("mouseout", () => {
+                data.src = viejaURL;
+            });
         });
     });
-});
-/* ORDENAMIENTO MEDIANTE LA ETIQUETA SELECT */
-/* const ordenarProductos = (tipoDeOrden,arrProductos) => {
+
+    /* EVENTO PARA CAMBIAR EL SENTIDO DE LAS CUADRICULAS DE LAS CARDS */
+    let btnCuadricula = document.querySelectorAll(".tipoDeCuadricula");
+    let cardsProductos = document.querySelectorAll(".productos__contenedor--article");
+    btnCuadricula.forEach((boton) => {
+      boton.addEventListener("click", (e) => {
+        let seleccion = e.target.getAttribute("data-cuadricula");
+        cardsProductos.forEach((card) => {
+          switch (seleccion) {
+            case "multiple":
+              if (card.classList.contains("cuadriculaUnica")) {
+                card.classList.remove("cuadriculaUnica");
+                card.classList.add("cuadriculaMultiple");
+              }
+              break;
+            default:
+              card.classList.remove("cuadriculaMultiple");
+              card.classList.add("cuadriculaUnica");
+          }
+        });
+      });
+    });
+  };
+  /* ESTA FUNCION SE ENCARGARA DE RECIBIR EL ARRAY DE OBJETOS Y EL VALOR QUE SE QUIERE CARGAR PARA LUEGO PINTARLO */
+  const cargarPlantilla = (arrProductos, categoriaRecibida) => {
+    let banderaDeError = false;
+    for (const producto of arrProductos) {
+      let nombre = producto.nombre.toLowerCase();
+      let categoria = producto.categoria.toLowerCase();
+      banderaDeError = false;
+      if (categoriaRecibida == "todos") {
+        crearPlantilla(producto);
+      } else if (categoria == categoriaRecibida) {
+        crearPlantilla(producto);
+      } else if (categoria.indexOf(categoriaRecibida) != -1 || nombre.indexOf(categoriaRecibida) != -1) {
+        crearPlantilla(producto);
+      }else{
+        banderaDeError = true;
+      }
+    }
+    if(banderaDeError && contenedorProductos.innerHTML == ""){
+        /* AQUI SE LLAMARA A LA FUNCION QUE PINTARA ERROR EN LA PANTALLA */
+        mensajeError();
+    }
+  };
+  cargarPlantilla(DATA, "todos"); /* LLAMO A ESTE FUNCION PARA QUE ME CARGUE LAS CARDS LA PRIMERA VEZ */
+
+  const mensajeError = () => {
+    contenedorProductos.innerHTML += `
+    <section class = "productos__contenedor--seccionError">
+        <div>
+            <h3>ATENCIÓN<i class="fas fa-exclamation-circle"></i></h3>
+        </div>
+        <span>SU BUSQUEDA NO ARROJÓ RESULTADOS</span>
+    </section>
+    
+    `;
+  };
+  /* EVENTO PARA CARGAR CARDS SEGUN LA CATEGORIA */
+  let btnCategorias = document.querySelectorAll(".btn__categorias");
+  btnCategorias.forEach((boton) => {
+    boton.addEventListener("click", (e) => {
+      contenedorProductos.innerHTML = "";
+      cargarPlantilla(DATA, e.target.innerHTML.toLowerCase());
+    });
+  });
+
+  /* ORDENAMIENTO MEDIANTE LA ETIQUETA SELECT */
+  /* const ordenarProductos = (tipoDeOrden,arrProductos) => {
     console.log(tipoDeOrden)
 
     if(tipoDeOrden == "menor"){
@@ -89,35 +115,24 @@ select.addEventListener("change",(e) => {
     ordenarProductos(e.target.value,DATA);
 }); 
  */
-/* EVENTO PARA CAMBIO DINAMICO DE IMAGEN AL HACER HOVER */
-let img = document.querySelectorAll(".productos__contenedor--img");
-img.forEach((data) => {
-  //CAMBIO LA IMAGEN AL PASAR EL MOUSE POR ARRIBA
-  data.addEventListener("mouseover",(e) => {
-    let viejaURL = e.target.src;
-    let indice = viejaURL.indexOf("-");
-    let valorIndice = parseInt(viejaURL.slice(indice+1,indice+2))+1;
-    let rutaDefinitiva = viejaURL.split("-",1);
-    rutaDefinitiva = `${rutaDefinitiva}-${valorIndice}.jpg`;
-    data.src = rutaDefinitiva;
-    //VUELVO A COLOCAR LA IMAGEN ANTERIOR
-    data.addEventListener("mouseout",() => {
-      data.src = viejaURL;
-    });
-  });
-});
 
-/* EVENTO PARA CAPTURAR LOS VALOS DE LA BARRA DE BUSQUEDA */
-let busqueda = document.querySelector("#barra-busqueda");
-let form = document.querySelector("#form");
-let buscar = document.querySelector("#buscar");
+  /* EVENTO PARA CAPTURAR LOS VALORES DE LA BARRA DE BUSQUEDA */
+  let form = document.querySelector("#form");
+  let iconoBusqueda = document.querySelector("#buscar");
 
-busqueda.addEventListener("input",(e) =>{
+  form.addEventListener("keypress", (tecla) => {
     /* ANULO EL ENVIO DEL FORMULARIO CON LA TECLA ENTER */
-    form.addEventListener("keypress",(tecla) => {
-        tecla.key == "Enter" ? tecla.preventDefault() : "";
-    })
-    buscar.addEventListener("click",() =>{
-        let valorDelInput = e.target.value;
-    });
-})
+    tecla.key == "Enter" ? tecla.preventDefault() : "";
+    iconoBusqueda.addEventListener("click", () => {
+        let inputBusqueda = document.querySelector("#barra-busqueda").value.toLowerCase();
+        contenedorProductos.innerHTML = "";
+        console.log(inputBusqueda);
+        if(inputBusqueda == ""){
+            /* AQUI SE LLAMARA A LA FUNCION QUE PINTARA ERROR EN LA PANTALLA */
+            console.error("NO SE ENCONTRO NADA!!");
+        }else{
+            cargarPlantilla(DATA,inputBusqueda);
+        }
+      });
+  });
+})();
