@@ -592,13 +592,31 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
     .detalle__contenedor{
       position: relative;
       display: flex;
-      justify-content: center;
-      align-items: center;
       width: 80%;
       height: 100%;
       box-shadow: 0px 0px 5px #ffffff;
       border-radius: 5px;
       background-color: #ffffff;
+    }
+    .detalle__btn-cerrar{
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: none;
+      background: none;
+      i{
+        font-size: 19px;
+      }
+    }
+    .detalle__imagenContenedor{
+      border: 1px solid red;
+      width: 50%;
+      height: 100%;
+    }
+    .detalle__descripcionContenedor{
+      border: 1px solid blue;
+      width: 50%;
+      height: 100%;
     }
 }
 /* 
