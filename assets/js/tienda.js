@@ -5,7 +5,10 @@
     contenedorProductos.innerHTML += `
         <article class="productos__contenedor--article cuadriculaMultiple mt-4" data-categorias = "${producto.categoria}">
             <div class="productos__contenedor--contenedorImg">
+              <div>
+                <i class="far fa-eye" title="Ver detalle"></i>
                 <img class="productos__contenedor--img" src="${producto.ruta}" alt="${producto.nombre}">
+              </div>
             </div>
             <div class="productos__contenedor--contenedorDescripcion">
                 <h4>${producto.nombre}</h4>
@@ -126,10 +129,9 @@ select.addEventListener("change",(e) => {
     iconoBusqueda.addEventListener("click", () => {
         let inputBusqueda = document.querySelector("#barra-busqueda").value.toLowerCase();
         contenedorProductos.innerHTML = "";
-        console.log(inputBusqueda);
         if(inputBusqueda == ""){
             /* AQUI SE LLAMARA A LA FUNCION QUE PINTARA ERROR EN LA PANTALLA */
-            console.error("NO SE ENCONTRO NADA!!");
+            mensajeError();
         }else{
             cargarPlantilla(DATA,inputBusqueda);
         }

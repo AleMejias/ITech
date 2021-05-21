@@ -387,7 +387,6 @@ ESTILOS PARA LA TIENDA
     .productos .productos__contenedor .productos__contenedor--seccionError {
       width: 100%;
       height: 200px;
-      border: 1px solid red;
       padding: 10px 5px;
       display: flex;
       flex-direction: column;
@@ -397,16 +396,32 @@ ESTILOS PARA LA TIENDA
         justify-content: center; }
       .productos .productos__contenedor .productos__contenedor--seccionError h3 {
         color: #393939;
-        font-family: "Roboto"; }
+        font-family: "Roboto";
+        font-weight: 600;
+        font-size: 30px; }
+        .productos .productos__contenedor .productos__contenedor--seccionError h3 i {
+          margin-left: 3px;
+          color: #08acaf;
+          font-size: 30px; }
       .productos .productos__contenedor .productos__contenedor--seccionError span {
         color: #393939;
+        padding: 5px 1px;
         font-family: "Roboto";
-        border: 1px solid green;
+        font-weight: 500;
+        font-size: 18px;
         text-align: center; }
     .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg {
       display: flex;
       justify-content: center;
       width: 100%; }
+      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg div {
+        position: relative; }
+      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg i {
+        position: absolute;
+        font-size: 17px;
+        cursor: grab;
+        right: -6px;
+        top: -10px; }
     .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion {
       display: flex;
       flex-direction: column;
@@ -434,14 +449,41 @@ ESTILOS PARA LA TIENDA
 
 /* 
 **************************************************************************************
+ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
+**************************************************************************************
+*/
+.detalle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9); }
+  .detalle .detalle__contenedor {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    box-shadow: 0px 0px 5px #ffffff;
+    border-radius: 5px;
+    background-color: #ffffff; }
+
+/* 
+**************************************************************************************
 Clase para mostrar/quitar elementos segun corresponda
 **************************************************************************************
 */
 .activada {
   display: none; }
-
-.cuadriculaActiva {
-  border: 1px solid #08acaf; }
 
 .cuadriculaMultiple {
   width: 47%; }
