@@ -15,7 +15,7 @@
                 <span>$${producto.precio}</span>
             </div>
             <div class="productos__contenedor--contenedorBoton">
-                <button>Agregar al carrito</button>
+                <button data-carrito = "${producto.nombre}" class = "btn-carrito">Agregar al carrito</button>
             </div>
         </article>
         `;
@@ -137,4 +137,16 @@ select.addEventListener("change",(e) => {
         }
       });
   });
+
+/*   let arrProductos = [];
+  class Carrito{
+    constructor( nombre ){
+      this.nombre = nombre;
+    }
+}
+  let btnCarrito = document.querySelectorAll(".btn-carrito");
+  btnCarrito.forEach((e) => {
+    e.addEventListener("click",(productoSeleccionado) => {
+    })
+  }); */
 })();
