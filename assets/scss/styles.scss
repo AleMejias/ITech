@@ -466,6 +466,7 @@ ESTILOS PARA LA TIENDA
       width: 70%;
       height: 32px;
       box-shadow: 0px 2px 4px rgba(219 ,219 ,219,0.8);
+      position: relative;
       input{
         width: 100%;
         outline: none;
@@ -480,6 +481,21 @@ ESTILOS PARA LA TIENDA
         padding: 5px 0px;
         cursor: pointer;
         color: $negro_opaco;
+      }
+      div{
+        position: absolute;
+        top: 4px;
+        right: -45px;
+        span{
+          position: absolute;
+          text-align: center;
+          top: -17px;
+          width: 15px;
+          right: -10px;
+          height: 23px;
+          border: 1px solid black;
+          border-radius: 10px;
+        }
       }
     }
   }

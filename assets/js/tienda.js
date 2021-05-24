@@ -1,5 +1,15 @@
 (() => {
   let contenedorProductos = document.querySelector("#productosContenedor");
+  /* CLASE PARA EL CARRITO DE COMPRAS */
+  class Carrito{
+    constructor( id , nombre ){
+      this.id = id;
+      this.nombre = nombre;
+    }
+}
+  /* Array y contador de productos para el carrito de compras */
+  let arrProductos = [];
+  let contadorProductos = 0;
 
   const crearPlantilla = (producto) => {
     contenedorProductos.innerHTML += `
@@ -56,6 +66,25 @@
               card.classList.add("cuadriculaUnica");
           }
         });
+      });
+    });
+    /* CODIGO PARA QUE SE CARGUEN LOS PRODUCTOS EN EL STORAGE */
+
+    let btnCarrito = document.querySelectorAll(".btn-carrito");
+
+    btnCarrito.forEach((e) => {
+      e.addEventListener("click",(productoSeleccionado) => {
+        contadorProductos++;
+        let nombre = productoSeleccionado.target.getAttribute("data-carrito");
+        let contadorCarrito = document.querySelector("#contador-carrito");
+        contadorCarrito.classList.remove("activada");
+        contadorCarrito.innerHTML = `${contadorProductos}`
+        arrProductos.push(new Carrito(contadorProductos,nombre));
+        console.log(arrProductos)
+      });
+      let guardarCompra = document.querySelector("#icono-carrito");
+      guardarCompra.addEventListener("click",() => {
+        localStorage.setItem("ListaDeCompra",JSON.stringify(arrProductos));
       });
     });
   };
@@ -137,16 +166,4 @@ select.addEventListener("change",(e) => {
         }
       });
   });
-
-/*   let arrProductos = [];
-  class Carrito{
-    constructor( nombre ){
-      this.nombre = nombre;
-    }
-}
-  let btnCarrito = document.querySelectorAll(".btn-carrito");
-  btnCarrito.forEach((e) => {
-    e.addEventListener("click",(productoSeleccionado) => {
-    })
-  }); */
 })();
