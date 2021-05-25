@@ -329,7 +329,6 @@ PIE DE PAGINA
 **************************************************************************************
 */
 .footer{
-  height: 200px;
   .footer__contenedor{
     border-bottom: 1px solid $links__menuNavegacion;
     div{
@@ -634,6 +633,44 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
       width: 50%;
       height: 100%;
     }
+}
+/* 
+**************************************************************************************
+ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
+**************************************************************************************
+*/
+.carrito{
+  border: 1px solid red;
+  .carrito__contenedor{
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    table{
+      border: 1px solid orange;
+      width: 100%;
+      thead{
+        background-color: #fafafa;
+      }
+      th{
+        padding: 0.8em;
+      }
+      td{
+        padding: 0.8em;
+        border: 1px solid red;
+      }
+      img{
+        width: 2em;
+      }
+      input{
+        width: 3em;
+      }
+      button{
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: 0 8px;
+      }
+    }
+  }
 }
 /* 
 **************************************************************************************

@@ -249,48 +249,46 @@ Clase para validar/novalidar el contenido de un input
 PIE DE PAGINA
 **************************************************************************************
 */
-.footer {
-  height: 200px; }
-  .footer .footer__contenedor {
-    border-bottom: 1px solid #e9ecef; }
-    .footer .footer__contenedor div {
-      height: 200px; }
-    .footer .footer__contenedor .footer__contenedor--img {
-      background-image: url(../img/logo.jpeg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain; }
-    .footer .footer__contenedor .footer__contenedor--informacion {
+.footer .footer__contenedor {
+  border-bottom: 1px solid #e9ecef; }
+  .footer .footer__contenedor div {
+    height: 200px; }
+  .footer .footer__contenedor .footer__contenedor--img {
+    background-image: url(../img/logo.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
+  .footer .footer__contenedor .footer__contenedor--informacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 15px 8px;
+    border-right: 1px solid #e9ecef; }
+    .footer .footer__contenedor .footer__contenedor--informacion i {
+      font-size: 15px;
+      margin-right: 4px;
+      color: #08acaf; }
+    .footer .footer__contenedor .footer__contenedor--informacion span {
+      padding: 0 2px;
+      font-size: 15px;
+      color: #393939; }
+  .footer .footer__contenedor .footer__contenedor--menu {
+    display: flex;
+    align-items: center;
+    padding: 15px 8px; }
+    .footer .footer__contenedor .footer__contenedor--menu ul {
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      padding: 15px 8px;
-      border-right: 1px solid #e9ecef; }
-      .footer .footer__contenedor .footer__contenedor--informacion i {
-        font-size: 15px;
-        margin-right: 4px;
-        color: #08acaf; }
-      .footer .footer__contenedor .footer__contenedor--informacion span {
-        padding: 0 2px;
-        font-size: 15px;
-        color: #393939; }
-    .footer .footer__contenedor .footer__contenedor--menu {
-      display: flex;
-      align-items: center;
-      padding: 15px 8px; }
-      .footer .footer__contenedor .footer__contenedor--menu ul {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 100%; }
-      .footer .footer__contenedor .footer__contenedor--menu li {
-        width: 50%;
-        padding: 7px 1px; }
-      .footer .footer__contenedor .footer__contenedor--menu a {
-        font-size: 15px;
-        color: #393939; }
-      .footer .footer__contenedor .footer__contenedor--menu a:hover {
-        color: #08acaf; }
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%; }
+    .footer .footer__contenedor .footer__contenedor--menu li {
+      width: 50%;
+      padding: 7px 1px; }
+    .footer .footer__contenedor .footer__contenedor--menu a {
+      font-size: 15px;
+      color: #393939; }
+    .footer .footer__contenedor .footer__contenedor--menu a:hover {
+      color: #08acaf; }
 
 .derechos-autor {
   padding: 20px 10px; }
@@ -504,6 +502,36 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
     border: 1px solid blue;
     width: 50%;
     height: 100%; }
+
+/* 
+**************************************************************************************
+ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
+**************************************************************************************
+*/
+.carrito {
+  border: 1px solid red; }
+  .carrito .carrito__contenedor {
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center; }
+    .carrito .carrito__contenedor table {
+      border: 1px solid orange;
+      width: 100%; }
+      .carrito .carrito__contenedor table thead {
+        background-color: #fafafa; }
+      .carrito .carrito__contenedor table th {
+        padding: 0.8em; }
+      .carrito .carrito__contenedor table td {
+        padding: 0.8em;
+        border: 1px solid red; }
+      .carrito .carrito__contenedor table img {
+        width: 2em; }
+      .carrito .carrito__contenedor table input {
+        width: 3em; }
+      .carrito .carrito__contenedor table button {
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: 0 8px; }
 
 /* 
 **************************************************************************************

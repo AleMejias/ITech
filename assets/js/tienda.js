@@ -2,9 +2,11 @@
   let contenedorProductos = document.querySelector("#productosContenedor");
   /* CLASE PARA EL CARRITO DE COMPRAS */
   class Carrito{
-    constructor( id , nombre ){
+    constructor( id , nombre, precio , ruta ){
       this.id = id;
       this.nombre = nombre;
+      this.precio = precio;
+      this.ruta = ruta;
     }
 }
   /* Array y contador de productos para el carrito de compras */
@@ -25,7 +27,7 @@
                 <span>$${producto.precio}</span>
             </div>
             <div class="productos__contenedor--contenedorBoton">
-                <button data-carrito = "${producto.nombre}" class = "btn-carrito">Agregar al carrito</button>
+                <button data-producto = "${producto.nombre}" data-precio = "${producto.precio}" data-ruta = "${producto.ruta}" class = "btn-carrito">Agregar al carrito</button>
             </div>
         </article>
         `;
@@ -75,12 +77,13 @@
     btnCarrito.forEach((e) => {
       e.addEventListener("click",(productoSeleccionado) => {
         contadorProductos++;
-        let nombre = productoSeleccionado.target.getAttribute("data-carrito");
+        let nombre = productoSeleccionado.target.getAttribute("data-producto");
+        let precio = productoSeleccionado.target.getAttribute("data-precio");
+        let ruta = productoSeleccionado.target.getAttribute("data-ruta");
         let contadorCarrito = document.querySelector("#contador-carrito");
         contadorCarrito.classList.remove("activada");
         contadorCarrito.innerHTML = `${contadorProductos}`
-        arrProductos.push(new Carrito(contadorProductos,nombre));
-        console.log(arrProductos)
+        arrProductos.push(new Carrito(contadorProductos,nombre,precio,ruta));
       });
       let guardarCompra = document.querySelector("#icono-carrito");
       guardarCompra.addEventListener("click",() => {

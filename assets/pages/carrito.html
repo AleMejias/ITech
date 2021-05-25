@@ -60,8 +60,55 @@
             </section>
         </header>
         <main>
-            <section id = "contenedor-carrito">
+            <!-- 
+                CONTENEDOR PARA EL LINK A NUESTRO SHOP 
+            -->
+            <section class="container-fluid shop">
+                <div class="row mx-0">
+                    <div class="col-md-12 shop__contenedor">
+                        <span class="shop__span"><a href="../pages/tienda.html" class="shop__enlace">Visita nuestro shop</a> y disfruta de envío gratis por tu compra online.</span>
+                    </div>
+                </div>
+            </section>
 
+            <section class="container carrito activada" id = "contenedor-carrito">
+                <div class="row">
+                    <div class="col-md-12 carrito__contenedor">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>PRODUCTO</th>
+                                    <th>PRECIO</th>
+                                    <th>CANTIDAD</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody  id = "carrito-de-compras">
+                                <!-- ACA SE CARGAN LOS PRODUCTOS DESDE JQUERY -->
+<!--                                 <tr>
+                                    <td>
+                                        <img src="../img/home/iphone12pro-1.jpg" alt="">
+                                    </td>
+                                    <td>
+                                        <span>iPhone 12 Pro</span>
+                                    </td>
+                                    <td>
+                                        <span>$999</span>
+                                    </td>
+                                    <td>
+                                        <form action="#">
+                                            <input type="number" name="cantidad" id="cantidad" value="1">
+                                        </form>
+                                    </td>
+                                    <td>
+                                        <button title="Eliminar">x</button>
+                                    </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </section>
         </main>
         <!-- 
