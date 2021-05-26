@@ -509,29 +509,72 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
 **************************************************************************************
 */
 .carrito {
-  border: 1px solid red; }
-  .carrito .carrito__contenedor {
-    border: 1px solid blue;
+  /* TABLA PARA MOSTRAR PRODUCTOS DEL CARRITO */
+  /* TABLA DE MONTO TOTAL */ }
+  .carrito .carrito__contenedorCompra {
     display: flex;
     justify-content: center; }
-    .carrito .carrito__contenedor table {
-      border: 1px solid orange;
+    .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito {
+      border: 1px solid #eaeaea;
       width: 100%; }
-      .carrito .carrito__contenedor table thead {
+      .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--thead {
         background-color: #fafafa; }
-      .carrito .carrito__contenedor table th {
+        .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--thead th {
+          padding: 0.8em;
+          font-family: "Roboto";
+          color: #393939; }
+      .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--tbody tr {
+        border-bottom: 1px solid #eaeaea; }
+      .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--tbody td {
         padding: 0.8em; }
-      .carrito .carrito__contenedor table td {
-        padding: 0.8em;
-        border: 1px solid red; }
-      .carrito .carrito__contenedor table img {
+      .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--tbody span {
+        font-family: "Roboto";
+        font-weight: 500;
+        color: #393939; }
+      .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--tbody img {
         width: 2em; }
-      .carrito .carrito__contenedor table input {
-        width: 3em; }
-      .carrito .carrito__contenedor table button {
+      .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--tbody input {
+        width: 3em;
+        border: 1px solid #eaeaea;
+        color: #393939;
+        text-align: center; }
+      .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--tbody button {
         background-color: #ffffff;
         border-radius: 20px;
-        padding: 0 8px; }
+        padding: 0px 8px;
+        border: 1px solid #bbb;
+        color: #bbb;
+        font-family: monospace;
+        font-weight: 400; }
+      .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--tbody button:hover {
+        border: 1px solid #000;
+        color: #000; }
+  .carrito .carrito__contenedorMontoTotal {
+    display: flex;
+    justify-content: flex-end; }
+    .carrito .carrito__contenedorMontoTotal .carrito__contenedorMontoTotal--tablaMontoTotal {
+      border: 1px solid #eaeaea;
+      border-collapse: separate; }
+      .carrito .carrito__contenedorMontoTotal .carrito__contenedorMontoTotal--tablaMontoTotal .carrito__contenedorMontoTotal--thead {
+        background-color: #fafafa; }
+        .carrito .carrito__contenedorMontoTotal .carrito__contenedorMontoTotal--tablaMontoTotal .carrito__contenedorMontoTotal--thead th {
+          padding: 0.3em;
+          font-family: "Roboto";
+          color: #393939; }
+      .carrito .carrito__contenedorMontoTotal .carrito__contenedorMontoTotal--tablaMontoTotal .carrito__contenedorMontoTotal--tbody td {
+        padding: 0.3em; }
+      .carrito .carrito__contenedorMontoTotal .carrito__contenedorMontoTotal--tablaMontoTotal .carrito__contenedorMontoTotal--tbody span {
+        font-family: "Roboto";
+        font-weight: 500;
+        color: #393939; }
+      .carrito .carrito__contenedorMontoTotal .carrito__contenedorMontoTotal--tablaMontoTotal .carrito__contenedorMontoTotal--tbody button {
+        padding: 6px 10px;
+        background-color: #08acaf;
+        color: #e9ecef;
+        font-family: "Roboto";
+        font-weight: 400;
+        border-radius: 8px;
+        border: 1px solid #e9ecef; }
 
 /* 
 **************************************************************************************

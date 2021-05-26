@@ -640,34 +640,91 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
 **************************************************************************************
 */
 .carrito{
-  border: 1px solid red;
-  .carrito__contenedor{
-    border: 1px solid blue;
+  /* TABLA PARA MOSTRAR PRODUCTOS DEL CARRITO */
+  .carrito__contenedorCompra{
     display: flex;
     justify-content: center;
-    table{
-      border: 1px solid orange;
+    .carrito__contenedorCompra--tablaCarrito{
+      border: 1px solid #eaeaea;
       width: 100%;
-      thead{
+      .carrito__contenedorCompra--thead{
         background-color: #fafafa;
+        th{
+          padding: 0.8em;
+          font-family: "Roboto";
+          color: $negro_opaco;
+        }
       }
-      th{
-        padding: 0.8em;
+      .carrito__contenedorCompra--tbody{
+        tr{
+          border-bottom: 1px solid #eaeaea;
+        }
+        td{
+          padding: 0.8em;
+        }
+        span{
+          font-family: "Roboto";
+          font-weight: 500;
+          color: $negro_opaco;
+        }
+        img{
+          width: 2em;
+        }
+        input{
+          width: 3em;
+          border: 1px solid #eaeaea;
+          color: $negro_opaco;
+          text-align: center;
+        }
+        button{
+          background-color: #ffffff;
+          border-radius: 20px;
+          padding: 0px 8px;
+          border: 1px solid #bbb;
+          color: #bbb;
+          font-family: monospace;
+          font-weight: 400;
+        }
+        button:hover{
+          border: 1px solid #000;
+          color: #000;
+        }
       }
-      td{
-        padding: 0.8em;
-        border: 1px solid red;
+    }
+  }
+  /* TABLA DE MONTO TOTAL */
+  .carrito__contenedorMontoTotal{
+    display: flex;
+    justify-content: flex-end;
+    .carrito__contenedorMontoTotal--tablaMontoTotal{
+      border: 1px solid #eaeaea;
+      border-collapse: separate;
+      .carrito__contenedorMontoTotal--thead{
+        background-color: #fafafa;
+        th{
+          padding: 0.3em;
+          font-family: "Roboto";
+          color: $negro_opaco;
+        }
       }
-      img{
-        width: 2em;
-      }
-      input{
-        width: 3em;
-      }
-      button{
-        background-color: #ffffff;
-        border-radius: 20px;
-        padding: 0 8px;
+      .carrito__contenedorMontoTotal--tbody{
+        td{
+          padding: 0.3em;
+        }
+        span{
+          font-family: "Roboto";
+          font-weight: 500;
+          color: $negro_opaco;
+        }
+        button{
+          padding: 6px 10px;
+          background-color: $verde_principal;
+          color: $links__menuNavegacion;
+          font-family: "Roboto";
+          font-weight: 400;
+          border-radius: 8px;
+          border: 1px solid $links__menuNavegacion;
+        }
       }
     }
   }

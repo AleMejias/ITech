@@ -71,11 +71,11 @@
                 </div>
             </section>
 
-            <section class="container carrito activada" id = "contenedor-carrito">
+            <section class="container carrito mt-5" id = "contenedor-carrito">
                 <div class="row">
-                    <div class="col-md-12 carrito__contenedor">
-                        <table>
-                            <thead>
+                    <div class="col-md-12 carrito__contenedorCompra">
+                        <table class="carrito__contenedorCompra--tablaCarrito">
+                            <thead class="carrito__contenedorCompra--thead">
                                 <tr>
                                     <th>&nbsp;</th>
                                     <th>PRODUCTO</th>
@@ -84,7 +84,7 @@
                                     <th>&nbsp;</th>
                                 </tr>
                             </thead>
-                            <tbody  id = "carrito-de-compras">
+                            <tbody class="carrito__contenedorCompra--tbody" id = "carrito-de-compras">
                                 <!-- ACA SE CARGAN LOS PRODUCTOS DESDE JQUERY -->
 <!--                                 <tr>
                                     <td>
@@ -105,6 +105,35 @@
                                         <button title="Eliminar">x</button>
                                     </td>
                                 </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row activada" id="contenedor-montoTotal">
+                    <div class="cold-md-12 mt-5 carrito__contenedorMontoTotal">
+                        <table class="carrito__contenedorMontoTotal--tablaMontoTotal">
+                            <thead class="carrito__contenedorMontoTotal--thead">
+                                <tr>
+                                    <th id = "orden-de-compra"></th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                    <th>&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody class="carrito__contenedorMontoTotal--tbody">
+                                <tr>
+                                    <td>
+                                        <span>TOTAL</span>
+                                    </td>
+                                    <td>
+                                        <span id="monto-total"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button>Finalizar Compra</button>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

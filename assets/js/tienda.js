@@ -2,7 +2,7 @@
   let contenedorProductos = document.querySelector("#productosContenedor");
   /* CLASE PARA EL CARRITO DE COMPRAS */
   class Carrito{
-    constructor( id , nombre, precio , ruta ){
+    constructor( id , nombre, precio , ruta){
       this.id = id;
       this.nombre = nombre;
       this.precio = precio;
