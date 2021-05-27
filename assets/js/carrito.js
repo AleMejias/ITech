@@ -32,7 +32,7 @@
                     </td>
                     <td>
                         <form action="#">
-                            <input type="number" name="cantidad" id="cantidad" value="1">
+                            <input type="number" name="cantidad" class = "cantidad" value="1" min = 1 max = 5 data-precio = "${valor.precio}">
                         </form>
                     </td>
                     <td>
@@ -44,6 +44,21 @@
           montoTotal.text(`$${sumarPrecios}`);
           ordenDeCompra__contenedor.text(`Orden de compra #${ordenDeCompra}`);
           contenedorMontoTotal.removeClass("activada");
+
+          let inputCantidad = $(".cantidad");
+
+
+          $.each(inputCantidad,(indice,valor)=> {
+              $(valor).change((nuevaCantidad) => {
+                let precioOriginal = $(valor).attr("data-precio");
+                console.log(sumarPrecios)
+              });
+          })
+          /* FUNCION PARA ACTUALIZAR LA CANTIDAD DE CADA PRODUCTO Y EL PRECIO */
+          let actualizarCantidad = (listadoDeProductos,nuevaCantidad) => {
+
+          }
+          
     };
     /* VERIFICO PRIMERO QUE EL CARRITO NO SE ENCUENTRE VACIO, de no estarlo imprimo los productos */
     productosCargadosArr.length == 0 ? carritoVacio() : imprimirProductos(productosCargadosArr);
