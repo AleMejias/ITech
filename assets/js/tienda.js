@@ -76,14 +76,19 @@
 
     btnCarrito.forEach((e) => {
       e.addEventListener("click",(productoSeleccionado) => {
-        contadorProductos++;
         let nombre = productoSeleccionado.target.getAttribute("data-producto");
         let precio = productoSeleccionado.target.getAttribute("data-precio");
         let ruta = productoSeleccionado.target.getAttribute("data-ruta");
         let contadorCarrito = document.querySelector("#contador-carrito");
-        contadorCarrito.classList.remove("activada");
-        contadorCarrito.innerHTML = `${contadorProductos}`
-        arrProductos.push(new Carrito(contadorProductos,nombre,precio,ruta));
+
+        /* VERIFICO SI EL NOMBRE NO EXISTE ANTES DE HACER EL PUSH */
+        //Si la respuesta del some NO es TRUE(Por eso niego la condicion), entonces significa que ya existe el producto y no debo hacer el push
+        if(!arrProductos.some((elemento) => elemento.nombre == nombre)){
+          contadorProductos++;
+          contadorCarrito.classList.remove("activada");
+          contadorCarrito.innerHTML = `${contadorProductos}`
+          arrProductos.push(new Carrito(contadorProductos,nombre,precio,ruta));
+        }
       });
       let guardarCompra = document.querySelector("#icono-carrito");
       guardarCompra.addEventListener("click",() => {

@@ -42,7 +42,7 @@
             `);
           });
           montoTotal.text(`$${sumarPrecios}`);
-          ordenDeCompra__contenedor.text(`#${ordenDeCompra}`);
+          ordenDeCompra__contenedor.text(`Orden de compra #${ordenDeCompra}`);
           contenedorMontoTotal.removeClass("activada");
     };
     /* VERIFICO PRIMERO QUE EL CARRITO NO SE ENCUENTRE VACIO, de no estarlo imprimo los productos */

@@ -383,12 +383,13 @@ ESTILOS PARA LA TIENDA
         .productos .productos__ordenamiento .productos__ordenamiento--form div span {
           position: absolute;
           text-align: center;
-          top: -17px;
-          width: 15px;
-          right: -10px;
-          height: 23px;
-          border: 1px solid black;
-          border-radius: 10px; }
+          top: -15px;
+          right: -8px;
+          border-radius: 10px;
+          color: #08acaf;
+          font-size: 16px;
+          font-weight: 600;
+          font-family: 'Roboto'; }
   .productos .productos__contenedor {
     display: flex;
     flex-wrap: wrap;
@@ -495,13 +496,22 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
     .detalle .detalle__btn-cerrar i {
       font-size: 19px; }
   .detalle .detalle__imagenContenedor {
+    display: flex;
+    justify-content: center;
     border: 1px solid red;
     width: 50%;
     height: 100%; }
+    .detalle .detalle__imagenContenedor .detalle__imagenContenedor--img {
+      width: 100%;
+      height: 50%; }
   .detalle .detalle__descripcionContenedor {
     border: 1px solid blue;
     width: 50%;
     height: 100%; }
+    .detalle .detalle__descripcionContenedor div {
+      width: 100%;
+      height: 100px;
+      border: 1px solid black; }
 
 /* 
 **************************************************************************************
