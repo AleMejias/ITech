@@ -86,25 +86,6 @@
                             </thead>
                             <tbody class="carrito__contenedorCompra--tbody" id = "carrito-de-compras">
                                 <!-- ACA SE CARGAN LOS PRODUCTOS DESDE JQUERY -->
-<!--                                 <tr>
-                                    <td>
-                                        <img src="../img/home/iphone12pro-1.jpg" alt="">
-                                    </td>
-                                    <td>
-                                        <span>iPhone 12 Pro</span>
-                                    </td>
-                                    <td>
-                                        <span>$999</span>
-                                    </td>
-                                    <td>
-                                        <form action="#">
-                                            <input type="number" name="cantidad" id="cantidad" value="1">
-                                        </form>
-                                    </td>
-                                    <td>
-                                        <button title="Eliminar">x</button>
-                                    </td>
-                                </tr> -->
                             </tbody>
                         </table>
                     </div>
@@ -131,7 +112,8 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <button>Finalizar Compra</button>
+                                        <button id = "finalizar-compra">Finalizar Compra</button>
+                                        <img src="../img/oval.svg" id="loadingImg" class=" activada carrito__contenedorMontoTotal--imgLoading"/>
                                     </td>
                                 </tr>
                             </tbody>
