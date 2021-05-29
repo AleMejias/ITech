@@ -25,8 +25,9 @@
         $.each(inputCantidad,(indice,valor)=> {
             let precioDelProducto = parseInt($(valor).val());
             let cantidadDelProducto = parseInt($(valor).attr("data-precio"));
-
-            sumatoriaTotal += precioDelProducto * cantidadDelProducto;
+            if(!$(valor).hasClass("activada")){
+                sumatoriaTotal += precioDelProducto * cantidadDelProducto;
+            }
         });
         return sumatoriaTotal;
     }
@@ -38,7 +39,7 @@
         $.each(listadoDeProductos, (indice, valor) => {
             sumarPrecios += parseInt(valor.precio);
             $(carritoDeCompras).prepend(`
-                <tr>
+                <tr class = "filas">
                     <td>
                         <img src="${valor.ruta}" alt="${valor.nombre}">
                     </td>
@@ -54,7 +55,7 @@
                         </form>
                     </td>
                     <td>
-                        <button title="Eliminar">x</button>
+                        <button class = "btn-eliminar" title="Eliminar">x</button>
                     </td>
                 </tr>
             `);
@@ -67,7 +68,24 @@
           let form = $(".formulario");
           $(form).change(() => {
               montoTotal.text(`$${calcularMontoTotal()}`);
-          })       
+          })  ;
+          
+          let btnEliminarProducto = $(".btn-eliminar");
+          let elementosEnCarrito = $(btnEliminarProducto).length;
+          $.each(btnEliminarProducto,(indice,valor) => {
+              $(valor).click((e) => {
+                  console.log(`Tamaño inicial ${elementosEnCarrito}`)
+                  let eliminarFila = $(".filas")[indice];
+                  let inputCantidad = $(".inputCantidad")[indice];
+                  $(eliminarFila).addClass("activada");
+                  $(inputCantidad).addClass("activada");
+                  montoTotal.text(`$${calcularMontoTotal()}`);
+                  elementosEnCarrito--;
+                  console.log(`Tamaño final ${elementosEnCarrito}`)
+                  elementosEnCarrito == 0 ? carritoVacio() : "";
+                });
+          });
+
     };
     /* VERIFICO PRIMERO QUE EL CARRITO NO SE ENCUENTRE VACIO, de no estarlo imprimo los productos */
     productosCargadosArr.length == 0 ? carritoVacio() : imprimirProductos(productosCargadosArr);

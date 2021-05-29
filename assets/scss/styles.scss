@@ -13,6 +13,9 @@ li {
 h2,h3,h4,a{
   font-family: "Roboto";
 }
+button:hover{
+  opacity: .7;
+}
 
 /* FIJAMOS NUESTRO MENU A LA PANTALLA AL HACER SCROLL */
 header{
@@ -656,6 +659,8 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 50vh;
     h3{
       padding: 10px 5px;
       color: $negro_opaco;
@@ -677,6 +682,9 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
       border-radius: 16px;
       text-align: center;
       cursor: pointer;
+    }
+    a:hover{
+      opacity: .7;
     }
   }
   /* TABLA PARA MOSTRAR PRODUCTOS DEL CARRITO */

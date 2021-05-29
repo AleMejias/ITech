@@ -13,6 +13,9 @@ li {
 h2, h3, h4, a {
   font-family: "Roboto"; }
 
+button:hover {
+  opacity: .7; }
+
 /* FIJAMOS NUESTRO MENU A LA PANTALLA AL HACER SCROLL */
 header {
   position: sticky;
@@ -524,7 +527,9 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
   .carrito .carrito__carritoVacio {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    justify-content: center;
+    height: 50vh; }
     .carrito .carrito__carritoVacio h3 {
       padding: 10px 5px;
       color: #393939;
@@ -544,6 +549,8 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
       border-radius: 16px;
       text-align: center;
       cursor: pointer; }
+    .carrito .carrito__carritoVacio a:hover {
+      opacity: .7; }
   .carrito .carrito__contenedorCompra {
     display: flex;
     justify-content: center; }
