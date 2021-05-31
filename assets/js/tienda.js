@@ -86,7 +86,6 @@
     /* CODIGO PARA QUE SE CARGUEN LOS PRODUCTOS EN EL STORAGE */
 
     let btnCarrito = document.querySelectorAll(".btn-carrito");
-
     btnCarrito.forEach((e) => {
       e.addEventListener("click",(productoSeleccionado) => {
         let nombre = productoSeleccionado.target.getAttribute("data-producto");
@@ -196,9 +195,9 @@ select.addEventListener("change",(e) => {
         <button class="detalle__btn-cerrar"><i class="fas fa-times" id="btn-cerrarDetalle"></i></button>
         <div class="detalle__imagenContenedor">
           <div class="detalle__imagenContenedor--imgDiv">
-            <img src="${producto.ruta}" alt="${producto.nombre}" class="detalle__imagenContenedor--img">
-            <span class="detalle__imagenContenedor--spanLeft"><i class="fas fa-chevron-left"></i></span>
-            <span class="detalle__imagenContenedor--spanRight"><i class="fas fa-chevron-right"></i></span>
+            <img src="${producto.ruta}" alt="${producto.nombre}" class="detalle__imagenContenedor--img" id= "detalle-img">
+            <span class="detalle__imagenContenedor--spanLeft cambiar-imagen"><i class="fas fa-chevron-left" id="left"></i></span>
+            <span class="detalle__imagenContenedor--spanRight cambiar-imagen"><i class="fas fa-chevron-right" id="right"></i></span>
           </div>
         </div>
         <div class="detalle__descripcionContenedor">
@@ -250,9 +249,9 @@ select.addEventListener("change",(e) => {
         <button class="detalle__btn-cerrar"><i class="fas fa-times" id="btn-cerrarDetalle"></i></button>
         <div class="detalle__imagenContenedor">
           <div class="detalle__imagenContenedor--imgDiv">
-            <img src="${producto.ruta}" alt="${producto.nombre}" class="detalle__imagenContenedor--img">
-            <span class="detalle__imagenContenedor--spanLeft"><i class="fas fa-chevron-left"></i></span>
-            <span class="detalle__imagenContenedor--spanRight"><i class="fas fa-chevron-right"></i></span>
+            <img src="${producto.ruta}" alt="${producto.nombre}" class="detalle__imagenContenedor--img" id= "detalle-img">
+            <span class="detalle__imagenContenedor--spanLeft cambiar-imagen"><i class="fas fa-chevron-left" id="left"></i></span>
+            <span class="detalle__imagenContenedor--spanRight cambiar-imagen"><i class="fas fa-chevron-right" id="right"></i></span>
           </div>
         </div>
         <div class="detalle__descripcionContenedor">
@@ -304,13 +303,21 @@ select.addEventListener("change",(e) => {
     }
     contenedorSeccionDetalle.classList.remove("activada");
 
-    /* EVENTO PARA CERRAR LA SECCION RECIEN CREADA */
+    /* EVENTO PARA CAMBIAR LA IMAGEN EN LA SECCION DETALLE */
+    let btnCambiarDeImagen = document.querySelectorAll(".cambiar-imagen");
+    btnCambiarDeImagen.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        let imagenActual = document.querySelector("#detalle-img");
+        let nuevaImagen = imagenActual.src.split("-",1);
+        e.target.getAttribute("id") == "right" ? imagenActual.src = `${nuevaImagen}-2.jpg` : imagenActual.src = `${nuevaImagen}-1.jpg`;
+      });
+    });
 
+    /* EVENTO PARA CERRAR LA SECCION RECIEN CREADA */
     let cerrarSeccionDetalle = document.querySelector("#btn-cerrarDetalle");
     cerrarSeccionDetalle.addEventListener("click",() => {
       contenedorSeccionDetalle.innerHTML = "";
       contenedorSeccionDetalle.classList.add("activada");
     });
   };
-
 })();
