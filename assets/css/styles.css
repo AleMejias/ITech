@@ -490,7 +490,7 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
     box-shadow: 0px 0px 5px #ffffff;
     border-radius: 5px;
     background-color: #ffffff;
-    overflow: scroll; }
+    overflow-y: scroll; }
   .detalle .detalle__btn-cerrar {
     position: absolute;
     right: 0;
@@ -534,6 +534,7 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
         color: #e9ecef;
         font-family: "Roboto";
         font-size: 19px;
+        font-weight: 400;
         border-radius: 20px;
         padding: 6px 10px; }
     .detalle .detalle__descripcionContenedor .detalle__contenedorTituloDiv .detalle__contenedorTituloDiv--tituloProducto {
