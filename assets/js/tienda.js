@@ -70,6 +70,19 @@
         });
       });
     });
+    /* EVENTO PARA MOSTRAR EL DETALLE DEL PRODUCTO */
+    let btn_abrirDetalle = document.querySelectorAll(".abrir-seccion-detalle");
+    btn_abrirDetalle.forEach((card) => {
+      card.addEventListener("click", () => {
+        let productoClickeado = card.getAttribute("data-producto");
+        /* RECORRO MI ARRAY DE OBJETOS */
+        for(const producto of DATA){
+          if(producto.nombre == productoClickeado){
+            imprimirDetalleProducto(producto);
+          }
+        }
+      });
+    });
     /* CODIGO PARA QUE SE CARGUEN LOS PRODUCTOS EN EL STORAGE */
 
     let btnCarrito = document.querySelectorAll(".btn-carrito");
@@ -177,62 +190,118 @@ select.addEventListener("change",(e) => {
 
   const imprimirDetalleProducto = (producto) => {
     let contenedorSeccionDetalle = document.querySelector("#seccion-detalle");
-    contenedorSeccionDetalle.innerHTML += `
+    if(producto.categoria == "Apple Watch"){
+      contenedorSeccionDetalle.innerHTML += `
       <div class="detalle__contenedor">
         <button class="detalle__btn-cerrar"><i class="fas fa-times" id="btn-cerrarDetalle"></i></button>
-      <div class="detalle__imagenContenedor">
-        <div class="detalle__imagenContenedor--imgDiv">
-          <img src="${producto.ruta}" alt="${producto.nombre}" class="detalle__imagenContenedor--img">
-          <span class="detalle__imagenContenedor--spanLeft"><i class="fas fa-chevron-left"></i></span>
-          <span class="detalle__imagenContenedor--spanRight"><i class="fas fa-chevron-right"></i></span>
+        <div class="detalle__imagenContenedor">
+          <div class="detalle__imagenContenedor--imgDiv">
+            <img src="${producto.ruta}" alt="${producto.nombre}" class="detalle__imagenContenedor--img">
+            <span class="detalle__imagenContenedor--spanLeft"><i class="fas fa-chevron-left"></i></span>
+            <span class="detalle__imagenContenedor--spanRight"><i class="fas fa-chevron-right"></i></span>
+          </div>
+        </div>
+        <div class="detalle__descripcionContenedor">
+          <div class="detalle__contenedorPrecioDiv">
+            <span class="detalle__contenedorPrecioDiv--spanPrecio">$${producto.precio}</span>
+          </div>
+          <div class="detalle__contenedorTituloDiv">
+            <h3 class="detalle__contenedorTituloDiv--tituloProducto">${producto.nombre}</h3>
+          </div>
+          <div class="detalle__contenedorListaDiv">
+            <ul>
+              <li>
+                <span>TECNOLOGÍA:</span>   
+                ${producto.detalle[0]}.
+              </li>
+              <li>
+                <span>CAJA:</span>   
+                ${producto.detalle[1]}.
+              </li>
+              <li>
+                <span>PANTALLA:</span>   
+                ${producto.detalle[2]}.
+              </li>
+              <li>
+                <span>CONEXIÓN MÓVIL:</span>   
+                ${producto.detalle[3]}.
+              </li>
+              <li>
+                <span>FUNCIONALIDADES:</span>   
+                ${producto.detalle[4]}.
+              </li>
+              <li>
+                <span>SISTEMA OPERATIVO:</span>   
+                ${producto.detalle[5]}.
+              </li>
+              <li>
+                <span>GARANTÍA:</span>   
+                1 año.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="detalle__descripcionContenedor">
-        <div class="detalle__contenedorPrecioDiv">
-          <span class="detalle__contenedorPrecioDiv--spanPrecio">$${producto.precio}</span>
+      `;
+
+    }else{
+      contenedorSeccionDetalle.innerHTML += `
+      <div class="detalle__contenedor">
+        <button class="detalle__btn-cerrar"><i class="fas fa-times" id="btn-cerrarDetalle"></i></button>
+        <div class="detalle__imagenContenedor">
+          <div class="detalle__imagenContenedor--imgDiv">
+            <img src="${producto.ruta}" alt="${producto.nombre}" class="detalle__imagenContenedor--img">
+            <span class="detalle__imagenContenedor--spanLeft"><i class="fas fa-chevron-left"></i></span>
+            <span class="detalle__imagenContenedor--spanRight"><i class="fas fa-chevron-right"></i></span>
+          </div>
         </div>
-        <div class="detalle__contenedorTituloDiv">
-          <h3 class="detalle__contenedorTituloDiv--tituloProducto">${producto.nombre}</h3>
-        </div>
-        <div class="detalle__contenedorListaDiv">
-          <ul>
-            <li>
-              <span>MEMORIA:</span>   
-              ${producto.detalle[0]}.
-            </li>
-            <li>
-              <span>DIMENSIONES:</span>   
-              ${producto.detalle[1]}.
-            </li>
-            <li>
-              <span>PANTALLA:</span>   
-              ${producto.detalle[2]}.
-            </li>
-            <li>
-              <span>CHIP:</span>   
-              ${producto.detalle[3]}.
-            </li>
-            <li>
-              <span>CÁMARA:</span>   
-              ${producto.detalle[4]}.
-            </li>
-            <li>
-              <span>BATERíA:</span>   
-              ${producto.detalle[5]}.
-            </li>
-            <li>
-              <span>SISTEMA OPERATIVO:</span>   
-              ${producto.detalle[6]}.
-            </li>
-            <li>
-              <span>GARANTÍA:</span>   
-              1 año.
-            </li>
-          </ul>
+        <div class="detalle__descripcionContenedor">
+          <div class="detalle__contenedorPrecioDiv">
+            <span class="detalle__contenedorPrecioDiv--spanPrecio">$${producto.precio}</span>
+          </div>
+          <div class="detalle__contenedorTituloDiv">
+            <h3 class="detalle__contenedorTituloDiv--tituloProducto">${producto.nombre}</h3>
+          </div>
+          <div class="detalle__contenedorListaDiv">
+            <ul>
+              <li>
+                <span>MEMORIA:</span>   
+                ${producto.detalle[0]}.
+              </li>
+              <li>
+                <span>DIMENSIONES:</span>   
+                ${producto.detalle[1]}.
+              </li>
+              <li>
+                <span>PANTALLA:</span>   
+                ${producto.detalle[2]}.
+              </li>
+              <li>
+                <span>CHIP:</span>   
+                ${producto.detalle[3]}.
+              </li>
+              <li>
+                <span>CÁMARA:</span>   
+                ${producto.detalle[4]}.
+              </li>
+              <li>
+                <span>BATERíA:</span>   
+                ${producto.detalle[5]}.
+              </li>
+              <li>
+                <span>SISTEMA OPERATIVO:</span>   
+                ${producto.detalle[6]}.
+              </li>
+              <li>
+                <span>GARANTÍA:</span>   
+                1 año.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    `;
+      `;
+    }
     contenedorSeccionDetalle.classList.remove("activada");
 
     /* EVENTO PARA CERRAR LA SECCION RECIEN CREADA */
@@ -243,17 +312,5 @@ select.addEventListener("change",(e) => {
       contenedorSeccionDetalle.classList.add("activada");
     });
   };
-  /* EVENTO PARA MOSTRAR EL DETALLE DEL PRODUCTO */
-  let btn_abrirDetalle = document.querySelectorAll(".abrir-seccion-detalle");
-  btn_abrirDetalle.forEach((card) => {
-    card.addEventListener("click", () => {
-      let productoClickeado = card.getAttribute("data-producto");
-      /* RECORRO MI ARRAY DE OBJETOS */
-      for(const producto of DATA){
-        if(producto.nombre == productoClickeado){
-          imprimirDetalleProducto(producto);
-        }
-      }
-    });
-  });
+
 })();
