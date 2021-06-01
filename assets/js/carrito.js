@@ -86,18 +86,22 @@
               $(valor).click(() => {
                   let eliminarFila = $(".filas")[indice];
                   let inputCantidad = $(".inputCantidad")[indice];
-                  $(eliminarFila).addClass("activada");
-                  $(inputCantidad).addClass("activada");
-                  montoTotal.text(`$${calcularMontoTotal()}`);
-                  elementosEnCarrito--;
-                  /* VERIFICO SI NO HAY MAS ELEMENTOS EN EL CARRITO PARA:
-                    1) IMPRIMIR MENSAJE DE QUE SE ENCUENTRA VACIO MI CARRITO
-                    2) PARA LIMPIAR EL STORAGE
-                  */
-                  if( elementosEnCarrito == 0 ){
-                    carritoVacio( "ATENCIÓN","fas fa-exclamation-circle","EL CARRRITO SE ENCUENTRA VACIO" );
-                    localStorage.clear();
-                  }
+                  $(eliminarFila).fadeTo("fast",0.6, () => {
+                      $(eliminarFila).slideUp(600, () => {
+                        $(eliminarFila).addClass("activada");
+                        $(inputCantidad).addClass("activada");
+                        montoTotal.text(`$${calcularMontoTotal()}`);
+                        elementosEnCarrito--;
+                        /* VERIFICO SI NO HAY MAS ELEMENTOS EN EL CARRITO PARA:
+                        1) IMPRIMIR MENSAJE DE QUE SE ENCUENTRA VACIO MI CARRITO
+                        2) PARA LIMPIAR EL STORAGE
+                        */
+                        if( elementosEnCarrito == 0 ){
+                            carritoVacio( "ATENCIÓN","fas fa-exclamation-circle","EL CARRRITO SE ENCUENTRA VACIO" );
+                            localStorage.clear();
+                        }
+                      });
+                  })
                 });
           });
 

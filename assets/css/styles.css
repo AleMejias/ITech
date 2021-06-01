@@ -64,7 +64,7 @@ Menu primario disponible a > 768px
 
 /* 
 **************************************************************************************
-Enlace al shop de nuestra pagina
+Estilos para el enlace al shop de nuestra pagina
 **************************************************************************************
 */
 .shop {
@@ -183,26 +183,96 @@ CONTENIDO/BODY DEL SITIO
 
 /* 
 **************************************************************************************
+ESTILOS PARA LA PAGINA DE CELULARES
+**************************************************************************************
+*/
+.iphone12 {
+  animation: aparecer .5s linear; }
+  .iphone12 .iphone12__contenedorTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 5px; }
+    .iphone12 .iphone12__contenedorTexto .iphone12__contenedorTexto--titulo {
+      color: #393939;
+      font-size: 35px;
+      font-weight: 600; }
+    .iphone12 .iphone12__contenedorTexto .iphone12__contenedorTexto--slogan {
+      color: #393939;
+      font-size: 25px;
+      font-weight: 500; }
+    .iphone12 .iphone12__contenedorTexto .iphone12__contenedorTexto--btnTienda {
+      background-color: #08acaf;
+      color: #e9ecef;
+      padding: 5px 20px;
+      margin-top: 7px;
+      border-radius: 15px; }
+  .iphone12 .iphone12__imagen {
+    height: 100vh;
+    background-image: url(../img/home/iphone12-celulares.jpg);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+
+.iphone12pro {
+  background-color: #1c1a1a; }
+  .iphone12pro .iphone12pro__img {
+    background-image: url(../img/home/1586965934_242736_1586966124_sumario_normal.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+    height: 400px;
+    background-repeat: no-repeat; }
+
+.cuotas .cuotas__contenedorImg {
+  display: flex;
+  justify-content: center; }
+  .cuotas .cuotas__contenedorImg img {
+    width: 65%; }
+
+.modelos {
+  background-color: #000000;
+  padding: 10px 2px; }
+  .modelos .modelos__contenedor .modelos__contenedor--img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .modelos .modelos__contenedor .modelos__contenedor--img h2 {
+      padding: 10px;
+      color: #e9ecef;
+      font-weight: 600;
+      font-size: 30px; }
+    .modelos .modelos__contenedor .modelos__contenedor--img img {
+      width: 85%; }
+    .modelos .modelos__contenedor .modelos__contenedor--img .modelos__contenedor--botones {
+      width: 85%;
+      display: flex;
+      justify-content: space-around;
+      position: relative; }
+      .modelos .modelos__contenedor .modelos__contenedor--img .modelos__contenedor--botones a {
+        background-color: #08acaf;
+        color: #e9ecef;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        padding: 5px 15px; }
+
+/* 
+**************************************************************************************
 SECCION DE SUSCRIPCION
 **************************************************************************************
 */
-/* 
-**************************************************************************************
-Clase para validar/novalidar el contenido de un input
-**************************************************************************************
-*/
 .valido {
-  border: 1px solid #2ad714e0;
-  /*   border-color: #2ad714e0; */ }
+  border: 1px solid #2ad714e0; }
 
 .noValido {
-  border: 1px solid #eb0b0b;
-  /*   border-color: #eb0b0b; */ }
+  border: 1px solid #eb0b0b; }
 
 .submitDesactivado {
   opacity: .4; }
 
 .suscripcion {
+  padding: 50px 0;
   background-image: url(../img/textura.png);
   height: auto; }
   .suscripcion .suscripcion__anuncio {
@@ -426,42 +496,55 @@ ESTILOS PARA LA TIENDA
         font-weight: 500;
         font-size: 18px;
         text-align: center; }
-    .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg {
-      display: flex;
-      justify-content: center;
-      width: 100%; }
-      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg div {
-        position: relative; }
-      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg i {
-        position: absolute;
-        font-size: 17px;
-        cursor: grab;
-        right: -6px;
-        top: -10px; }
-    .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 3px; }
-      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion h4,
-      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion span {
-        color: #393939;
-        font-weight: 600; }
-    .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorBoton {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 10px; }
-      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorBoton button {
-        padding: 8px;
-        border-radius: 5px;
-        outline: none;
-        border: none;
-        background-color: #08acaf;
-        color: #e9ecef;
-        font-size: 17px;
-        font-family: "Roboto";
-        font-weight: 400; }
+    .productos .productos__contenedor .productos__contenedor--article {
+      animation: aparecer .6s linear; }
+      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg {
+        display: flex;
+        justify-content: center;
+        width: 100%; }
+        .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg div {
+          position: relative; }
+        .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg i {
+          position: absolute;
+          font-size: 17px;
+          cursor: grab;
+          right: -6px;
+          top: -10px; }
+      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3px; }
+        .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion h4,
+        .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion span {
+          color: #393939;
+          font-weight: 600; }
+      .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorBoton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px; }
+        .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorBoton button {
+          padding: 8px;
+          border-radius: 5px;
+          outline: none;
+          border: none;
+          background-color: #08acaf;
+          color: #e9ecef;
+          font-size: 17px;
+          font-family: "Roboto";
+          font-weight: 400; }
+
+/*
+Animacion para que aparezcan las cards de productos
+*/
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.6; }
+  100% {
+    opacity: 1; } }
 
 /* 
 **************************************************************************************

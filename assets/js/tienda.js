@@ -98,6 +98,8 @@
         if(!arrProductos.some((elemento) => elemento.nombre == nombre)){
           contadorProductos++;
           contadorCarrito.classList.remove("activada");
+          e.innerHTML = "Agregado";
+          e.style.background = "#393939";
           contadorCarrito.innerHTML = `${contadorProductos}`
           arrProductos.push(new Carrito(contadorProductos,nombre,precio,ruta));
         }
