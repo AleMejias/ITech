@@ -80,6 +80,7 @@
               montoTotal.text(`$${calcularMontoTotal()}`);
           })  ;
           
+          /* ELIMINAR ELEMENTOS DEL CARRITO CON UNA PEQUEÑA ANIMACION */
           let btnEliminarProducto = $(".btn-eliminar");
           let elementosEnCarrito = $(btnEliminarProducto).length;
           $.each(btnEliminarProducto,(indice,valor) => {
