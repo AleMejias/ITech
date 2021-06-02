@@ -115,12 +115,33 @@
                                 <tr>
                                     <td>
                                         <button id = "finalizar-compra">Finalizar Compra</button>
-                                        <img src="../img/oval.svg" id="loadingImg" class=" activada carrito__contenedorMontoTotal--imgLoading"/>
+                                        <img src="../img/oval.svg" id="loadingImg-ordenDeCompra" class=" activada carrito__contenedorMontoTotal--imgLoading"/>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+                </div>
+            </section>
+            <!-- 
+            SECCION DE SUBCRIPCION
+            -->
+            <section class="container-fluid suscripcion mt-5">
+                <div class="row">
+                <div class="col-md-7 suscripcion__anuncio">
+                    <h2 class="suscripcion__anuncio--titulo">Se parte de nuestra familia
+                    </h2>
+                    <p class="suscripcion__anuncio--mensaje">Suscribite a nuestra tienda dejando tu dirección de correo para acceder a descuentos exclusicos.
+                    </p>
+                </div>
+                <div class="col-md-5 suscripcion__formulario">
+                    <form class="suscripcion__formularioContenedor" id="formulario" action="#">
+                    <input type="email" name="correo" class="inputCorreo suscripcion__formulario--input" id="inputCorreo" placeholder="ejemplo@ejemplo.com"/>
+                    <input type="submit" id="btnSubmit" class="suscripcion__formulario--btnEnviar submitDesactivado" disabled value="SUSCRIBIRME"/>
+                    <img src="../img/oval.svg" id="loadingImg" class="activada suscripcion__formulario--loadingImg"/>
+                    <span id="suscripcionExitosa" class="activada suscripcion__formulario--suscripcionExitosa">¡Suscripción enviada con éxito!</span>
+                    </form>
+                </div>
                 </div>
             </section>
         </main>
@@ -159,6 +180,7 @@
         </footer>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="../js/home.js"></script>
         <script src="../js/carrito.js"></script>
     </body>
 </html>

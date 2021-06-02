@@ -12,10 +12,10 @@
         3) Mensaje para el usuario
         */
     const carritoVacio = ( alerta, claseDelIcono ,mensaje ) => {
-        $(contenedorCarrito).removeClass("activada");
+        /* $(contenedorCarrito).removeClass("activada"); */
         $(contenedorCarrito).empty();
+        $(contenedorCarrito).fadeIn();
       $(contenedorCarrito).append(`
-
         <section class = "carrito__carritoVacio">
             <div>
                 <h3>${alerta}<i class="${claseDelIcono}"></i></h3>
@@ -45,7 +45,8 @@
         let sumarPrecios = 0;
         let ordenDeCompra__contenedor = $("#orden-de-compra");
         let ordenDeCompra;
-        $(contenedorCarrito).removeClass("activada");
+        /* $(contenedorCarrito).removeClass("activada"); */
+        $(contenedorCarrito).show();
         $.each(listadoDeProductos, (indice, valor) => {
             sumarPrecios += parseInt(valor.precio);
             $(carritoDeCompras).prepend(`
@@ -73,7 +74,8 @@
           montoTotal.text(`$${sumarPrecios}`);
           ordenDeCompra = Math.floor(Math.random() * (30000000 - 5000000)) + 5000000; // con esto simulo un numero de ticket u orden de compra
           ordenDeCompra__contenedor.text(`Orden de compra #${ordenDeCompra}`);
-          contenedorMontoTotal.removeClass("activada");
+          /* contenedorMontoTotal.removeClass("activada"); */
+          contenedorMontoTotal.show();
 
           let form = $(".formulario");
           $(form).change(() => {
@@ -87,36 +89,43 @@
               $(valor).click(() => {
                   let eliminarFila = $(".filas")[indice];
                   let inputCantidad = $(".inputCantidad")[indice];
-                  $(eliminarFila).fadeTo("fast",0.6, () => {
-                      $(eliminarFila).slideUp(600, () => {
-                        $(eliminarFila).addClass("activada");
-                        $(inputCantidad).addClass("activada");
-                        montoTotal.text(`$${calcularMontoTotal()}`);
-                        elementosEnCarrito--;
-                        /* VERIFICO SI NO HAY MAS ELEMENTOS EN EL CARRITO PARA:
-                        1) IMPRIMIR MENSAJE DE QUE SE ENCUENTRA VACIO MI CARRITO
-                        2) PARA LIMPIAR EL STORAGE
-                        */
-                        if( elementosEnCarrito == 0 ){
-                            carritoVacio( "ATENCIÓN","fas fa-exclamation-circle","EL CARRRITO SE ENCUENTRA VACIO" );
-                            localStorage.clear();
-                        }
-                      });
-                  })
+                  $(eliminarFila).fadeTo("fast",0.6)
+                                    .slideUp(600, () => {
+                                        $(eliminarFila).addClass("activada");
+                                        $(inputCantidad).addClass("activada");
+                                        montoTotal.text(`$${calcularMontoTotal()}`);
+                                        elementosEnCarrito--;
+                                        /* VERIFICO SI NO HAY MAS ELEMENTOS EN EL CARRITO PARA:
+                                        1) IMPRIMIR MENSAJE DE QUE SE ENCUENTRA VACIO MI CARRITO
+                                        2) PARA LIMPIAR EL STORAGE
+                                        */
+                                        if( elementosEnCarrito == 0 ){
+                                            carritoVacio( "ATENCIÓN","fas fa-exclamation-circle","EL CARRRITO SE ENCUENTRA VACIO" );
+                                            localStorage.clear();
+                                        }
+                                    });
                 });
           });
 
     };
-    /* VERIFICO PRIMERO QUE EL CARRITO NO SE ENCUENTRE VACIO, de no estarlo imprimo los productos */
-    productosCargadosArr.length == 0 ? carritoVacio( "ATENCIÓN", "fas fa-exclamation-circle","EL CARRRITO SE ENCUENTRA VACIO") : imprimirProductos(productosCargadosArr);
+    /* VERIFICO PRIMERO QUE EL CARRITO NO SE ENCUENTRE VACIO, de no estarlo imprimo los productos,
+    PREGUNTO USANDO EL OPERADOR TERNARIO POR: 
+    1) SI LA VARIABLE RECIBIO NULL DESDE EL LOCALSTORAGE
+    2) SI EL TAMAÑO DEL ARRAY RECIBIDO DEL LOCALSTORAGE SE REDUJO A CERO
+    */
+    productosCargadosArr == null ? carritoVacio( "ATENCIÓN", "fas fa-exclamation-circle","EL CARRRITO SE ENCUENTRA VACIO") :
+    productosCargadosArr.length == 0 ? carritoVacio( "ATENCIÓN", "fas fa-exclamation-circle","EL CARRRITO SE ENCUENTRA VACIO") 
+    : imprimirProductos(productosCargadosArr);
 
     /* EVENTO PARA LA FINALIZACION DE LA COMPRA */
     let btn__finalizarCompra = $("#finalizar-compra");
     $(btn__finalizarCompra).click(() => {
-        let imgLoading = $("#loadingImg");
-        $(imgLoading).removeClass("activada");
+        let imgLoading = $("#loadingImg-ordenDeCompra");
+        /* $(imgLoading).removeClass("activada"); */
+        $(imgLoading).show();
         setTimeout(() => {
-            $(imgLoading).addClass("activada");
+            /* $(imgLoading).addClass("activada"); */
+            $(imgLoading).hide();
             carritoVacio("FELICITACIONES","far fa-check-circle","TU COMPRA HA SIDO REGISTRADA CON ÉXITO");
             localStorage.clear();
         },2200);
