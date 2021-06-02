@@ -24,7 +24,24 @@ header{
   z-index: 1;
 }
 
-
+/* MIXIN PARA REUTILIZAR ESTILOS DE TITULO QUE SEAN IGUALES EN LAS PAGINAS DE TIPO COLLAGE */
+@mixin titulos{
+  font-size: 35px;
+  font-weight: 600;
+}
+/* MIXIN PARA REUTILIZAR ESTILOS DE SLOGAN QUE SEAN IGUALES EN LAS PAGINAS DE TIPO COLLAGE */
+@mixin slogans{
+  font-size: 25px;
+  font-weight: 500;
+}
+/* MIXIN PARA REUTILIZAR ESTILOS DE BOTON "COMPRAR" QUE SEAN IGUALES EN LAS PAGINAS DE TIPO COLLAGE */
+@mixin btnCollagePaginas {
+  background-color: $verde_principal;
+  color: $links__menuNavegacion;
+  padding: 5px 20px;
+  margin-top: 7px;
+  border-radius: 15px;
+}
 /* 
 **************************************************************************************
 Menu secundario disponible a < 768px
@@ -110,9 +127,8 @@ CONTENIDO/BODY DEL SITIO
     flex-direction: column;
     align-items: center;
     .iphone-12pro__titulo{
+      @include titulos;
       color: $links__menuNavegacion;
-      font-size: 52px;
-      font-weight: 600;
       text-align: center;
     }
     .iphone-12pro__tienda{
@@ -120,9 +136,9 @@ CONTENIDO/BODY DEL SITIO
       flex-direction: inherit;
       align-items: center;
       .iphone-12pro__descripcion{
-        @extend .iphone-12pro__titulo;
-        font-size: 26px;
-        font-weight: 400;
+        @include slogans;
+        color: $links__menuNavegacion;
+        text-align: center;
       }
       .iphone-12pro__enlaceTienda{
         @extend .iphone-12pro__titulo;
@@ -162,8 +178,7 @@ CONTENIDO/BODY DEL SITIO
       color: $links__menuNavegacion;
     }
     .collageUno__filaUno--tituloAppleWatch{
-      font-size: 35px;
-      font-weight: 600;
+      @include titulos;
     }
     .collageUno__filaUno--iconoAppleWatch{
       font-size: 35px;
@@ -237,13 +252,11 @@ CONTENIDO/BODY DEL SITIO
   .collageTres__contenedorPropaganda{
     padding: 10px;
     h2{
-      font-size: 35px;
-      font-weight: 600;
+      @include titulos;
       color: #ffffff;
     }
     span{
-      font-size: 17px;
-      font-weight: 400;
+      @include slogans;
       color: #ffffff;
     }
     i{
@@ -265,21 +278,15 @@ ESTILOS PARA LA PAGINA DE CELULARES
     align-items: center;
     padding: 45px 5px;
     .iphone12__contenedorTexto--titulo{
-      color: #393939;
-      font-size: 35px;
-      font-weight: 600;
+      @include titulos;
+      color: $negro_opaco;
     }
     .iphone12__contenedorTexto--slogan{
+      @include slogans;
       color: $negro_opaco;
-      font-size: 25px;
-      font-weight: 500;
     }
     .iphone12__contenedorTexto--btnTienda{
-      background-color: $verde_principal;
-      color: $links__menuNavegacion;
-      padding: 5px 20px;
-      margin-top: 7px;
-      border-radius: 15px;
+      @include btnCollagePaginas;
     }
   }
   .iphone12__imagen{
@@ -319,10 +326,9 @@ ESTILOS PARA LA PAGINA DE CELULARES
       flex-wrap: wrap;
       justify-content: center;
       h2{
+        @include titulos;
         padding: 10px;
         color: $links__menuNavegacion;
-        font-weight: 600;
-        font-size: 30px;
       }
       img{
         width: 85%;
@@ -345,7 +351,97 @@ ESTILOS PARA LA PAGINA DE CELULARES
   }
 }
 
-
+/* 
+**************************************************************************************
+ESTILOS PARA LA PAGINA DE TABLETS
+**************************************************************************************
+*/
+.ipadPro{
+  background-color: #000000;
+  padding: 10px;
+  .ipadPro__contenedorTexto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 5px;
+    .ipadPro__contenedorTexto--titulo{
+      @include titulos;
+      color: $links__menuNavegacion;
+      i{
+        margin-left: 5px;
+      }
+    }
+    .ipadPro__contenedorTexto--slogan{
+      @include slogans;
+      color:$links__menuNavegacion;
+    }
+    .ipadPro__contenedorTexto--btnTienda{
+      @include btnCollagePaginas;
+    }
+  }
+  .ipadPro__contenedorImg{
+    img{
+      width: 100%;
+    }
+  }
+}
+.ipadAir{
+  .ipadAir__contenedorTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5px;
+    .ipadAir__contenedorTexto--titulo{
+      @include titulos;
+      color: $negro_opaco;
+    }
+    .ipadAir__contenedorTexto--slogan{
+      @include slogans;
+      color: $negro_opaco;
+      text-align: center;
+    }
+    .ipadAir__contenedorTexto--btnTienda{
+      @include btnCollagePaginas;
+    }
+  }
+  .ipadAir__contenedorImg{
+    display: flex;
+    justify-content: center;
+    img{
+      width: 65%;
+    }
+  }
+}
+.ipadMini{
+  background-color: #ffffff;
+  .ipadMini__contenedorTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5px;
+    .ipadMini__contenedorTexto--titulo{
+      @include titulos;
+      color: $negro_opaco;
+    }
+    .ipadMini__contenedorTexto--slogan{
+      @include slogans;
+      color: $negro_opaco;
+      text-align: center;
+    }
+    .ipadMini__contenedorTexto--btnTienda{
+      @include btnCollagePaginas;
+    }
+  }
+  .ipadMini__contenedorImg{
+    display: flex;
+    justify-content: center;
+    img{
+      width: 100%;
+    }
+  }
+}
 /* 
 **************************************************************************************
 SECCION DE SUSCRIPCION
@@ -611,22 +707,20 @@ ESTILOS PARA LA TIENDA
         justify-content: center;
       }
       h3{
+        @include titulos;
         color: $negro_opaco;
         font-family: "Roboto";
-        font-weight: 600;
-        font-size: 30px;
         i{
           margin-left: 3px;
           color: $verde_principal;
-          font-size: 30px;
+          font-size: 35px;
         }
       }
       span{
+        @include slogans;
+        font-family: "Roboto";
         color: $negro_opaco;
         padding: 5px 1px;
-        font-family: "Roboto";
-        font-weight: 500;
-        font-size: 18px;
         text-align: center;
       }
     }
@@ -822,18 +916,16 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
     h3{
       padding: 10px 5px;
       color: $negro_opaco;
-      font-size: 35px;
-      font-weight: 600;
+      @include titulos;
     }
     i{
       margin-left: 2px ;
     }
     span{
+      @include slogans;
       margin: 10px;
       color: $negro_opaco;
       font-family: "Roboto";
-      font-size: 16px;
-      font-weight: 400;
     }
     a{
       background-color: $verde_principal;
