@@ -442,11 +442,43 @@ ESTILOS PARA LA PAGINA DE TABLETS
     }
   }
 }
+
+/* **************************************************************************************
+ ESTILOS PARA LA PAGINA DE APPLE WATCH
+************************************************************************************** */
+.watchSeries6{
+  .watchSeries6__contenedor{
+    .watchSeries6__contenedor--Img{
+      img{
+        width: 100%;
+      }
+    }
+    .watchSeries6__contenedor--Texto{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 5px;
+      .watchSeries6__contenedor--titulo{
+        @include titulos;
+        color: $negro_opaco;
+      }
+      .watchSeries6__contenedor--slogan{
+        @include slogans;
+        color: $negro_opaco;
+        text-align: center;
+      }
+      .watchSeries6__contenedor--btnTienda{
+        @include btnCollagePaginas;
+      }
+    }
+  }
+}
 /* 
 **************************************************************************************
 SECCION DE SUSCRIPCION
 **************************************************************************************
-*/
+ */
 .valido{
   border: 1px solid #2ad714e0;
 }

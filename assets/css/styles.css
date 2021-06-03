@@ -351,11 +351,39 @@ ESTILOS PARA LA PAGINA DE TABLETS
     .ipadMini .ipadMini__contenedorImg img {
       width: 100%; }
 
+/* **************************************************************************************
+ ESTILOS PARA LA PAGINA DE APPLE WATCH
+************************************************************************************** */
+.watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Img img {
+  width: 100%; }
+
+.watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 5px; }
+  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto .watchSeries6__contenedor--titulo {
+    font-size: 35px;
+    font-weight: 600;
+    color: #393939; }
+  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto .watchSeries6__contenedor--slogan {
+    font-size: 25px;
+    font-weight: 500;
+    color: #393939;
+    text-align: center; }
+  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto .watchSeries6__contenedor--btnTienda {
+    background-color: #08acaf;
+    color: #e9ecef;
+    padding: 5px 20px;
+    margin-top: 7px;
+    border-radius: 15px; }
+
 /* 
 **************************************************************************************
 SECCION DE SUSCRIPCION
 **************************************************************************************
-*/
+ */
 .valido {
   border: 1px solid #2ad714e0; }
 
