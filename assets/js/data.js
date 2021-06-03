@@ -14,6 +14,13 @@ const DATA = [
         detalle:["64 GB, 256 GB","20,32 cm | 13,48 cm | 0,61 cm","Pantalla Retina. Pantalla Multi-Touch de 7,9 pulgadas (en diagonal) retroiluminada por LED. Resolución de 2.048 por 1.536 píxeles a 326 p/p. Cubierta oleófuga antihuellas. Compatible con el Apple Pencil","Chip A12 Bionic con arquitectura de 64 bits. Neural Engine. Coprocesador M12 integrado","Cámara de 8 Mpx. Apertura de ƒ/2,4. Lente de cinco elementos. Filtro de infrarrojos híbrido. Live Photos. Gama cromática amplia para fotos y Live Photos. Enfoque automático. Fotos panorámicas (hasta 43 Mpx). HDR para fotos. Modo ráfaga. Enfoque por toque. Temporizador. Estabilización automática de imagen","Batería recargable integrada de polímeros de litio de 19,1 vatios/hora","iPadOS"]
     },
     {
+        nombre: "Apple Watch Series 3",
+        precio: 299,
+        ruta: "../img/home/watchseries3-1.jpg",
+        categoria:"Apple Watch",
+        detalle: ["Incluye las principales funciones de salud, forma física y conectividad del Apple Watch. Construido en Aluminio","Caja de 38 o 42 mm","Pantalla Retina. La pantalla se enciende en cuanto levantas la muñeca","No posee conexión móvil. Incluye GPS","Altímetro y Sensor óptico de frecuencia cardiaca. Acelerómetro(fuerzas de hasta 16 g). Resistencia al agua(hasta 50 metros)","S3 SiP con procesador de doble núcleo"]
+    },
+    {
         nombre:"iPhone SE",
         precio: 400,
         ruta:"../img/home/iphonese-1.jpg",

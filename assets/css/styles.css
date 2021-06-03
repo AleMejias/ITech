@@ -355,7 +355,7 @@ ESTILOS PARA LA PAGINA DE TABLETS
  ESTILOS PARA LA PAGINA DE APPLE WATCH
 ************************************************************************************** */
 .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Img img {
-  width: 100%; }
+  width: 85%; }
 
 .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto {
   display: flex;
@@ -378,6 +378,59 @@ ESTILOS PARA LA PAGINA DE TABLETS
     padding: 5px 20px;
     margin-top: 7px;
     border-radius: 15px; }
+
+.watchse .watchse__contenedor--Img img {
+  width: 85%; }
+
+.watchse .watchse__contenedor--Texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 5px; }
+  .watchse .watchse__contenedor--Texto .watchse__contenedor--titulo {
+    font-size: 35px;
+    font-weight: 600;
+    color: #393939; }
+  .watchse .watchse__contenedor--Texto .watchse__contenedor--slogan {
+    font-size: 25px;
+    font-weight: 500;
+    color: #393939;
+    text-align: center; }
+  .watchse .watchse__contenedor--Texto .watchse__contenedor--btnTienda {
+    background-color: #08acaf;
+    color: #e9ecef;
+    padding: 5px 20px;
+    margin-top: 7px;
+    border-radius: 15px; }
+
+.modelosWatch {
+  background-color: #f1f1f1; }
+  .modelosWatch .modelosWatch__contenedorTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px; }
+    .modelosWatch .modelosWatch__contenedorTexto .modelosWatch__contenedorTexto--titulo {
+      font-size: 35px;
+      font-weight: 600;
+      color: #393939; }
+    .modelosWatch .modelosWatch__contenedorTexto .modelosWatch__contenedorTexto--slogan {
+      font-size: 25px;
+      font-weight: 500;
+      color: #393939; }
+    .modelosWatch .modelosWatch__contenedorTexto .modelosWatch__contenedorTexto--btnTienda {
+      background-color: #08acaf;
+      color: #e9ecef;
+      padding: 5px 20px;
+      margin-top: 7px;
+      border-radius: 15px; }
+  .modelosWatch .modelosWatch__contenedorImg {
+    display: flex;
+    justify-content: center; }
+    .modelosWatch .modelosWatch__contenedorImg img {
+      width: 82.5%; }
 
 /* 
 **************************************************************************************

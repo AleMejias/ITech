@@ -450,7 +450,7 @@ ESTILOS PARA LA PAGINA DE TABLETS
   .watchSeries6__contenedor{
     .watchSeries6__contenedor--Img{
       img{
-        width: 100%;
+        width: 85%;
       }
     }
     .watchSeries6__contenedor--Texto{
@@ -471,6 +471,60 @@ ESTILOS PARA LA PAGINA DE TABLETS
       .watchSeries6__contenedor--btnTienda{
         @include btnCollagePaginas;
       }
+    }
+  }
+}
+.watchse{
+  .watchse__contenedor--Img{
+    img{
+      width: 85%;
+    }
+  }
+  .watchse__contenedor--Texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5px;
+    .watchse__contenedor--titulo{
+      @include titulos;
+      color: $negro_opaco;
+    }
+    .watchse__contenedor--slogan{
+      @include slogans;
+      color: $negro_opaco;
+      text-align: center;
+    }
+    .watchse__contenedor--btnTienda{
+      @include btnCollagePaginas;
+    }
+  }
+}
+.modelosWatch{
+  background-color: #f1f1f1;
+  .modelosWatch__contenedorTexto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    .modelosWatch__contenedorTexto--titulo{
+      @include titulos;
+      color: $negro_opaco;
+    }
+    .modelosWatch__contenedorTexto--slogan{
+      @include slogans;
+      color: $negro_opaco;
+    }
+    .modelosWatch__contenedorTexto--btnTienda{
+      @include btnCollagePaginas;
+    }
+  }
+  .modelosWatch__contenedorImg{
+    display: flex;
+    justify-content: center;
+    img{
+      width: 82.5%;
     }
   }
 }
