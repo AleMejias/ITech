@@ -13,7 +13,8 @@ li {
 h2,h3,h4,a{
   font-family: "Roboto";
 }
-button:hover{
+button:hover,
+input[type="submit"]:hover{
   opacity: .7;
 }
 
@@ -527,6 +528,88 @@ ESTILOS PARA LA PAGINA DE TABLETS
       width: 82.5%;
     }
   }
+}
+/* 
+**************************************************************************************
+ESTILOS PARA LA PAGINA DE CONTACTO
+**************************************************************************************
+ */
+.fondoEncabezado{
+  .fondoEncabezado__contenedorImg{
+    background-image: url(../img/home/fondo-pag-contacto.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    .fondoEncabezado__contenedorTexto{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 5px;
+      .fondoEncabezado__contenedorTitulo{
+        @include titulos;
+        color: $links__menuNavegacion;
+      }
+      .fondoEncabezado__contenedorSlogan{
+        @include slogans;
+        color: $links__menuNavegacion;
+        text-align: center;
+      }
+    }
+  }
+}
+.formulario{
+  padding: 10px 5px;
+  .formulario__contenedor{
+    .formulario__contenedor--titulo{
+      @include titulos;
+      padding: 10px 10px;
+      color: $negro_opaco;
+    }
+    .formulario__contenedor--form{
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      padding: 20px 10px;
+      .formulario__contenedor--label{
+        width: 70%;
+        color: $negro_opaco;
+        font-size: 15px;
+        font-weight: 600;
+        font-family: 'Roboto';
+        padding: 3px 0px;
+        margin: 9px 0;
+      }
+      .formulario__contenedor--input{
+        width: 70%;
+        padding: 7px;
+        background-color: #fafafa;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+      }
+      .formulario__contenedor--inputSubmit{
+        background-color: $verde_principal;
+        color: $links__menuNavegacion;
+        border: none;
+        outline: none;
+        border-radius: 7px;
+        width: 20%;
+        margin-top: 10px;
+        padding: 5px 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+/* ESTILOS PARA VALIDAR LOS CAMPOS DEL FORMULARIO DE LA PAGINA CONTACTO */
+.check{
+  color: #2ad714e0;
+  font-size: 20px;
+}
+.noCheck{
+  color: #eb0b0b;
+  font-size: 20px;
 }
 /* 
 **************************************************************************************

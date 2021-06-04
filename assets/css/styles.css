@@ -13,7 +13,8 @@ li {
 h2, h3, h4, a {
   font-family: "Roboto"; }
 
-button:hover {
+button:hover,
+input[type="submit"]:hover {
   opacity: .7; }
 
 /* FIJAMOS NUESTRO MENU A LA PANTALLA AL HACER SCROLL */
@@ -431,6 +432,79 @@ ESTILOS PARA LA PAGINA DE TABLETS
     justify-content: center; }
     .modelosWatch .modelosWatch__contenedorImg img {
       width: 82.5%; }
+
+/* 
+**************************************************************************************
+ESTILOS PARA LA PAGINA DE CONTACTO
+**************************************************************************************
+ */
+.fondoEncabezado .fondoEncabezado__contenedorImg {
+  background-image: url(../img/home/fondo-pag-contacto.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 35vh; }
+  .fondoEncabezado .fondoEncabezado__contenedorImg .fondoEncabezado__contenedorTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px; }
+    .fondoEncabezado .fondoEncabezado__contenedorImg .fondoEncabezado__contenedorTexto .fondoEncabezado__contenedorTitulo {
+      font-size: 35px;
+      font-weight: 600;
+      color: #e9ecef; }
+    .fondoEncabezado .fondoEncabezado__contenedorImg .fondoEncabezado__contenedorTexto .fondoEncabezado__contenedorSlogan {
+      font-size: 25px;
+      font-weight: 500;
+      color: #e9ecef;
+      text-align: center; }
+
+.formulario {
+  padding: 10px 5px; }
+  .formulario .formulario__contenedor .formulario__contenedor--titulo {
+    font-size: 35px;
+    font-weight: 600;
+    padding: 10px 10px;
+    color: #393939; }
+  .formulario .formulario__contenedor .formulario__contenedor--form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 20px 10px; }
+    .formulario .formulario__contenedor .formulario__contenedor--form .formulario__contenedor--label {
+      width: 70%;
+      color: #393939;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: 'Roboto';
+      padding: 3px 0px;
+      margin: 9px 0; }
+    .formulario .formulario__contenedor .formulario__contenedor--form .formulario__contenedor--input {
+      width: 70%;
+      padding: 7px;
+      background-color: #fafafa;
+      border: none;
+      outline: none;
+      border-radius: 4px; }
+    .formulario .formulario__contenedor .formulario__contenedor--form .formulario__contenedor--inputSubmit {
+      background-color: #08acaf;
+      color: #e9ecef;
+      border: none;
+      outline: none;
+      border-radius: 7px;
+      width: 20%;
+      margin-top: 10px;
+      padding: 5px 5px;
+      cursor: pointer; }
+
+/* ESTILOS PARA VALIDAR LOS CAMPOS DEL FORMULARIO DE LA PAGINA CONTACTO */
+.check {
+  color: #2ad714e0;
+  font-size: 20px; }
+
+.noCheck {
+  color: #eb0b0b;
+  font-size: 20px; }
 
 /* 
 **************************************************************************************

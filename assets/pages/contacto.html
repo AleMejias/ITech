@@ -79,16 +79,58 @@
                 </div>
             </div>
         </section>
+        <section class="container-fluid fondoEncabezado">
+            <div class="row">
+                <div class="col-md-12 fondoEncabezado__contenedorImg">
+                    <div class="fondoEncabezado__contenedorTexto">
+                        <h2 class="fondoEncabezado__contenedorTitulo">CONACTANOS</h2>
+                        <h4 class="fondoEncabezado__contenedorSlogan">TE RESPONDEREMOS LO ANTES POSIBLE.</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 
+            FORMULARIO
+         -->
+         <section class="container mt-5 formulario">
+             <div class="row">
+                 <div class="col-md-12 formulario__contenedor">
+                     <h2 class="formulario__contenedor--titulo">CONTACTO</h2>
+                     <form action="#" class="formulario__contenedor--form" id="formulario">
+                        <label class="formulario__contenedor--label" for="nombre">Nombre
+                            <i class="fas fa-check activada check" id="nombre-check"></i>
+                            <i class="fas fa-times activada noCheck" id="nombre-noCheck"></i>
+                        </label>
+                            <input class="formulario__contenedor--input" type="text" name="nombre" id="nombre" minlength= "3" maxlength= "60" placeholder="Alejandro" required>
+                        <label class="formulario__contenedor--label" for="apellido">Apellido
+                            <i class="fas fa-check activada check" id="apellido-check"></i>
+                            <i class="fas fa-times activada noCheck" id="apellido-noCheck"></i>
+                        </label>
+                            <input class="formulario__contenedor--input" type="text" name="apellido" id="apellido" minlength="3" maxlength="60" placeholder="Mejias" required>
+                        <label class="formulario__contenedor--label" for="mail">Correo
+                            <i class="fas fa-check activada check" id="mail-check"></i>
+                            <i class="fas fa-times activada noCheck" id="mail-noCheck"></i>
+                        </label>
+                            <input class="formulario__contenedor--input" type="email" name="mail" id="mail"  placeholder="ejemplo@ejemplo.com" required>
+                         <label class="formulario__contenedor--label" for="mensaje">Consulta
+                            <i class="fas fa-check activada check" id="mensaje-check"></i>
+                            <i class="fas fa-times activada noCheck" id="mensaje-noCheck"></i>
+                         </label>
+                            <textarea class="formulario__contenedor--input" name="mensaje" id="mensaje" cols="30" rows="6" minLength = "6" maxlength="50" placeholder="Escribenos tu consulta" required></textarea>
+                            <input class="formulario__contenedor--inputSubmit" type="submit" id = "enviarFormulario" value="Enviar">
+                     </form>
+                 </div>
+             </div>
+
+         </section>
         <!-- 
             SECCION DE SUBCRIPCION
         -->
-        <section class="container-fluid suscripcion">
+        <section class="container-fluid suscripcion mt-5">
             <div class="row mx-0">
                 <div class="col-md-7 suscripcion__anuncio">
-                    <h2 class="suscripcion__anuncio--titulo">Se parte de nuestra familia
-                    </h2>
-                    <p class="suscripcion__anuncio--mensaje">Suscribite a nuestra tienda dejando tu dirección de correo para acceder a descuentos exclusicos.
-                    </p>
+                    <h2 class="suscripcion__anuncio--titulo">Se parte de nuestra familia</h2>
+                    <p class="suscripcion__anuncio--mensaje">Suscribite a nuestra tienda dejando tu dirección de correo para acceder a descuentos exclusicos.</p>
                 </div>
                 <div class="col-md-5 suscripcion__formulario">
                     <form class="suscripcion__formularioContenedor" id="formulario" action="#">
@@ -134,5 +176,6 @@
      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
      <script src="../js/home.js"></script>
+     <script src="../js/formulario.js"></script>
 </body>
 </html>
