@@ -1,5 +1,4 @@
 (() => {
-    const formulario = document.querySelector("#formulario");
     const validarFormulario = ( identificador , contenido) => {
         let inputPorValidar;
 
@@ -15,34 +14,51 @@
         }
         return inputPorValidar.test(contenido)
     };
-    const enviarFormulario = () => {};
-    let contadorCamposValidos = 0;
+
+    let contadorCamposValidados = 0;
+    const formulario = document.querySelector("#formulario");
     formulario.addEventListener("change", (respuesta) => {
         let identificador = respuesta.target.getAttribute("id");
         let esValido = document.querySelector(`#${identificador}-check`);
         let noEsValido = document.querySelector(`#${identificador}-noCheck`);
-        if(identificador != "mensaje"){
-            if(validarFormulario( identificador,respuesta.target.value )){
-                noEsValido.classList.add("activada");
-                esValido.classList.remove("activada");
-                contadorCamposValidos++;
-            }else{
-                esValido.classList.add("activada");
-                noEsValido.classList.remove("activada");
-                contadorCamposValidos--;
-            }
-        }else{
-            if(respuesta.target.value.length > 5 && respuesta.target.value.length < 51){
-                noEsValido.classList.add("activada");
-                esValido.classList.remove("activada");
-                contadorCamposValidos++;
-            }else{
-                esValido.classList.add("activada");
-                noEsValido.classList.remove("activada");
-                contadorCamposValidos--;
-            }
+        let longitudDelMensaje = respuesta.target.value.length;
+        let input = respuesta.target;
+        switch(identificador){
+            case "mensaje":
+                if(longitudDelMensaje > 3 && longitudDelMensaje < 51){
+                    noEsValido.classList.add("activada");
+                    input.classList.add("valido");
+                    esValido.classList.remove("activada");
+                    input.classList.remove("noValido");
+                    contadorCamposValidados++;
+                }else if(respuesta.target.classList.contains("valido")){
+                    esValido.classList.add("activada");
+                    input.classList.remove("valido");
+                    noEsValido.classList.remove("activada");
+                    input.classList.add("noValido");
+                    contadorCamposValidados--;
+                }
+                break;
+            default:
+                if(validarFormulario( identificador,respuesta.target.value )){
+                    noEsValido.classList.add("activada");
+                    input.classList.add("valido");
+                    esValido.classList.remove("activada");
+                    input.classList.remove("noValido");
+                    contadorCamposValidados++;
+                }else if(input.classList.contains("valido")){
+                    esValido.classList.add("activada");
+                    input.classList.remove("valido");
+                    noEsValido.classList.remove("activada");
+                    input.classList.add("noValido");
+                    contadorCamposValidados--;
+                }
         }
+        const btnEnviar = document.querySelector("#enviarFormulario");
+        contadorCamposValidados == 4 ? btnEnviar.removeAttribute("disabled") : "";
 
-        contadorCamposValidos == 4 ? enviarFormulario() : "";
+        btnEnviar.addEventListener("click", (e) => {
+            e.preventDefault();
+        });
     });
 })();
