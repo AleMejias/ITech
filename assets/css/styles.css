@@ -483,6 +483,7 @@ ESTILOS PARA LA PAGINA DE CONTACTO
       width: 70%;
       padding: 7px;
       background-color: #fafafa;
+      border: none;
       outline: none;
       border-radius: 4px; }
     .formulario .formulario__contenedor .formulario__contenedor--form .formulario__contenedor--inputSubmit {
@@ -494,7 +495,7 @@ ESTILOS PARA LA PAGINA DE CONTACTO
       width: 20%;
       margin-top: 10px;
       padding: 5px 5px;
-      cursor: pointer; }
+      cursor: not-allowed; }
 
 /* ESTILOS PARA VALIDAR LOS CAMPOS DEL FORMULARIO DE LA PAGINA CONTACTO */
 .check {
