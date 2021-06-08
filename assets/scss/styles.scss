@@ -601,6 +601,24 @@ ESTILOS PARA LA PAGINA DE CONTACTO
       }
     }
   }
+  .formulario__respuesta{
+    .formulario-respuesta--div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 5px;
+      .formularrio__respuesta--titulo{
+        @include titulos;
+        color: $negro_opaco;
+      }
+      .formulario__respuesta--span{
+        font-size: 1rem;
+        font-family: "Roboto";
+        color: $negro_opaco;
+      }
+    }
+  }
 }
 /* ESTILOS PARA VALIDAR LOS CAMPOS DEL FORMULARIO DE LA PAGINA CONTACTO */
 .check{

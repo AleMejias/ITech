@@ -496,6 +496,20 @@ ESTILOS PARA LA PAGINA DE CONTACTO
       margin-top: 10px;
       padding: 5px 5px;
       cursor: not-allowed; }
+  .formulario .formulario__respuesta .formulario-respuesta--div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px; }
+    .formulario .formulario__respuesta .formulario-respuesta--div .formularrio__respuesta--titulo {
+      font-size: 35px;
+      font-weight: 600;
+      color: #393939; }
+    .formulario .formulario__respuesta .formulario-respuesta--div .formulario__respuesta--span {
+      font-size: 1rem;
+      font-family: "Roboto";
+      color: #393939; }
 
 /* ESTILOS PARA VALIDAR LOS CAMPOS DEL FORMULARIO DE LA PAGINA CONTACTO */
 .check {
