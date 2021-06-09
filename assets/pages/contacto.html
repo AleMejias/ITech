@@ -83,7 +83,7 @@
             <div class="row">
                 <div class="col-md-12 fondoEncabezado__contenedorImg">
                     <div class="fondoEncabezado__contenedorTexto">
-                        <h2 class="fondoEncabezado__contenedorTitulo">CONACTANOS</h2>
+                        <h2 class="fondoEncabezado__contenedorTitulo">CONTACTANOS</h2>
                         <h4 class="fondoEncabezado__contenedorSlogan">TE RESPONDEREMOS LO ANTES POSIBLE.</h4>
                     </div>
                 </div>
@@ -97,36 +97,12 @@
                  <div class="col-md-12 formulario__contenedor">
                      <h2 class="formulario__contenedor--titulo">CONTACTO</h2>
                      <form action="#" class="formulario__contenedor--form" id="formulario">
-                        <label class="formulario__contenedor--label" for="nombre">Nombre
-                            <i class="fas fa-check activada check" id="nombre-check"></i>
-                            <i class="fas fa-times activada noCheck" id="nombre-noCheck"></i>
-                        </label>
-                            <input class="formulario__contenedor--input" type="text" name="nombre" id="nombre" minlength= "3" maxlength= "60" placeholder="Alejandro" required>
-                        <label class="formulario__contenedor--label" for="apellido">Apellido
-                            <i class="fas fa-check activada check" id="apellido-check"></i>
-                            <i class="fas fa-times activada noCheck" id="apellido-noCheck"></i>
-                        </label>
-                            <input class="formulario__contenedor--input" type="text" name="apellido" id="apellido" minlength="3" maxlength="60" placeholder="Mejias" required>
-                        <label class="formulario__contenedor--label" for="mail">Correo
-                            <i class="fas fa-check activada check" id="mail-check"></i>
-                            <i class="fas fa-times activada noCheck" id="mail-noCheck"></i>
-                        </label>
-                            <input class="formulario__contenedor--input" type="email" name="mail" id="mail"  placeholder="ejemplo@ejemplo.com" required>
-                         <label class="formulario__contenedor--label" for="mensaje">Consulta
-                            <i class="fas fa-check activada check" id="mensaje-check"></i>
-                            <i class="fas fa-times activada noCheck" id="mensaje-noCheck"></i>
-                         </label>
-                            <textarea class="formulario__contenedor--input" name="mensaje" id="mensaje" cols="30" rows="6" minLength = "4" maxlength="50" placeholder="Escribenos tu consulta" required></textarea>
-                            <input class="formulario__contenedor--inputSubmit" type="submit" id = "enviarFormulario" value="Enviar" disabled>
-                            <img src="../img/oval.svg" id="loadingImg-formularioContacto" class="activada"/>
+                         <!-- SE CARGARA LA PLANTILLA DEL FORMULARIO DESDE JAVASCRIPT -->
                      </form>
                  </div>
              </div>
-             <div class="row formulario__respuesta" id = "formulario-respuesta">
-<!--                  <div class="col-md-12 formulario-respuesta--div">
-                     <h4 class="formulario__respuesta--titulo">Tu consulta fue procesada correctamente Alejandro</h4>
-                     <span class="formulario__respuesta--span">Te contactaremos mediante alejandro20452@gmail.com lo antes posible</span>
-                 </div> -->
+             <div class="row activada formulario__respuesta mx-0" id = "formulario-respuesta">
+                 <!-- SE CARGA DESDE JQUERY EL MENSAJE DE RESPUESTA PARA EL FORMULARIO -->
              </div>
 
          </section>

@@ -496,20 +496,51 @@ ESTILOS PARA LA PAGINA DE CONTACTO
       margin-top: 10px;
       padding: 5px 5px;
       cursor: not-allowed; }
-  .formulario .formulario__respuesta .formulario-respuesta--div {
+    .formulario .formulario__contenedor .formulario__contenedor--form .formulario__contenedor--contactoLoadingImg {
+      background-color: #08acaf;
+      border-radius: 20px;
+      opacity: 0.4;
+      margin-left: 10px; }
+  .formulario .formulario__respuesta {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 15px 5px; }
-    .formulario .formulario__respuesta .formulario-respuesta--div .formularrio__respuesta--titulo {
-      font-size: 35px;
-      font-weight: 600;
-      color: #393939; }
-    .formulario .formulario__respuesta .formulario-respuesta--div .formulario__respuesta--span {
-      font-size: 1rem;
-      font-family: "Roboto";
-      color: #393939; }
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9); }
+    .formulario .formulario__respuesta .formulario-respuesta--div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 50vh;
+      background-color: #fefefefe;
+      border-radius: 3px;
+      padding: 15px 5px; }
+      .formulario .formulario__respuesta .formulario-respuesta--div .formularrio__respuesta--titulo {
+        font-size: 35px;
+        font-weight: 600;
+        color: #393939;
+        text-align: center; }
+      .formulario .formulario__respuesta .formulario-respuesta--div .formulario__respuesta--span {
+        font-size: 1rem;
+        font-family: "Roboto";
+        color: #393939;
+        text-align: center; }
+      .formulario .formulario__respuesta .formulario-respuesta--div .formulario__respuesta--btnCerrar {
+        background-color: #08acaf;
+        color: #e9ecef;
+        font-family: "Roboto";
+        margin: 10px;
+        border-radius: 4px;
+        padding: 10px 20px; }
 
 /* ESTILOS PARA VALIDAR LOS CAMPOS DEL FORMULARIO DE LA PAGINA CONTACTO */
 .check {
@@ -1013,7 +1044,7 @@ Clase para mostrar/quitar elementos segun corresponda
 **************************************************************************************
 */
 .activada {
-  display: none; }
+  display: none !important; }
 
 .cuadriculaMultiple {
   width: 47%; }

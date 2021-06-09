@@ -599,23 +599,55 @@ ESTILOS PARA LA PAGINA DE CONTACTO
         padding: 5px 5px;
         cursor:not-allowed;
       }
+      .formulario__contenedor--contactoLoadingImg{
+        background-color: $verde_principal;
+        border-radius: 20px;
+        opacity: 0.4;
+        margin-left: 10px;
+      }
     }
   }
   .formulario__respuesta{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
     .formulario-respuesta--div{
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      width: 80%;
+      height: 50vh;
+      background-color: #fefefefe;
+      border-radius: 3px;
       padding: 15px 5px;
       .formularrio__respuesta--titulo{
         @include titulos;
         color: $negro_opaco;
+        text-align: center;
       }
       .formulario__respuesta--span{
         font-size: 1rem;
         font-family: "Roboto";
         color: $negro_opaco;
+        text-align: center;
+      }
+      .formulario__respuesta--btnCerrar{
+        background-color: #08acaf;
+        color: #e9ecef;
+        font-family: "Roboto";
+        margin: 10px;
+        border-radius: 4px;
+        padding: 10px 20px;
       }
     }
   }
@@ -686,7 +718,7 @@ SECCION DE SUSCRIPCION
         font-weight: 600;
       }
       .suscripcion__formulario--loadingImg{
-        background-color: #08acaf;
+        background-color: $verde_principal;
         border-radius: 20px;
         opacity: 0.4;
       }
@@ -1227,7 +1259,7 @@ Clase para mostrar/quitar elementos segun corresponda
 **************************************************************************************
 */
 .activada{
-  display: none;
+  display: none !important;
 }
 .cuadriculaMultiple{
   width: 47%;
