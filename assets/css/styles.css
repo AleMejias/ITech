@@ -131,7 +131,7 @@ CONTENIDO/BODY DEL SITIO
   .collageUno .collageUno__filaUno .collageUno__filaUno--AppleWatch {
     background-color: #000000;
     width: 49.4%;
-    padding: 0 0; }
+    padding: 10px 4px; }
   .collageUno .collageUno__filaUno .collageUno__filaUno--tituloAppleWatchContenedor {
     font-weight: 600;
     color: #e9ecef;
@@ -1115,6 +1115,8 @@ Clase para mostrar/quitar elementos segun corresponda
     font-weight: 600; }
   .iphone-12pro .iphone-12pro__contenedor .iphone-12pro__tienda .iphone-12pro--icono {
     font-size: 14px; }
+  .iphone-12pro .iphone-12pro__img {
+    background-size: cover; }
   .collageUno .collageUno__filaUno .collageUno__filaUno--AppleWatch,
   .collageUno .collageUno__filaUno .collageUno__filaUno--Ipad {
     width: 100%; }
@@ -1164,3 +1166,32 @@ Clase para mostrar/quitar elementos segun corresponda
       font-weight: 400; }
     .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--input, .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--btnEnviar {
       width: 65%; } }
+
+@media only screen and (max-width: 530px) {
+  /* 
+    HOME 
+  */
+  .iphone-12pro .iphone-12pro__img {
+    height: 190px; }
+  .collageUno .collageUno__filaUno .collageUno__filaUno--appleWatchImg,
+  .collageUno .collageUno__filaUno .collageUno__filaUno--ipadImg {
+    width: 100%;
+    height: 220px; }
+  .collageDos .collageDos__filaDos .collageDos__filaDos--iphone11Img,
+  .collageDos .collageDos__filaDos .collageDos__filaDos--iphoneSeImg {
+    width: 100%;
+    height: 220px; }
+  .collageTres {
+    background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 85% no-repeat;
+    padding: 20px;
+    height: 300px; }
+    .collageTres .collageTres__contenedorPropaganda {
+      padding: 10px; }
+      .collageTres .collageTres__contenedorPropaganda h2 {
+        font-size: 30px;
+        font-weight: 600; }
+      .collageTres .collageTres__contenedorPropaganda span {
+        font-size: 20px;
+        font-weight: 500; }
+      .collageTres .collageTres__contenedorPropaganda i {
+        font-size: 20px; } }

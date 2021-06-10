@@ -183,7 +183,7 @@ CONTENIDO/BODY DEL SITIO
     @include collageFila(flex, space-between);
     .collageUno__filaUno--AppleWatch{
       @include collageProducto($negro,49.4%);
-      padding: 0 0;
+      padding: 10px 4px;
     }
     .collageUno__filaUno--tituloAppleWatchContenedor{
       @include collageTituloContenedor( 600,$links__menuNavegacion );
@@ -1323,6 +1323,9 @@ Clase para mostrar/quitar elementos segun corresponda
         }
       }
     }
+    .iphone-12pro__img{
+      background-size: cover;
+    }
   }
   .collageUno{
     .collageUno__filaUno{
@@ -1396,6 +1399,50 @@ Clase para mostrar/quitar elementos segun corresponda
         .suscripcion__formulario--input{
           width: 65%;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 530px){
+  /* 
+    HOME 
+  */
+  .iphone-12pro{
+    .iphone-12pro__img{
+      height: 190px;
+    }
+  }
+  .collageUno{
+    .collageUno__filaUno{
+      .collageUno__filaUno--appleWatchImg,
+      .collageUno__filaUno--ipadImg{
+        @include collageImg(100% , 220px);
+      }
+    }
+  }
+  .collageDos{
+    .collageDos__filaDos{
+      .collageDos__filaDos--iphone11Img,
+      .collageDos__filaDos--iphoneSeImg{
+        @include collageImg(100%, 220px);
+      }
+    }
+  }
+  .collageTres{
+    background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 85% no-repeat;
+    padding: 20px;
+    height: 300px;
+    .collageTres__contenedorPropaganda{
+      padding: 10px;
+      h2{
+        @include titulos(30px , 600);
+      }
+      span{
+        @include slogans(20px , 500);
+      }
+      i{
+        font-size: 20px;
       }
     }
   }
