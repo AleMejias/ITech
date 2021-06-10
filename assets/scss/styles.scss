@@ -26,14 +26,14 @@ header{
 }
 
 /* MIXIN PARA REUTILIZAR ESTILOS DE TITULO QUE SEAN IGUALES EN LAS PAGINAS DE TIPO COLLAGE */
-@mixin titulos{
-  font-size: 35px;
-  font-weight: 600;
+@mixin titulos($font-size,$font-weight){
+  font-size: $font-size;
+  font-weight: $font-weight;
 }
 /* MIXIN PARA REUTILIZAR ESTILOS DE SLOGAN QUE SEAN IGUALES EN LAS PAGINAS DE TIPO COLLAGE */
-@mixin slogans{
-  font-size: 25px;
-  font-weight: 500;
+@mixin slogans($font-size,$font-weight){
+  font-size: $font-size;
+  font-weight: $font-weight;
 }
 /* MIXIN PARA REUTILIZAR ESTILOS DE BOTON "COMPRAR" QUE SEAN IGUALES EN LAS PAGINAS DE TIPO COLLAGE */
 @mixin btnCollagePaginas {
@@ -42,6 +42,26 @@ header{
   padding: 5px 20px;
   margin-top: 7px;
   border-radius: 15px;
+}
+/* MIXINS PARA COLLAGE DE LA PAGINA HOME */
+@mixin collageFila($display,$justify-content){
+  display: $display;
+  justify-content: $justify-content;
+}
+@mixin collageProducto($background-color,$width){
+  background-color:$background-color;
+  width: $width;
+}
+@mixin collageTituloContenedor($font-weight,$color){
+  font-weight: $font-weight;
+  color: $color;
+}
+@mixin collageIcono($font-size){
+  font-size: $font-size;
+}
+@mixin collageImg($width,$height){
+  width: $width; 
+  height: $height;
 }
 /* 
 **************************************************************************************
@@ -128,7 +148,7 @@ CONTENIDO/BODY DEL SITIO
     align-items: center;
     padding: 5px 5px;
     .iphone-12pro__titulo{
-      @include titulos;
+      @include titulos(35px , 600);
       color: $links__menuNavegacion;
       text-align: center;
     }
@@ -137,20 +157,19 @@ CONTENIDO/BODY DEL SITIO
       flex-direction: inherit;
       align-items: center;
       .iphone-12pro__descripcion{
-        @include slogans;
+        @include slogans(25px , 500);
         color: $links__menuNavegacion;
         text-align: center;
       }
       .iphone-12pro__enlaceTienda{
-        @extend .iphone-12pro__titulo;
+        @include titulos(16px, 600);
         color: $verde_principal;
         border-bottom: 1px solid $verde_principal;
-        font-size: 16px;
       }
       .iphone-12pro--icono{
+        @include collageIcono(16px);
         margin-left: 2px;
         color: $links__menuNavegacion;
-        font-size: 16px;
       }
     }
   }
@@ -161,103 +180,105 @@ CONTENIDO/BODY DEL SITIO
 }
 .collageUno{
   .collageUno__filaUno{
-    display: flex;
-    justify-content: space-between;
+    @include collageFila(flex, space-between);
     .collageUno__filaUno--AppleWatch{
+      @include collageProducto($negro,49.4%);
       padding: 0 0;
-      background-color:$negro;
-      height:auto;
-      width: 49.4%;
     }
     .collageUno__filaUno--tituloAppleWatchContenedor{
-      font-weight: 600;
-      padding: 5px;
+      @include collageTituloContenedor( 600,$links__menuNavegacion );
+      padding: 5px 5px;
       text-align: center;
-      color: $links__menuNavegacion;
     }
     .collageUno__filaUno--tituloAppleWatch{
-      @include titulos;
+      @include titulos(35px , 600);
     }
     .collageUno__filaUno--iconoAppleWatch{
-      font-size: 35px;
+      @include collageIcono(35px);
       padding: 0 9px;
     }
     .collageUno__filaUno--appleWatchImg{
-      width: 100%; 
-      height: 350px;
+      @include collageImg(100% , 300px);
     }
     .collageUno__filaUno--Ipad{
+      @include collageProducto(#fefefe, 49.4%);
       padding: 0 0;
-      width: 49.4%;
-      height:auto;
     }
     .collageUno__filaUno--tituloIpadContenedor{
-      @extend .collageUno__filaUno--tituloAppleWatchContenedor;
-      color: $negro;
+      @include collageTituloContenedor(600 ,$negro_opaco);
+      padding: 5px 5px;
+      text-align: center
     }
     .collageUno__filaUno--tituloIpad{
-      @extend .collageUno__filaUno--tituloAppleWatch;
-      color: $negro_opaco;
+      @include titulos(35px , 600);
     }
-    .collageUno__filaUno--ipadproImg{
-      @extend .collageUno__filaUno--appleWatchImg;
+    .collageUno__filaUno--iconoIpad{
+      @include collageIcono(35px);
+      padding: 0 9px;
+    }
+    .collageUno__filaUno--ipadImg{
+      @include collageImg(100% , 300px);
     }
   }
 }
 
 .collageDos{
-  @extend .collageUno;
   .collageDos__filaDos{
-    @extend .collageUno__filaUno;
+    @include collageFila(flex, space-between);
     .collageDos__filaDos--Iphone11{
-      @extend .collageUno__filaUno--AppleWatch;
-      background-color: #fafafa;
+      @include collageProducto(#fafafa,49.4%);
+      padding: 0 0;
     }
     .collageDos__filaDos--tituloIphone11Contenedor{
-      @extend .collageUno__filaUno--tituloAppleWatchContenedor;
-      color: $negro_opaco;
+      @include collageTituloContenedor( 600,$negro_opaco );
+      padding: 5px 5px;
+      text-align: center;
     }
     .collageDos__filaDos--tituloIphone11{
-      @extend .collageUno__filaUno--tituloAppleWatch;
+      @include titulos(35px , 600);
     }
     .collageDos__filaDos--iconoIphone11{
-      @extend .collageUno__filaUno--iconoAppleWatch;
+      @include collageIcono(35px);
+      padding: 0 9px;
+    }
+    .collageDos__filaDos--iphone11Img{
+      @include collageImg(100% , 300px);
     }
     .collageDos__filaDos--IphoneSE{
-      @extend .collageUno__filaUno--AppleWatch;
+      @include collageProducto($negro,49.4%);
+      padding: 0 0;
     }
     .collage__filaDos--tituloIphoneSEContenedor{
-      @extend .collageUno__filaUno--tituloAppleWatchContenedor;
+      @include collageTituloContenedor( 600, $links__menuNavegacion );
+      padding: 5px 5px;
+      text-align: center;
     }
     .collage__filaDos--tituloIphoneSE{
-      @extend .collageUno__filaUno--tituloAppleWatch;
+      @include titulos(35px , 600);
     }
     .collageDos__filaDos--iconoIphoneSE{
-      @extend .collageUno__filaUno--iconoAppleWatch;
+      @include collageIcono(35px);
+      padding: 0 9px;
     }
-    .collageDos__filaDos--img{
-      @extend .collageUno__filaUno--ipadproImg;
+    .collageDos__filaDos--iphoneSeImg{
+      @include collageImg(100% , 300px);
     }
   }
 }
 
 .collageTres{
+  position: relative;
+  background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 85% no-repeat fixed ;
   padding: 30px;
   height: 400px;
-  background-attachment: fixed;
-  background-repeat:no-repeat;
-  background-position: center;
-  background-size:100% 85%;
-  background-image: url(../img/home/macbook-portada-1300x731.jpg);
-  position: relative;
   .collageTres__contenedorPropaganda{
     padding: 10px;
     h2{
-      @include titulos;
+      @include titulos(35px , 600);
       color: #ffffff;
     }
     span{
-      @include slogans;
+      @include slogans(25px , 500);
       color: #ffffff;
     }
     i{
@@ -279,11 +300,11 @@ ESTILOS PARA LA PAGINA DE CELULARES
     align-items: center;
     padding: 45px 5px;
     .iphone12__contenedorTexto--titulo{
-      @include titulos;
+      @include titulos(35px , 600);
       color: $negro_opaco;
     }
     .iphone12__contenedorTexto--slogan{
-      @include slogans;
+      @include slogans(25px , 500);
       color: $negro_opaco;
     }
     .iphone12__contenedorTexto--btnTienda{
@@ -327,7 +348,7 @@ ESTILOS PARA LA PAGINA DE CELULARES
       flex-wrap: wrap;
       justify-content: center;
       h2{
-        @include titulos;
+        @include titulos(35px , 600);
         padding: 10px;
         color: $links__menuNavegacion;
       }
@@ -366,14 +387,14 @@ ESTILOS PARA LA PAGINA DE TABLETS
     align-items: center;
     padding: 15px 5px;
     .ipadPro__contenedorTexto--titulo{
-      @include titulos;
+      @include titulos(35px , 600);
       color: $links__menuNavegacion;
       i{
         margin-left: 5px;
       }
     }
     .ipadPro__contenedorTexto--slogan{
-      @include slogans;
+      @include slogans(25px , 500);
       color:$links__menuNavegacion;
     }
     .ipadPro__contenedorTexto--btnTienda{
@@ -394,11 +415,11 @@ ESTILOS PARA LA PAGINA DE TABLETS
     align-items: center;
     padding: 15px 5px;
     .ipadAir__contenedorTexto--titulo{
-      @include titulos;
+      @include titulos(35px , 600);
       color: $negro_opaco;
     }
     .ipadAir__contenedorTexto--slogan{
-      @include slogans;
+      @include slogans(25px , 500);
       color: $negro_opaco;
       text-align: center;
     }
@@ -423,11 +444,11 @@ ESTILOS PARA LA PAGINA DE TABLETS
     align-items: center;
     padding: 15px 5px;
     .ipadMini__contenedorTexto--titulo{
-      @include titulos;
+      @include titulos(35px , 600);
       color: $negro_opaco;
     }
     .ipadMini__contenedorTexto--slogan{
-      @include slogans;
+      @include slogans(25px , 500);
       color: $negro_opaco;
       text-align: center;
     }
@@ -461,11 +482,11 @@ ESTILOS PARA LA PAGINA DE TABLETS
       align-items: center;
       padding: 15px 5px;
       .watchSeries6__contenedor--titulo{
-        @include titulos;
+        @include titulos(35px , 600);
         color: $negro_opaco;
       }
       .watchSeries6__contenedor--slogan{
-        @include slogans;
+        @include slogans(25px , 500);
         color: $negro_opaco;
         text-align: center;
       }
@@ -488,11 +509,11 @@ ESTILOS PARA LA PAGINA DE TABLETS
     align-items: center;
     padding: 15px 5px;
     .watchse__contenedor--titulo{
-      @include titulos;
+      @include titulos(35px , 600);
       color: $negro_opaco;
     }
     .watchse__contenedor--slogan{
-      @include slogans;
+      @include slogans(25px , 500);
       color: $negro_opaco;
       text-align: center;
     }
@@ -510,11 +531,11 @@ ESTILOS PARA LA PAGINA DE TABLETS
     justify-content: center;
     margin-top: 25px;
     .modelosWatch__contenedorTexto--titulo{
-      @include titulos;
+      @include titulos(35px , 600);
       color: $negro_opaco;
     }
     .modelosWatch__contenedorTexto--slogan{
-      @include slogans;
+      @include slogans(25px , 500);
       color: $negro_opaco;
     }
     .modelosWatch__contenedorTexto--btnTienda{
@@ -547,11 +568,11 @@ ESTILOS PARA LA PAGINA DE CONTACTO
       justify-content: center;
       padding: 15px 5px;
       .fondoEncabezado__contenedorTitulo{
-        @include titulos;
+        @include titulos(35px , 600);
         color: $links__menuNavegacion;
       }
       .fondoEncabezado__contenedorSlogan{
-        @include slogans;
+        @include slogans(25px , 500);
         color: $links__menuNavegacion;
         text-align: center;
       }
@@ -562,7 +583,7 @@ ESTILOS PARA LA PAGINA DE CONTACTO
   padding: 10px 5px;
   .formulario__contenedor{
     .formulario__contenedor--titulo{
-      @include titulos;
+      @include titulos(35px , 600);
       padding: 10px 10px;
       color: $negro_opaco;
     }
@@ -631,7 +652,7 @@ ESTILOS PARA LA PAGINA DE CONTACTO
       border-radius: 3px;
       padding: 15px 5px;
       .formularrio__respuesta--titulo{
-        @include titulos;
+        @include titulos(35px , 600);
         color: $negro_opaco;
         text-align: center;
       }
@@ -683,17 +704,17 @@ SECCION DE SUSCRIPCION
     padding: 10px;
     height: auto;
     .suscripcion__anuncio--titulo{
+      @include titulos(40px, 600);
       padding: 5px;
-      font-size: 40px;
-      font-weight: 600;
       text-align: center;
       color: #393939;
     }
     .suscripcion__anuncio--mensaje{
+      @include slogans(17px, 400);
       margin-bottom: 0;
       padding: 4px 15px;
       color: $negro;
-      font-size: 17px;
+      text-align: center;
     }
   }
   .suscripcion__formulario{
@@ -723,10 +744,9 @@ SECCION DE SUSCRIPCION
         opacity: 0.4;
       }
       .suscripcion__formulario--suscripcionExitosa{
+        @include slogans(14px, 600);
         color: #ff7e7e;
         padding: 7px;
-        font-size: 14px;
-        font-weight: 600;
       }
     }
   }
@@ -926,7 +946,7 @@ ESTILOS PARA LA TIENDA
         justify-content: center;
       }
       h3{
-        @include titulos;
+        @include titulos(35px , 600);
         color: $negro_opaco;
         font-family: "Roboto";
         i{
@@ -936,7 +956,7 @@ ESTILOS PARA LA TIENDA
         }
       }
       span{
-        @include slogans;
+        @include slogans(25px , 500);
         font-family: "Roboto";
         color: $negro_opaco;
         padding: 5px 1px;
@@ -1133,15 +1153,15 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
     justify-content: center;
     height: 50vh;
     h3{
+      @include titulos(35px , 600);
       padding: 10px 5px;
       color: $negro_opaco;
-      @include titulos;
     }
     i{
       margin-left: 2px ;
     }
     span{
-      @include slogans;
+      @include slogans(25px , 500);
       margin: 10px;
       color: $negro_opaco;
       font-family: "Roboto";
@@ -1281,20 +1301,102 @@ Clase para mostrar/quitar elementos segun corresponda
 
 @media only screen and (max-width: 767px){
 
+
   /* 
     PAGINA HOME
   */
 
+  .iphone-12pro{
+    .iphone-12pro__contenedor{
+      .iphone-12pro__titulo{
+        @include titulos(30px , 600);
+      }
+      .iphone-12pro__tienda{
+        .iphone-12pro__descripcion{
+          @include slogans(20px , 500);
+        }
+        .iphone-12pro__enlaceTienda{
+          @include titulos(14px, 600);
+        }
+        .iphone-12pro--icono{
+          @include collageIcono(14px);
+        }
+      }
+    }
+  }
   .collageUno{
     .collageUno__filaUno{
       .collageUno__filaUno--AppleWatch,
       .collageUno__filaUno--Ipad{
         width: 100%;
       }
+      .collageUno__filaUno--tituloAppleWatch,
+      .collageUno__filaUno--tituloIpad{
+        @include titulos(30px, 600);
+      }
+      .collageUno__filaUno--iconoAppleWatch,
+      .collageUno__filaUno--iconoIpad{
+        @include collageIcono(30px);
+      }
       .collageUno__filaUno--appleWatchImg,
-      .collageUno__filaUno--ipadproImg{
-        width: 100%;
+      .collageUno__filaUno--ipadImg{
+        @include collageImg(100% , 350px);
       }
     }
-  }  
+  }
+  .collageDos{
+    .collageDos__filaDos{
+      .collageDos__filaDos--Iphone11,
+      .collageDos__filaDos--IphoneSE{
+        width: 100%;
+      }
+      .collageDos__filaDos--tituloIphone11,
+      .collage__filaDos--tituloIphoneSE{
+        @include titulos(30px, 600);
+      }
+      .collageDos__filaDos--iconoIphone11,
+      .collageDos__filaDos--iconoIphoneSE{
+        @include collageIcono(30px);
+      }
+      .collageDos__filaDos--iphone11Img,
+      .collageDos__filaDos--iphoneSeImg{
+        @include collageImg(100%, 350px);
+      }
+    }
+  }
+  .collageTres{
+    .collageTres__contenedorPropaganda{
+      h2{
+        @include titulos(30px , 600);
+      }
+      span{
+        @include slogans(20px , 500);
+      }
+      i{
+        font-size: 20px;
+      }
+    }
+  }
+
+  /* 
+    SECCION PARA FORMULARIO DE SUSCRIPCION
+  */
+  .suscripcion{
+    padding: 40px 0;
+    .suscripcion__anuncio{
+      .suscripcion__anuncio--titulo{
+        @include titulos(30px, 600);
+      }
+      .suscripcion__anuncio--mensaje{
+        @include slogans(16px, 400);
+      }
+    }
+    .suscripcion__formulario{
+      .suscripcion__formularioContenedor{
+        .suscripcion__formulario--input{
+          width: 65%;
+        }
+      }
+    }
+  }
 }
