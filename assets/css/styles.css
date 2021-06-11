@@ -660,10 +660,7 @@ PIE DE PAGINA
   .footer .footer__contenedor div {
     height: 200px; }
   .footer .footer__contenedor .footer__contenedor--img {
-    background-image: url(../img/logo.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; }
+    background: url(../img/logo.jpeg) no-repeat center/contain; }
   .footer .footer__contenedor .footer__contenedor--informacion {
     display: flex;
     flex-direction: column;
@@ -1104,47 +1101,22 @@ Clase para mostrar/quitar elementos segun corresponda
   /* 
     PAGINA HOME
   */
-  .iphone-12pro .iphone-12pro__contenedor .iphone-12pro__titulo {
-    font-size: 30px;
-    font-weight: 600; }
-  .iphone-12pro .iphone-12pro__contenedor .iphone-12pro__tienda .iphone-12pro__descripcion {
-    font-size: 20px;
-    font-weight: 500; }
-  .iphone-12pro .iphone-12pro__contenedor .iphone-12pro__tienda .iphone-12pro__enlaceTienda {
-    font-size: 14px;
-    font-weight: 600; }
-  .iphone-12pro .iphone-12pro__contenedor .iphone-12pro__tienda .iphone-12pro--icono {
-    font-size: 14px; }
   .iphone-12pro .iphone-12pro__img {
     background-size: cover; }
   .collageUno .collageUno__filaUno .collageUno__filaUno--AppleWatch,
   .collageUno .collageUno__filaUno .collageUno__filaUno--Ipad {
     width: 100%; }
-  .collageUno .collageUno__filaUno .collageUno__filaUno--tituloAppleWatch,
-  .collageUno .collageUno__filaUno .collageUno__filaUno--tituloIpad {
-    font-size: 30px;
-    font-weight: 600; }
-  .collageUno .collageUno__filaUno .collageUno__filaUno--iconoAppleWatch,
-  .collageUno .collageUno__filaUno .collageUno__filaUno--iconoIpad {
-    font-size: 30px; }
   .collageUno .collageUno__filaUno .collageUno__filaUno--appleWatchImg,
   .collageUno .collageUno__filaUno .collageUno__filaUno--ipadImg {
     width: 100%;
-    height: 350px; }
+    height: 60vh; }
   .collageDos .collageDos__filaDos .collageDos__filaDos--Iphone11,
   .collageDos .collageDos__filaDos .collageDos__filaDos--IphoneSE {
     width: 100%; }
-  .collageDos .collageDos__filaDos .collageDos__filaDos--tituloIphone11,
-  .collageDos .collageDos__filaDos .collage__filaDos--tituloIphoneSE {
-    font-size: 30px;
-    font-weight: 600; }
-  .collageDos .collageDos__filaDos .collageDos__filaDos--iconoIphone11,
-  .collageDos .collageDos__filaDos .collageDos__filaDos--iconoIphoneSE {
-    font-size: 30px; }
   .collageDos .collageDos__filaDos .collageDos__filaDos--iphone11Img,
   .collageDos .collageDos__filaDos .collageDos__filaDos--iphoneSeImg {
     width: 100%;
-    height: 350px; }
+    height: 60vh; }
   .collageTres .collageTres__contenedorPropaganda h2 {
     font-size: 30px;
     font-weight: 600; }
@@ -1165,22 +1137,31 @@ Clase para mostrar/quitar elementos segun corresponda
       font-size: 16px;
       font-weight: 400; }
     .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--input, .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--btnEnviar {
-      width: 65%; } }
+      width: 65%; }
+  /* 
+    FOOTER
+  */
+  .footer .footer__contenedor .footer__contenedor--img {
+    background-position: left; } }
 
-@media only screen and (max-width: 530px) {
+/**************************
+  DE 575PX PARA ARRIBA
+***************************  
+*/
+@media only screen and (min-width: 575px) {
   /* 
     HOME 
   */
   .iphone-12pro .iphone-12pro__img {
-    height: 190px; }
+    height: 52vh; }
   .collageUno .collageUno__filaUno .collageUno__filaUno--appleWatchImg,
   .collageUno .collageUno__filaUno .collageUno__filaUno--ipadImg {
     width: 100%;
-    height: 220px; }
+    height: 52vh; }
   .collageDos .collageDos__filaDos .collageDos__filaDos--iphone11Img,
   .collageDos .collageDos__filaDos .collageDos__filaDos--iphoneSeImg {
     width: 100%;
-    height: 220px; }
+    height: 52vh; }
   .collageTres {
     background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 85% no-repeat;
     padding: 20px;
@@ -1195,3 +1176,75 @@ Clase para mostrar/quitar elementos segun corresponda
         font-weight: 500; }
       .collageTres .collageTres__contenedorPropaganda i {
         font-size: 20px; } }
+
+/*********************************
+  DE 575PX PARA ABAJO 
+**********************************
+*/
+@media only screen and (max-width: 575px) {
+  /* 
+    HOME 
+  */
+  .menu-secundario .menu-secundario__contenedor .menu-secundario__enlaces {
+    font-size: 14px; }
+  .menu-secundario .menu-secundario__icono {
+    height: 45px; }
+  .iphone-12pro .iphone-12pro__contenedor .iphone-12pro__titulo {
+    font-size: 30px;
+    font-weight: 600; }
+  .iphone-12pro .iphone-12pro__contenedor .iphone-12pro__tienda .iphone-12pro__descripcion {
+    font-size: 20px;
+    font-weight: 500; }
+  .iphone-12pro .iphone-12pro__img {
+    height: 36vh; }
+  .collageUno .collageUno__filaUno .collageUno__filaUno--tituloAppleWatch,
+  .collageUno .collageUno__filaUno .collageUno__filaUno--tituloIpad {
+    font-size: 30px;
+    font-weight: 600; }
+  .collageUno .collageUno__filaUno .collageUno__filaUno--appleWatchImg,
+  .collageUno .collageUno__filaUno .collageUno__filaUno--ipadImg {
+    width: 100%;
+    height: 36vh; }
+  .collageDos .collageDos__filaDos .collageDos__filaDos--tituloIphone11,
+  .collageDos .collageDos__filaDos .collage__filaDos--tituloIphoneSE {
+    font-size: 30px;
+    font-weight: 600; }
+  .collageDos .collageDos__filaDos .collageDos__filaDos--iphone11Img,
+  .collageDos .collageDos__filaDos .collageDos__filaDos--iphoneSeImg {
+    width: 100%;
+    height: 36vh; }
+  .collageTres {
+    background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 100% no-repeat;
+    padding: 20px;
+    height: 260px; }
+    .collageTres .collageTres__contenedorPropaganda {
+      padding: 10px; }
+      .collageTres .collageTres__contenedorPropaganda h2 {
+        font-size: 26px;
+        font-weight: 600; }
+      .collageTres .collageTres__contenedorPropaganda span {
+        font-size: 16px;
+        font-weight: 500; }
+      .collageTres .collageTres__contenedorPropaganda i {
+        font-size: 16px; }
+  /* 
+    SECCION PARA FORMULARIO DE SUSCRIPCION
+  */
+  .suscripcion {
+    padding: 20px 0; }
+  /* 
+    FOOTER
+  */
+  .footer .footer__contenedor .footer__contenedor--img {
+    background: url(../img/logo.jpeg) no-repeat contain; }
+  .footer .footer__contenedor .footer__contenedor--informacion i {
+    font-size: 14px; }
+  .footer .footer__contenedor .footer__contenedor--informacion span {
+    padding: 0 2px;
+    font-size: 15px;
+    color: #393939; }
+  .footer .footer__contenedor .footer__contenedor--menu a {
+    font-size: 14px; }
+  .derechos-autor .derechos-autor__contenedor .derechos-autor__contenedor--desarrollador {
+    font-size: 14px;
+    text-align: center; } }

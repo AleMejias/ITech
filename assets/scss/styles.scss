@@ -763,10 +763,7 @@ PIE DE PAGINA
       height: 200px;
     }
     .footer__contenedor--img{
-      background-image: url(../img/logo.jpeg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
+      background: url(../img/logo.jpeg) no-repeat center/contain;
     }
     .footer__contenedor--informacion{
       display: flex;
@@ -1307,22 +1304,6 @@ Clase para mostrar/quitar elementos segun corresponda
   */
 
   .iphone-12pro{
-    .iphone-12pro__contenedor{
-      .iphone-12pro__titulo{
-        @include titulos(30px , 600);
-      }
-      .iphone-12pro__tienda{
-        .iphone-12pro__descripcion{
-          @include slogans(20px , 500);
-        }
-        .iphone-12pro__enlaceTienda{
-          @include titulos(14px, 600);
-        }
-        .iphone-12pro--icono{
-          @include collageIcono(14px);
-        }
-      }
-    }
     .iphone-12pro__img{
       background-size: cover;
     }
@@ -1333,17 +1314,9 @@ Clase para mostrar/quitar elementos segun corresponda
       .collageUno__filaUno--Ipad{
         width: 100%;
       }
-      .collageUno__filaUno--tituloAppleWatch,
-      .collageUno__filaUno--tituloIpad{
-        @include titulos(30px, 600);
-      }
-      .collageUno__filaUno--iconoAppleWatch,
-      .collageUno__filaUno--iconoIpad{
-        @include collageIcono(30px);
-      }
       .collageUno__filaUno--appleWatchImg,
       .collageUno__filaUno--ipadImg{
-        @include collageImg(100% , 350px);
+        @include collageImg(100% , 60vh);
       }
     }
   }
@@ -1353,17 +1326,9 @@ Clase para mostrar/quitar elementos segun corresponda
       .collageDos__filaDos--IphoneSE{
         width: 100%;
       }
-      .collageDos__filaDos--tituloIphone11,
-      .collage__filaDos--tituloIphoneSE{
-        @include titulos(30px, 600);
-      }
-      .collageDos__filaDos--iconoIphone11,
-      .collageDos__filaDos--iconoIphoneSE{
-        @include collageIcono(30px);
-      }
       .collageDos__filaDos--iphone11Img,
       .collageDos__filaDos--iphoneSeImg{
-        @include collageImg(100%, 350px);
+        @include collageImg(100%, 60vh);
       }
     }
   }
@@ -1402,22 +1367,36 @@ Clase para mostrar/quitar elementos segun corresponda
       }
     }
   }
+  /* 
+    FOOTER
+  */
+  .footer{
+    .footer__contenedor{
+      .footer__contenedor--img{
+        background-position: left;
+      }
+    }
+  }
 }
 
-@media only screen and (max-width: 530px){
+/**************************
+  DE 575PX PARA ARRIBA
+***************************  
+*/
+@media only screen and (min-width: 575px){
   /* 
     HOME 
   */
   .iphone-12pro{
     .iphone-12pro__img{
-      height: 190px;
+      height: 52vh;
     }
   }
   .collageUno{
     .collageUno__filaUno{
       .collageUno__filaUno--appleWatchImg,
       .collageUno__filaUno--ipadImg{
-        @include collageImg(100% , 220px);
+        @include collageImg(100% , 52vh);
       }
     }
   }
@@ -1425,7 +1404,7 @@ Clase para mostrar/quitar elementos segun corresponda
     .collageDos__filaDos{
       .collageDos__filaDos--iphone11Img,
       .collageDos__filaDos--iphoneSeImg{
-        @include collageImg(100%, 220px);
+        @include collageImg(100%, 52vh);
       }
     }
   }
@@ -1443,6 +1422,122 @@ Clase para mostrar/quitar elementos segun corresponda
       }
       i{
         font-size: 20px;
+      }
+    }
+  }
+}
+
+/*********************************
+  DE 575PX PARA ABAJO 
+**********************************
+*/
+@media only screen and (max-width: 575px){
+    /* 
+    HOME 
+  */
+  .menu-secundario {
+  .menu-secundario__contenedor {
+    .menu-secundario__enlaces {
+      font-size: 14px;
+    }
+  }
+  .menu-secundario__icono{
+    height: 45px;
+  }
+}
+  .iphone-12pro{
+    .iphone-12pro__contenedor{
+      .iphone-12pro__titulo{
+        @include titulos(30px , 600);
+      }
+      .iphone-12pro__tienda{
+        .iphone-12pro__descripcion{
+          @include slogans(20px , 500);
+        }
+      }
+    }
+    .iphone-12pro__img{
+      height: 36vh;
+    }
+  }
+  .collageUno{
+    .collageUno__filaUno{
+      .collageUno__filaUno--tituloAppleWatch,
+      .collageUno__filaUno--tituloIpad{
+        @include titulos(30px, 600);
+      }
+      .collageUno__filaUno--appleWatchImg,
+      .collageUno__filaUno--ipadImg{
+        @include collageImg(100% , 36vh);
+      }
+    }
+  }
+  .collageDos{
+    .collageDos__filaDos{
+      .collageDos__filaDos--tituloIphone11,
+      .collage__filaDos--tituloIphoneSE{
+        @include titulos(30px, 600);
+      }
+      .collageDos__filaDos--iphone11Img,
+      .collageDos__filaDos--iphoneSeImg{
+        @include collageImg(100%, 36vh);
+      }
+    }
+  }
+  .collageTres{
+    background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 100% no-repeat;
+    padding: 20px;
+    height: 260px;
+    .collageTres__contenedorPropaganda{
+      padding: 10px;
+      h2{
+        @include titulos(26px , 600);
+      }
+      span{
+        @include slogans(16px , 500);
+      }
+      i{
+        font-size: 16px;
+      }
+    }
+  }
+    /* 
+    SECCION PARA FORMULARIO DE SUSCRIPCION
+  */
+  .suscripcion{
+    padding: 20px 0;
+  }
+
+  /* 
+    FOOTER
+  */
+  .footer{
+    .footer__contenedor{
+      .footer__contenedor--img{
+        background: url(../img/logo.jpeg) no-repeat contain;
+      }
+      .footer__contenedor--informacion{
+        i{
+          font-size: 14px;
+        }
+        span{
+          padding: 0 2px;
+          font-size: 15px;
+          color: $negro_opaco;
+        }
+      }
+      .footer__contenedor--menu{
+        a{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .derechos-autor{
+    .derechos-autor__contenedor{
+      .derechos-autor__contenedor--desarrollador{
+        font-size: 14px;
+        text-align: center;
       }
     }
   }
