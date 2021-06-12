@@ -142,6 +142,7 @@ CONTENIDO/BODY DEL SITIO
 */
 .iphone-12pro{
   background-color: $negro;
+  animation: aparecer .6s linear;
   .iphone-12pro__contenedor{
     display: flex;
     flex-direction: column;
@@ -1009,20 +1010,6 @@ ESTILOS PARA LA TIENDA
     }
   }
 }
-/*
-Animacion para que aparezcan las cards de productos
-*/
-@keyframes aparecer{
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /* 
 **************************************************************************************
 ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
@@ -1293,12 +1280,57 @@ Clase para mostrar/quitar elementos segun corresponda
   }
 }
 /* ******************************************************************************* */
+/* ANIMACIONES */
+/* ******************************************************************************* */
+
+.opacity{
+  opacity: 0;
+  transition: all 1s;
+}
+
+.animacion__derecha--izquierda{
+  opacity: 1;
+  animation: animacion__derecha--izquierda .4s linear;
+}
+@keyframes animacion__derecha--izquierda{
+  0%{
+    transform: translateX(300px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+/* ********************** */
+.animacion__izquierda--derecha{
+  opacity: 1;
+  animation: animacion__izquierda--derecha .4s linear;
+}
+
+@keyframes animacion__izquierda--derecha{
+  0%{
+    transform: translateX(-300px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+/* ************************************ */
+@keyframes aparecer{
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ******************************************************************************* */
 /* ESTILOS PARA EL RESPONSIVE */
 /* ******************************************************************************* */
 
 @media only screen and (max-width: 767px){
-
-
   /* 
     PAGINA HOME
   */
@@ -1314,10 +1346,10 @@ Clase para mostrar/quitar elementos segun corresponda
       .collageUno__filaUno--Ipad{
         width: 100%;
       }
-      .collageUno__filaUno--appleWatchImg,
+/*       .collageUno__filaUno--appleWatchImg,
       .collageUno__filaUno--ipadImg{
         @include collageImg(100% , 60vh);
-      }
+      } */
     }
   }
   .collageDos{
@@ -1326,10 +1358,10 @@ Clase para mostrar/quitar elementos segun corresponda
       .collageDos__filaDos--IphoneSE{
         width: 100%;
       }
-      .collageDos__filaDos--iphone11Img,
+/*       .collageDos__filaDos--iphone11Img,
       .collageDos__filaDos--iphoneSeImg{
         @include collageImg(100%, 60vh);
-      }
+      } */
     }
   }
   .collageTres{
@@ -1383,7 +1415,7 @@ Clase para mostrar/quitar elementos segun corresponda
   DE 575PX PARA ARRIBA
 ***************************  
 */
-@media only screen and (min-width: 575px){
+@media only screen and (min-width: 575px) and (max-width: 767px){
   /* 
     HOME 
   */
@@ -1408,7 +1440,7 @@ Clase para mostrar/quitar elementos segun corresponda
       }
     }
   }
-  .collageTres{
+/*   .collageTres{
     background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 85% no-repeat;
     padding: 20px;
     height: 300px;
@@ -1424,7 +1456,7 @@ Clase para mostrar/quitar elementos segun corresponda
         font-size: 20px;
       }
     }
-  }
+  } */
 }
 
 /*********************************

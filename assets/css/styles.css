@@ -92,7 +92,8 @@ CONTENIDO/BODY DEL SITIO
 **************************************************************************************
 */
 .iphone-12pro {
-  background-color: #000000; }
+  background-color: #000000;
+  animation: aparecer .6s linear; }
   .iphone-12pro .iphone-12pro__contenedor {
     display: flex;
     flex-direction: column;
@@ -865,17 +866,6 @@ ESTILOS PARA LA TIENDA
           font-family: "Roboto";
           font-weight: 400; }
 
-/*
-Animacion para que aparezcan las cards de productos
-*/
-@keyframes aparecer {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 0.6; }
-  100% {
-    opacity: 1; } }
-
 /* 
 **************************************************************************************
 ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
@@ -1095,6 +1085,43 @@ Clase para mostrar/quitar elementos segun corresponda
     height: 290px; }
 
 /* ******************************************************************************* */
+/* ANIMACIONES */
+/* ******************************************************************************* */
+.opacity {
+  opacity: 0;
+  transition: all 1s; }
+
+.animacion__derecha--izquierda {
+  opacity: 1;
+  animation: animacion__derecha--izquierda .4s linear; }
+
+@keyframes animacion__derecha--izquierda {
+  0% {
+    transform: translateX(300px); }
+  100% {
+    transform: translateX(0px); } }
+
+/* ********************** */
+.animacion__izquierda--derecha {
+  opacity: 1;
+  animation: animacion__izquierda--derecha .4s linear; }
+
+@keyframes animacion__izquierda--derecha {
+  0% {
+    transform: translateX(-300px); }
+  100% {
+    transform: translateX(0px); } }
+
+/* ************************************ */
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.6; }
+  100% {
+    opacity: 1; } }
+
+/* ******************************************************************************* */
 /* ESTILOS PARA EL RESPONSIVE */
 /* ******************************************************************************* */
 @media only screen and (max-width: 767px) {
@@ -1103,20 +1130,22 @@ Clase para mostrar/quitar elementos segun corresponda
   */
   .iphone-12pro .iphone-12pro__img {
     background-size: cover; }
-  .collageUno .collageUno__filaUno .collageUno__filaUno--AppleWatch,
-  .collageUno .collageUno__filaUno .collageUno__filaUno--Ipad {
-    width: 100%; }
-  .collageUno .collageUno__filaUno .collageUno__filaUno--appleWatchImg,
-  .collageUno .collageUno__filaUno .collageUno__filaUno--ipadImg {
-    width: 100%;
-    height: 60vh; }
-  .collageDos .collageDos__filaDos .collageDos__filaDos--Iphone11,
-  .collageDos .collageDos__filaDos .collageDos__filaDos--IphoneSE {
-    width: 100%; }
-  .collageDos .collageDos__filaDos .collageDos__filaDos--iphone11Img,
-  .collageDos .collageDos__filaDos .collageDos__filaDos--iphoneSeImg {
-    width: 100%;
-    height: 60vh; }
+  .collageUno .collageUno__filaUno {
+    /*       .collageUno__filaUno--appleWatchImg,
+      .collageUno__filaUno--ipadImg{
+        @include collageImg(100% , 60vh);
+      } */ }
+    .collageUno .collageUno__filaUno .collageUno__filaUno--AppleWatch,
+    .collageUno .collageUno__filaUno .collageUno__filaUno--Ipad {
+      width: 100%; }
+  .collageDos .collageDos__filaDos {
+    /*       .collageDos__filaDos--iphone11Img,
+      .collageDos__filaDos--iphoneSeImg{
+        @include collageImg(100%, 60vh);
+      } */ }
+    .collageDos .collageDos__filaDos .collageDos__filaDos--Iphone11,
+    .collageDos .collageDos__filaDos .collageDos__filaDos--IphoneSE {
+      width: 100%; }
   .collageTres .collageTres__contenedorPropaganda h2 {
     font-size: 30px;
     font-weight: 600; }
@@ -1148,7 +1177,7 @@ Clase para mostrar/quitar elementos segun corresponda
   DE 575PX PARA ARRIBA
 ***************************  
 */
-@media only screen and (min-width: 575px) {
+@media only screen and (min-width: 575px) and (max-width: 767px) {
   /* 
     HOME 
   */
@@ -1162,20 +1191,23 @@ Clase para mostrar/quitar elementos segun corresponda
   .collageDos .collageDos__filaDos .collageDos__filaDos--iphoneSeImg {
     width: 100%;
     height: 52vh; }
-  .collageTres {
+  /*   .collageTres{
     background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 85% no-repeat;
     padding: 20px;
-    height: 300px; }
-    .collageTres .collageTres__contenedorPropaganda {
-      padding: 10px; }
-      .collageTres .collageTres__contenedorPropaganda h2 {
-        font-size: 30px;
-        font-weight: 600; }
-      .collageTres .collageTres__contenedorPropaganda span {
+    height: 300px;
+    .collageTres__contenedorPropaganda{
+      padding: 10px;
+      h2{
+        @include titulos(30px , 600);
+      }
+      span{
+        @include slogans(20px , 500);
+      }
+      i{
         font-size: 20px;
-        font-weight: 500; }
-      .collageTres .collageTres__contenedorPropaganda i {
-        font-size: 20px; } }
+      }
+    }
+  } */ }
 
 /*********************************
   DE 575PX PARA ABAJO 
