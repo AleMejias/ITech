@@ -2,6 +2,7 @@
     let inputCorreo = document.querySelector('#inputCorreo');
     let btnSubmit = document.querySelector('#btnSubmit');
     let form = document.querySelector("#formulario");
+    const contenedores = document.querySelectorAll(".opacity");
 
     const validarCorreoSuscripcion = (valor) => {
         let correoValido = new RegExp(/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i);
@@ -10,7 +11,7 @@
 
     const dispararAnimacion = () => {
         window.addEventListener("scroll", () => {
-            const contenedores = document.querySelectorAll(".opacity");
+            
             contenedores.forEach((contenedor) => {
                 const scrollTop = document.documentElement.scrollTop;
                 const alturaDelContenedor = contenedor.offsetTop;

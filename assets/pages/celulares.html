@@ -41,11 +41,15 @@
           <div class="collapse menu-secundario__contenedor" id="navbarToggleExternalContent">
             <div class="py-4">
               <ul class="menu-secundario__lista">
-                <li><a href="../../index.html" class="menu-secundario__enlaces">Home</a></li>
+                <li>
+                    <a href="../../index.html" class="menu-secundario__enlaces">Home</a>
+                </li>
                 <li>
                   <a href="tienda.html" class="menu-secundario__enlaces">Tienda</a>
                 </li>
-                <li><a href="tablets.html" class="menu-secundario__enlaces">Tablets</a></li>
+                <li>
+                    <a href="tablets.html" class="menu-secundario__enlaces">Tablets</a>
+                </li>
                 <li>
                   <a href="watch.html" class="menu-secundario__enlaces">Apple Watch</a>
                 </li>
@@ -92,14 +96,14 @@
                  </div>
              </div>
          </section>
-         <section class="container-fluid iphone12pro">
+         <section class="container-fluid iphone12pro mt-3">
              <div class="row">
                  <div class="cold-md-12 iphone12pro__img">
                     <!-- IMG CARGADA DESDE CSS -->
                  </div>
              </div>
          </section>
-         <section class="container-fluid cuotas">
+         <section class="container-fluid cuotas opacity mt-3" data-direccion = "izquierda-derecha">
              <div class="row">
                  <div class="col-md-12 cuotas__contenedorImg">
                     <img src="../img/home/cuotassininteres.jpg" alt="Renová tu iphone con cuotas sin interés">
@@ -107,7 +111,7 @@
                  </div>
              </div>
          </section>
-         <section class="container-fluid modelos">
+         <section class="container-fluid modelos mt-3">
              <div class="row mx-0">
                  <div class="col-md-12 px-0 modelos__contenedor">
                     <div class="modelos__contenedor--img">
@@ -127,21 +131,19 @@
         SECCION DE SUBCRIPCION
         -->
         <section class="container-fluid suscripcion">
-            <div class="row">
-            <div class="col-md-7 suscripcion__anuncio">
-                <h2 class="suscripcion__anuncio--titulo">Se parte de nuestra familia
-                </h2>
-                <p class="suscripcion__anuncio--mensaje">Suscribite a nuestra tienda dejando tu dirección de correo para acceder a descuentos exclusicos.
-                </p>
-            </div>
-            <div class="col-md-5 suscripcion__formulario">
-                <form class="suscripcion__formularioContenedor" id="formulario" action="#">
-                <input type="email" name="correo" class="inputCorreo suscripcion__formulario--input" id="inputCorreo" placeholder="ejemplo@ejemplo.com"/>
-                <input type="submit" id="btnSubmit" class="suscripcion__formulario--btnEnviar submitDesactivado" disabled value="SUSCRIBIRME"/>
-                <img src="../img/oval.svg" id="loadingImg" class="activada suscripcion__formulario--loadingImg"/>
-                <span id="suscripcionExitosa" class="activada suscripcion__formulario--suscripcionExitosa">¡Suscripción enviada con éxito!</span>
-                </form>
-            </div>
+            <div class="row mx-0">
+                <div class="col-md-7 suscripcion__anuncio">
+                    <h2 class="suscripcion__anuncio--titulo">Se parte de nuestra familia</h2>
+                    <p class="suscripcion__anuncio--mensaje">Suscribite a nuestra tienda dejando tu dirección de correo para acceder a descuentos exclusicos.</p>
+                </div>
+                <div class="col-md-5 suscripcion__formulario">
+                    <form class="suscripcion__formularioContenedor" id="formulario" action="#">
+                        <input type="email" name="correo" class="inputCorreo suscripcion__formulario--input" id="inputCorreo" placeholder="ejemplo@ejemplo.com"/>
+                        <input type="submit" id="btnSubmit" class="suscripcion__formulario--btnEnviar submitDesactivado" disabled value="SUSCRIBIRME"/>
+                        <img src="../img/oval.svg" id="loadingImg" class="activada suscripcion__formulario--loadingImg"/>
+                        <span id="suscripcionExitosa" class="activada suscripcion__formulario--suscripcionExitosa">¡Suscripción enviada con éxito!</span>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -151,30 +153,46 @@
     <footer>
         <section class="container-fluid footer">
             <div class="row footer__contenedor">
-            <div class="col-md-4 footer__contenedor--img">
-                <!-- LOGO DE MI TIENDA -->
-            </div>
-            <div class="col-md-4 footer__contenedor--informacion">
-                <span><i class="fas fa-map-marker-alt"></i>Capital Federal. Buenos Aires, Argentina.</span>
-                <span><i class="far fa-envelope"></i>alejandro20452@gmail.com</span>
-                <span><i class="fas fa-phone"></i>4322-7777</span>
-            </div>
-            <div class="col-md-4 footer__contenedor--menu">
-                <ul class="px-0">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="watch.html">AppleWatch</a></li>
-                <li><a href="tienda.html">Tienda</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="tablets.html">Tablets</a></li>
-                </ul>
-            </div>
+                <div class="col-md-4 footer__contenedor--img">
+                    <!-- LOGO DE MI TIENDA -->
+                </div>
+                <div class="col-md-4 footer__contenedor--informacion">
+                    <span>
+                        <i class="fas fa-map-marker-alt"></i>Capital Federal. Buenos Aires, Argentina.
+                    </span>
+                    <span>
+                        <i class="far fa-envelope"></i>alejandro20452@gmail.com
+                    </span>
+                    <span>
+                        <i class="fas fa-phone"></i>4322-7777
+                    </span>
+                </div>
+                <div class="col-md-4 footer__contenedor--menu">
+                    <ul class="px-0">
+                        <li>
+                            <a href="../../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="watch.html">AppleWatch</a>
+                        </li>
+                        <li>
+                            <a href="tienda.html">Tienda</a>
+                        </li>
+                        <li>
+                            <a href="contacto.html" target="_blank">Contacto</a>
+                        </li>
+                        <li>
+                            <a href="tablets.html">Tablets</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="derechos-autor">
             <div class="derechos-autor__contenedor">
-            <p class="mb-0 derechos-autor__contenedor--desarrollador">
-                Alejandro Mejias-Desarrollador Web Jr &copy;
-            </p>
+                <p class="mb-0 derechos-autor__contenedor--desarrollador">
+                    Alejandro Mejias-Desarrollador Web Jr &copy;
+                </p>
             </div>
         </section>
     </footer>

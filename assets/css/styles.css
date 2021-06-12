@@ -253,20 +253,13 @@ ESTILOS PARA LA PAGINA DE CELULARES
       border-radius: 15px; }
   .iphone12 .iphone12__imagen {
     height: 100vh;
-    background-image: url(../img/home/iphone12-celulares.jpg);
-    background-position-x: center;
-    background-repeat: no-repeat;
-    background-size: contain; }
+    background: url(../img/home/iphone12-celulares.jpg) center/contain no-repeat; }
 
 .iphone12pro {
   background-color: #1c1a1a; }
   .iphone12pro .iphone12pro__img {
-    background-image: url(../img/home/1586965934_242736_1586966124_sumario_normal.jpg);
-    background-size: contain;
-    background-attachment: fixed;
-    background-position: center;
     height: 400px;
-    background-repeat: no-repeat; }
+    background: url(../img/home/1586965934_242736_1586966124_sumario_normal.jpg) center/contain no-repeat fixed; }
 
 .cuotas .cuotas__contenedorImg {
   display: flex;
@@ -308,7 +301,8 @@ ESTILOS PARA LA PAGINA DE TABLETS
 */
 .ipadPro {
   background-color: #000000;
-  padding: 10px; }
+  padding: 10px;
+  animation: aparecer .6s linear; }
   .ipadPro .ipadPro__contenedorTexto {
     display: flex;
     flex-direction: column;
@@ -393,30 +387,31 @@ ESTILOS PARA LA PAGINA DE TABLETS
 /* **************************************************************************************
  ESTILOS PARA LA PAGINA DE APPLE WATCH
 ************************************************************************************** */
-.watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Img img {
-  width: 85%; }
-
-.watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 5px; }
-  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto .watchSeries6__contenedor--titulo {
-    font-size: 35px;
-    font-weight: 600;
-    color: #393939; }
-  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto .watchSeries6__contenedor--slogan {
-    font-size: 25px;
-    font-weight: 500;
-    color: #393939;
-    text-align: center; }
-  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto .watchSeries6__contenedor--btnTienda {
-    background-color: #08acaf;
-    color: #e9ecef;
-    padding: 5px 20px;
-    margin-top: 7px;
-    border-radius: 15px; }
+.watchSeries6 {
+  animation: aparecer .6s linear; }
+  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Img img {
+    width: 85%; }
+  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5px; }
+    .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto .watchSeries6__contenedor--titulo {
+      font-size: 35px;
+      font-weight: 600;
+      color: #393939; }
+    .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto .watchSeries6__contenedor--slogan {
+      font-size: 25px;
+      font-weight: 500;
+      color: #393939;
+      text-align: center; }
+    .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto .watchSeries6__contenedor--btnTienda {
+      background-color: #08acaf;
+      color: #e9ecef;
+      padding: 5px 20px;
+      margin-top: 7px;
+      border-radius: 15px; }
 
 .watchse .watchse__contenedor--Img img {
   width: 85%; }
@@ -1191,23 +1186,11 @@ Clase para mostrar/quitar elementos segun corresponda
   .collageDos .collageDos__filaDos .collageDos__filaDos--iphoneSeImg {
     width: 100%;
     height: 52vh; }
-  /*   .collageTres{
-    background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 85% no-repeat;
-    padding: 20px;
-    height: 300px;
-    .collageTres__contenedorPropaganda{
-      padding: 10px;
-      h2{
-        @include titulos(30px , 600);
-      }
-      span{
-        @include slogans(20px , 500);
-      }
-      i{
-        font-size: 20px;
-      }
-    }
-  } */ }
+  /* 
+    CELULARES
+  */
+  .iphone12 .iphone12__imagen {
+    height: 50vh; } }
 
 /*********************************
   DE 575PX PARA ABAJO 
