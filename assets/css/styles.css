@@ -1119,28 +1119,31 @@ Clase para mostrar/quitar elementos segun corresponda
 /* ******************************************************************************* */
 /* ESTILOS PARA EL RESPONSIVE */
 /* ******************************************************************************* */
-@media only screen and (max-width: 767px) {
+/**************************
+  DE 575PX PARA ARRIBA
+***************************  
+*/
+@media only screen and (min-width: 575px) and (max-width: 767px) {
   /* 
-    PAGINA HOME
+    HOME 
   */
   .iphone-12pro .iphone-12pro__img {
+    height: 52vh;
     background-size: cover; }
-  .collageUno .collageUno__filaUno {
-    /*       .collageUno__filaUno--appleWatchImg,
-      .collageUno__filaUno--ipadImg{
-        @include collageImg(100% , 60vh);
-      } */ }
-    .collageUno .collageUno__filaUno .collageUno__filaUno--AppleWatch,
-    .collageUno .collageUno__filaUno .collageUno__filaUno--Ipad {
-      width: 100%; }
-  .collageDos .collageDos__filaDos {
-    /*       .collageDos__filaDos--iphone11Img,
-      .collageDos__filaDos--iphoneSeImg{
-        @include collageImg(100%, 60vh);
-      } */ }
-    .collageDos .collageDos__filaDos .collageDos__filaDos--Iphone11,
-    .collageDos .collageDos__filaDos .collageDos__filaDos--IphoneSE {
-      width: 100%; }
+  .collageUno .collageUno__filaUno .collageUno__filaUno--AppleWatch,
+  .collageUno .collageUno__filaUno .collageUno__filaUno--Ipad {
+    width: 100%; }
+  .collageUno .collageUno__filaUno .collageUno__filaUno--appleWatchImg,
+  .collageUno .collageUno__filaUno .collageUno__filaUno--ipadImg {
+    width: 100%;
+    height: 52vh; }
+  .collageDos .collageDos__filaDos .collageDos__filaDos--Iphone11,
+  .collageDos .collageDos__filaDos .collageDos__filaDos--IphoneSE {
+    width: 100%; }
+  .collageDos .collageDos__filaDos .collageDos__filaDos--iphone11Img,
+  .collageDos .collageDos__filaDos .collageDos__filaDos--iphoneSeImg {
+    width: 100%;
+    height: 52vh; }
   .collageTres .collageTres__contenedorPropaganda h2 {
     font-size: 30px;
     font-weight: 600; }
@@ -1166,26 +1169,7 @@ Clase para mostrar/quitar elementos segun corresponda
     FOOTER
   */
   .footer .footer__contenedor .footer__contenedor--img {
-    background-position: left; } }
-
-/**************************
-  DE 575PX PARA ARRIBA
-***************************  
-*/
-@media only screen and (min-width: 575px) and (max-width: 767px) {
-  /* 
-    HOME 
-  */
-  .iphone-12pro .iphone-12pro__img {
-    height: 52vh; }
-  .collageUno .collageUno__filaUno .collageUno__filaUno--appleWatchImg,
-  .collageUno .collageUno__filaUno .collageUno__filaUno--ipadImg {
-    width: 100%;
-    height: 52vh; }
-  .collageDos .collageDos__filaDos .collageDos__filaDos--iphone11Img,
-  .collageDos .collageDos__filaDos .collageDos__filaDos--iphoneSeImg {
-    width: 100%;
-    height: 52vh; }
+    background-position: left; }
   /* 
     CELULARES
   */
@@ -1262,4 +1246,55 @@ Clase para mostrar/quitar elementos segun corresponda
     font-size: 14px; }
   .derechos-autor .derechos-autor__contenedor .derechos-autor__contenedor--desarrollador {
     font-size: 14px;
+    text-align: center; }
+  /* 
+    CELULARES
+  */
+  .iphone12 .iphone12__contenedorTexto {
+    padding: 20px 5px; }
+    .iphone12 .iphone12__contenedorTexto .iphone12__contenedorTexto--titulo {
+      font-size: 30px;
+      font-weight: 600;
+      text-align: center; }
+    .iphone12 .iphone12__contenedorTexto .iphone12__contenedorTexto--slogan {
+      font-size: 20px;
+      font-weight: 500; }
+    .iphone12 .iphone12__contenedorTexto .iphone12__contenedorTexto--btnTienda {
+      background-color: #08acaf;
+      color: #e9ecef;
+      padding: 5px 20px;
+      margin-top: 7px;
+      border-radius: 15px;
+      padding: 5px 15px; }
+  .iphone12 .iphone12__imagen {
+    height: 40vh; }
+  .iphone12pro .iphone12pro__img {
+    height: 60vh;
+    background: url(../img/home/1586965934_242736_1586966124_sumario_normal.jpg) center/contain no-repeat; }
+  .cuotas .cuotas__contenedorImg img {
+    width: 95%; }
+  .modelos {
+    padding: 10px 2px; }
+    .modelos .modelos__contenedor .modelos__contenedor--img h2 {
+      font-size: 30px;
+      font-weight: 600;
+      text-align: center; }
+    .modelos .modelos__contenedor .modelos__contenedor--img img {
+      width: 100%; }
+    .modelos .modelos__contenedor .modelos__contenedor--img .modelos__contenedor--botones {
+      width: 100%; }
+      .modelos .modelos__contenedor .modelos__contenedor--img .modelos__contenedor--botones a {
+        font-size: 13px;
+        padding: 5px 6px; }
+  /* 
+    TABLETS
+  */
+  .ipadPro .ipadPro__contenedorTexto .ipadPro__contenedorTexto--titulo {
+    font-size: 30px;
+    font-weight: 600; }
+    .ipadPro .ipadPro__contenedorTexto .ipadPro__contenedorTexto--titulo i {
+      font-size: 30px; }
+  .ipadPro .ipadPro__contenedorTexto .ipadPro__contenedorTexto--slogan {
+    font-size: 20px;
+    font-weight: 500;
     text-align: center; } }
