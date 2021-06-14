@@ -10,12 +10,15 @@ a {
 li {
   list-style: none; }
 
-h2, h3, h4, a {
+h2,
+h3,
+h4,
+a {
   font-family: "Roboto"; }
 
 button:hover,
 input[type="submit"]:hover {
-  opacity: .7; }
+  opacity: 0.7; }
 
 /* FIJAMOS NUESTRO MENU A LA PANTALLA AL HACER SCROLL */
 header {
@@ -93,7 +96,7 @@ CONTENIDO/BODY DEL SITIO
 */
 .iphone-12pro {
   background-color: #000000;
-  animation: aparecer .6s linear; }
+  animation: aparecer 0.6s linear; }
   .iphone-12pro .iphone-12pro__contenedor {
     display: flex;
     flex-direction: column;
@@ -231,7 +234,7 @@ ESTILOS PARA LA PAGINA DE CELULARES
 **************************************************************************************
 */
 .iphone12 {
-  animation: aparecer .5s linear; }
+  animation: aparecer 0.5s linear; }
   .iphone12 .iphone12__contenedorTexto {
     display: flex;
     flex-direction: column;
@@ -302,7 +305,7 @@ ESTILOS PARA LA PAGINA DE TABLETS
 .ipadPro {
   background-color: #000000;
   padding: 10px;
-  animation: aparecer .6s linear; }
+  animation: aparecer 0.6s linear; }
   .ipadPro .ipadPro__contenedorTexto {
     display: flex;
     flex-direction: column;
@@ -388,7 +391,7 @@ ESTILOS PARA LA PAGINA DE TABLETS
  ESTILOS PARA LA PAGINA DE APPLE WATCH
 ************************************************************************************** */
 .watchSeries6 {
-  animation: aparecer .6s linear; }
+  animation: aparecer 0.6s linear; }
   .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Img {
     display: flex;
     justify-content: center; }
@@ -515,7 +518,7 @@ ESTILOS PARA LA PAGINA DE CONTACTO
       color: #393939;
       font-size: 15px;
       font-weight: 600;
-      font-family: 'Roboto';
+      font-family: "Roboto";
       padding: 3px 0px;
       margin: 9px 0; }
     .formulario .formulario__contenedor .formulario__contenedor--form .formulario__contenedor--input {
@@ -602,7 +605,7 @@ SECCION DE SUSCRIPCION
   border: 1px solid #eb0b0b; }
 
 .submitDesactivado {
-  opacity: .4; }
+  opacity: 0.4; }
 
 .suscripcion {
   padding: 50px 0;
@@ -773,7 +776,7 @@ ESTILOS PARA LA TIENDA
         text-align: center;
         font-size: 13px;
         font-weight: 600;
-        font-family: 'Roboto'; }
+        font-family: "Roboto"; }
       .productos .productos__ordenamiento .productos__ordenamiento--form i {
         padding: 5px 0px;
         cursor: pointer;
@@ -791,7 +794,7 @@ ESTILOS PARA LA TIENDA
           color: #08acaf;
           font-size: 16px;
           font-weight: 600;
-          font-family: 'Roboto'; }
+          font-family: "Roboto"; }
   .productos .productos__contenedor {
     display: flex;
     flex-wrap: wrap;
@@ -826,7 +829,7 @@ ESTILOS PARA LA TIENDA
         padding: 5px 1px;
         text-align: center; }
     .productos .productos__contenedor .productos__contenedor--article {
-      animation: aparecer .6s linear; }
+      animation: aparecer 0.6s linear; }
       .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg {
         display: flex;
         justify-content: center;
@@ -892,7 +895,7 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
     border-radius: 5px;
     background-color: #ffffff;
     overflow-y: scroll;
-    animation: aparecer .6s linear; }
+    animation: aparecer 0.6s linear; }
   .detalle .detalle__btn-cerrar {
     position: absolute;
     right: 0;
@@ -993,7 +996,7 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
       text-align: center;
       cursor: pointer; }
     .carrito .carrito__carritoVacio a:hover {
-      opacity: .7; }
+      opacity: 0.7; }
   .carrito .carrito__contenedorCompra {
     display: flex;
     justify-content: center; }
@@ -1092,7 +1095,7 @@ Clase para mostrar/quitar elementos segun corresponda
 
 .animacion__derecha--izquierda {
   opacity: 1;
-  animation: animacion__derecha--izquierda .4s linear; }
+  animation: animacion__derecha--izquierda 0.4s linear; }
 
 @keyframes animacion__derecha--izquierda {
   0% {
@@ -1103,7 +1106,7 @@ Clase para mostrar/quitar elementos segun corresponda
 /* ********************** */
 .animacion__izquierda--derecha {
   opacity: 1;
-  animation: animacion__izquierda--derecha .4s linear; }
+  animation: animacion__izquierda--derecha 0.4s linear; }
 
 @keyframes animacion__izquierda--derecha {
   0% {
@@ -1489,4 +1492,54 @@ Clase para mostrar/quitar elementos segun corresponda
       margin-top: 15px; }
       .detalle .detalle__descripcionContenedor .detalle__contenedorPrecioDiv .detalle__contenedorPrecioDiv--spanPrecio, .detalle .detalle__descripcionContenedor .detalle__contenedorTituloDiv .detalle__contenedorPrecioDiv--spanPrecio, .detalle .detalle__descripcionContenedor .detalle__contenedorListaDiv .detalle__contenedorPrecioDiv--spanPrecio {
         font-size: 17px;
-        font-weight: 600; } }
+        font-weight: 600; }
+  /* TABLA PARA MOSTRAR PRODUCTOS DEL CARRITO */
+  .carrito {
+    /* TABLA DEL CARRITO DE COMPRAS */
+    /* TABLA DE MONTO TOTAL */ }
+    .carrito .carrito__carritoVacio {
+      height: 50vh; }
+      .carrito .carrito__carritoVacio h3 {
+        font-size: 27px;
+        font-weight: 600; }
+      .carrito .carrito__carritoVacio i {
+        margin-left: 2px; }
+      .carrito .carrito__carritoVacio span {
+        font-size: 17px;
+        font-weight: 500;
+        text-align: center; }
+      .carrito .carrito__carritoVacio a {
+        width: 55%;
+        border-radius: 14px; }
+    .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--thead th {
+      padding: 0.4em;
+      font-size: 12px; }
+    .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--tbody td {
+      padding: 0.4em; }
+    .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--tbody span {
+      font-size: 11px; }
+    .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--tbody img {
+      width: 2.5em; }
+    .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--tbody input {
+      font-size: 11px; }
+    .carrito .carrito__contenedorCompra .carrito__contenedorCompra--tablaCarrito .carrito__contenedorCompra--tbody button {
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 0px 8px;
+      border: 1px solid #bbb;
+      color: #bbb;
+      font-family: monospace;
+      font-weight: 400; }
+    .carrito .carrito__contenedorMontoTotal .carrito__contenedorMontoTotal--tablaMontoTotal .carrito__contenedorMontoTotal--thead th {
+      font-size: 12px; }
+    .carrito .carrito__contenedorMontoTotal .carrito__contenedorMontoTotal--tablaMontoTotal .carrito__contenedorMontoTotal--tbody td {
+      padding: 0.3em; }
+    .carrito .carrito__contenedorMontoTotal .carrito__contenedorMontoTotal--tablaMontoTotal .carrito__contenedorMontoTotal--tbody span {
+      font-family: "Roboto";
+      font-weight: 500;
+      color: #393939;
+      font-size: 12px; }
+    .carrito .carrito__contenedorMontoTotal .carrito__contenedorMontoTotal--tablaMontoTotal .carrito__contenedorMontoTotal--tbody .carrito__contenedorMontoTotal--imgLoading {
+      background-color: #08acaf;
+      border-radius: 20px;
+      margin-left: 10px; } }

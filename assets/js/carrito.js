@@ -46,7 +46,6 @@
         let ordenDeCompra__contenedor = $("#orden-de-compra");
         let ordenDeCompra;
         $(contenedorCarrito).removeClass("activada");
-        /* $(contenedorCarrito).show(); */
         $.each(listadoDeProductos, (indice, valor) => {
             sumarPrecios += parseInt(valor.precio);
             $(carritoDeCompras).prepend(`
@@ -74,12 +73,11 @@
           montoTotal.text(`$${sumarPrecios}`);
           ordenDeCompra = Math.floor(Math.random() * (30_000_000 - 5_000_000)) + 5_000_000; // con esto simulo un numero de ticket u orden de compra
           ordenDeCompra__contenedor.text(`Orden de compra #${ordenDeCompra}`);
-          /* contenedorMontoTotal.removeClass("activada"); */
           contenedorMontoTotal.show();
 
           let form = $(".formulario");
           $(form).change(() => {
-              montoTotal.text(`$${calcularMontoTotal()}`);
+            montoTotal.text(`$${calcularMontoTotal()}`);
           })  ;
           
           /* ELIMINAR ELEMENTOS DEL CARRITO CON UNA PEQUEÑA ANIMACION */
@@ -121,10 +119,10 @@
     let btn__finalizarCompra = $("#finalizar-compra");
     $(btn__finalizarCompra).click(() => {
         let imgLoading = $("#loadingImg-ordenDeCompra");
-        /* $(imgLoading).removeClass("activada"); */
+        $(imgLoading).removeClass("activada");
         $(imgLoading).show();
         setTimeout(() => {
-            /* $(imgLoading).addClass("activada"); */
+            $(imgLoading).addClass("activada");
             $(imgLoading).hide();
             carritoVacio("FELICITACIONES","far fa-check-circle","TU COMPRA HA SIDO REGISTRADA CON ÉXITO");
             localStorage.clear();

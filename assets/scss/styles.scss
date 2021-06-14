@@ -10,28 +10,31 @@ a {
 li {
   list-style: none;
 }
-h2,h3,h4,a{
+h2,
+h3,
+h4,
+a {
   font-family: "Roboto";
 }
 button:hover,
-input[type="submit"]:hover{
-  opacity: .7;
+input[type="submit"]:hover {
+  opacity: 0.7;
 }
 
 /* FIJAMOS NUESTRO MENU A LA PANTALLA AL HACER SCROLL */
-header{
+header {
   position: sticky;
   top: 0;
   z-index: 1;
 }
 
 /* MIXIN PARA REUTILIZAR ESTILOS DE TITULO QUE SEAN IGUALES EN LAS PAGINAS DE TIPO COLLAGE */
-@mixin titulos($font-size,$font-weight){
+@mixin titulos($font-size, $font-weight) {
   font-size: $font-size;
   font-weight: $font-weight;
 }
 /* MIXIN PARA REUTILIZAR ESTILOS DE SLOGAN QUE SEAN IGUALES EN LAS PAGINAS DE TIPO COLLAGE */
-@mixin slogans($font-size,$font-weight){
+@mixin slogans($font-size, $font-weight) {
   font-size: $font-size;
   font-weight: $font-weight;
 }
@@ -44,23 +47,23 @@ header{
   border-radius: 15px;
 }
 /* MIXINS PARA COLLAGE DE LA PAGINA HOME */
-@mixin collageFila($display,$justify-content){
+@mixin collageFila($display, $justify-content) {
   display: $display;
   justify-content: $justify-content;
 }
-@mixin collageProducto($background-color,$width){
-  background-color:$background-color;
+@mixin collageProducto($background-color, $width) {
+  background-color: $background-color;
   width: $width;
 }
-@mixin collageTituloContenedor($font-weight,$color){
+@mixin collageTituloContenedor($font-weight, $color) {
   font-weight: $font-weight;
   color: $color;
 }
-@mixin collageIcono($font-size){
+@mixin collageIcono($font-size) {
   font-size: $font-size;
 }
-@mixin collageImg($width,$height){
-  width: $width; 
+@mixin collageImg($width, $height) {
+  width: $width;
   height: $height;
 }
 /* 
@@ -69,7 +72,7 @@ Menu secundario disponible a < 768px
 **************************************************************************************
 */
 .menu-secundario {
-    background-color: $verde_principal;
+  background-color: $verde_principal;
   .menu-secundario__contenedor {
     .menu-secundario__lista {
       display: flex;
@@ -82,7 +85,7 @@ Menu secundario disponible a < 768px
       color: $links__menuNavegacion;
     }
   }
-  .menu-secundario__icono{
+  .menu-secundario__icono {
     height: 50px;
     border-radius: 20px;
     margin-left: 5px;
@@ -93,23 +96,23 @@ Menu secundario disponible a < 768px
 Menu primario disponible a > 768px
 **************************************************************************************
 */
-.menu-primario{
+.menu-primario {
   background-color: $verde_principal;
   padding: 5px;
-  .menu-primario__contenedor{
+  .menu-primario__contenedor {
     display: flex;
     justify-content: space-around;
-    .menu-primario__enlaces{
+    .menu-primario__enlaces {
       font-size: 1.1rem;
       color: $links__menuNavegacion;
     }
-    .menu-primario__enlaces:hover{
+    .menu-primario__enlaces:hover {
       color: #ffffff;
     }
   }
-  .menu-primario__icono{
+  .menu-primario__icono {
     height: 50px;
-    border-radius: 20px
+    border-radius: 20px;
   }
 }
 /* 
@@ -117,20 +120,20 @@ Menu primario disponible a > 768px
 Estilos para el enlace al shop de nuestra pagina
 **************************************************************************************
 */
-.shop{
+.shop {
   background-color: #fafafa;
   padding: 10px;
   font-size: 14px;
   color: #7c7c7c;
-  box-shadow: 0px 2px 4px rgba(219, 219, 219,0.8);
-  .shop__contenedor{
+  box-shadow: 0px 2px 4px rgba(219, 219, 219, 0.8);
+  .shop__contenedor {
     display: flex;
     justify-content: center;
   }
-  .shop__enlace{
+  .shop__enlace {
     color: $verde_principal;
   }
-  .shop__enlace:hover{
+  .shop__enlace:hover {
     border-bottom: 1px solid $verde_principal;
   }
 }
@@ -140,149 +143,150 @@ Estilos para el enlace al shop de nuestra pagina
 CONTENIDO/BODY DEL SITIO
 **************************************************************************************
 */
-.iphone-12pro{
+.iphone-12pro {
   background-color: $negro;
-  animation: aparecer .6s linear;
-  .iphone-12pro__contenedor{
+  animation: aparecer 0.6s linear;
+  .iphone-12pro__contenedor {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5px 5px;
-    .iphone-12pro__titulo{
-      @include titulos(35px , 600);
+    .iphone-12pro__titulo {
+      @include titulos(35px, 600);
       color: $links__menuNavegacion;
       text-align: center;
     }
-    .iphone-12pro__tienda{
+    .iphone-12pro__tienda {
       display: flex;
       flex-direction: inherit;
       align-items: center;
-      .iphone-12pro__descripcion{
-        @include slogans(25px , 500);
+      .iphone-12pro__descripcion {
+        @include slogans(25px, 500);
         color: $links__menuNavegacion;
         text-align: center;
       }
-      .iphone-12pro__enlaceTienda{
+      .iphone-12pro__enlaceTienda {
         @include titulos(16px, 600);
         color: $verde_principal;
         border-bottom: 1px solid $verde_principal;
       }
-      .iphone-12pro--icono{
+      .iphone-12pro--icono {
         @include collageIcono(16px);
         margin-left: 2px;
         color: $links__menuNavegacion;
       }
     }
   }
-  .iphone-12pro__img{
+  .iphone-12pro__img {
     height: 250px;
     background: url(../img/home/iphone-12pro-home4.jpg) no-repeat center;
   }
 }
-.collageUno{
-  .collageUno__filaUno{
+.collageUno {
+  .collageUno__filaUno {
     @include collageFila(flex, space-between);
-    .collageUno__filaUno--AppleWatch{
-      @include collageProducto($negro,49.4%);
+    .collageUno__filaUno--AppleWatch {
+      @include collageProducto($negro, 49.4%);
       padding: 10px 4px;
     }
-    .collageUno__filaUno--tituloAppleWatchContenedor{
-      @include collageTituloContenedor( 600,$links__menuNavegacion );
+    .collageUno__filaUno--tituloAppleWatchContenedor {
+      @include collageTituloContenedor(600, $links__menuNavegacion);
       padding: 5px 5px;
       text-align: center;
     }
-    .collageUno__filaUno--tituloAppleWatch{
-      @include titulos(35px , 600);
+    .collageUno__filaUno--tituloAppleWatch {
+      @include titulos(35px, 600);
     }
-    .collageUno__filaUno--iconoAppleWatch{
+    .collageUno__filaUno--iconoAppleWatch {
       @include collageIcono(35px);
       padding: 0 9px;
     }
-    .collageUno__filaUno--appleWatchImg{
-      @include collageImg(100% , 300px);
+    .collageUno__filaUno--appleWatchImg {
+      @include collageImg(100%, 300px);
     }
-    .collageUno__filaUno--Ipad{
+    .collageUno__filaUno--Ipad {
       @include collageProducto(#fefefe, 49.4%);
       padding: 0 0;
     }
-    .collageUno__filaUno--tituloIpadContenedor{
-      @include collageTituloContenedor(600 ,$negro_opaco);
+    .collageUno__filaUno--tituloIpadContenedor {
+      @include collageTituloContenedor(600, $negro_opaco);
       padding: 5px 5px;
-      text-align: center
+      text-align: center;
     }
-    .collageUno__filaUno--tituloIpad{
-      @include titulos(35px , 600);
+    .collageUno__filaUno--tituloIpad {
+      @include titulos(35px, 600);
     }
-    .collageUno__filaUno--iconoIpad{
+    .collageUno__filaUno--iconoIpad {
       @include collageIcono(35px);
       padding: 0 9px;
     }
-    .collageUno__filaUno--ipadImg{
-      @include collageImg(100% , 300px);
+    .collageUno__filaUno--ipadImg {
+      @include collageImg(100%, 300px);
     }
   }
 }
 
-.collageDos{
-  .collageDos__filaDos{
+.collageDos {
+  .collageDos__filaDos {
     @include collageFila(flex, space-between);
-    .collageDos__filaDos--Iphone11{
-      @include collageProducto(#fafafa,49.4%);
+    .collageDos__filaDos--Iphone11 {
+      @include collageProducto(#fafafa, 49.4%);
       padding: 0 0;
     }
-    .collageDos__filaDos--tituloIphone11Contenedor{
-      @include collageTituloContenedor( 600,$negro_opaco );
+    .collageDos__filaDos--tituloIphone11Contenedor {
+      @include collageTituloContenedor(600, $negro_opaco);
       padding: 5px 5px;
       text-align: center;
     }
-    .collageDos__filaDos--tituloIphone11{
-      @include titulos(35px , 600);
+    .collageDos__filaDos--tituloIphone11 {
+      @include titulos(35px, 600);
     }
-    .collageDos__filaDos--iconoIphone11{
+    .collageDos__filaDos--iconoIphone11 {
       @include collageIcono(35px);
       padding: 0 9px;
     }
-    .collageDos__filaDos--iphone11Img{
-      @include collageImg(100% , 300px);
+    .collageDos__filaDos--iphone11Img {
+      @include collageImg(100%, 300px);
     }
-    .collageDos__filaDos--IphoneSE{
-      @include collageProducto($negro,49.4%);
+    .collageDos__filaDos--IphoneSE {
+      @include collageProducto($negro, 49.4%);
       padding: 0 0;
     }
-    .collage__filaDos--tituloIphoneSEContenedor{
-      @include collageTituloContenedor( 600, $links__menuNavegacion );
+    .collage__filaDos--tituloIphoneSEContenedor {
+      @include collageTituloContenedor(600, $links__menuNavegacion);
       padding: 5px 5px;
       text-align: center;
     }
-    .collage__filaDos--tituloIphoneSE{
-      @include titulos(35px , 600);
+    .collage__filaDos--tituloIphoneSE {
+      @include titulos(35px, 600);
     }
-    .collageDos__filaDos--iconoIphoneSE{
+    .collageDos__filaDos--iconoIphoneSE {
       @include collageIcono(35px);
       padding: 0 9px;
     }
-    .collageDos__filaDos--iphoneSeImg{
-      @include collageImg(100% , 300px);
+    .collageDos__filaDos--iphoneSeImg {
+      @include collageImg(100%, 300px);
     }
   }
 }
 
-.collageTres{
+.collageTres {
   position: relative;
-  background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 85% no-repeat fixed ;
+  background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 85%
+    no-repeat fixed;
   padding: 30px;
   height: 400px;
-  .collageTres__contenedorPropaganda{
+  .collageTres__contenedorPropaganda {
     padding: 10px;
-    h2{
-      @include titulos(35px , 600);
+    h2 {
+      @include titulos(35px, 600);
       color: #ffffff;
     }
-    span{
-      @include slogans(25px , 500);
+    span {
+      @include slogans(25px, 500);
       color: #ffffff;
     }
-    i{
+    i {
       font-size: 25px;
       margin-left: 5px;
     }
@@ -293,68 +297,69 @@ CONTENIDO/BODY DEL SITIO
 ESTILOS PARA LA PAGINA DE CELULARES
 **************************************************************************************
 */
-.iphone12{
-  animation: aparecer .5s linear;
-  .iphone12__contenedorTexto{
+.iphone12 {
+  animation: aparecer 0.5s linear;
+  .iphone12__contenedorTexto {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 45px 5px;
-    .iphone12__contenedorTexto--titulo{
-      @include titulos(35px , 600);
+    .iphone12__contenedorTexto--titulo {
+      @include titulos(35px, 600);
       color: $negro_opaco;
     }
-    .iphone12__contenedorTexto--slogan{
-      @include slogans(25px , 500);
+    .iphone12__contenedorTexto--slogan {
+      @include slogans(25px, 500);
       color: $negro_opaco;
     }
-    .iphone12__contenedorTexto--btnTienda{
+    .iphone12__contenedorTexto--btnTienda {
       @include btnCollagePaginas;
     }
   }
-  .iphone12__imagen{
+  .iphone12__imagen {
     height: 100vh;
     background: url(../img/home/iphone12-celulares.jpg) center/contain no-repeat;
   }
 }
-.iphone12pro{
+.iphone12pro {
   background-color: #1c1a1a;
-  .iphone12pro__img{
+  .iphone12pro__img {
     height: 400px;
-    background: url(../img/home/1586965934_242736_1586966124_sumario_normal.jpg) center/contain no-repeat fixed;
+    background: url(../img/home/1586965934_242736_1586966124_sumario_normal.jpg)
+      center/contain no-repeat fixed;
   }
 }
-.cuotas{
-  .cuotas__contenedorImg{
+.cuotas {
+  .cuotas__contenedorImg {
     display: flex;
     justify-content: center;
-    img{
+    img {
       width: 65%;
     }
   }
 }
-.modelos{
+.modelos {
   background-color: #000000;
   padding: 10px 2px;
-  .modelos__contenedor{
-    .modelos__contenedor--img{
+  .modelos__contenedor {
+    .modelos__contenedor--img {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      h2{
-        @include titulos(35px , 600);
+      h2 {
+        @include titulos(35px, 600);
         padding: 10px;
         color: $links__menuNavegacion;
       }
-      img{
+      img {
         width: 85%;
       }
-      .modelos__contenedor--botones{
+      .modelos__contenedor--botones {
         width: 85%;
         display: flex;
         justify-content: space-around;
         position: relative;
-        a{
+        a {
           background-color: $verde_principal;
           color: $links__menuNavegacion;
           border-radius: 8px;
@@ -372,89 +377,89 @@ ESTILOS PARA LA PAGINA DE CELULARES
 ESTILOS PARA LA PAGINA DE TABLETS
 **************************************************************************************
 */
-.ipadPro{
+.ipadPro {
   background-color: #000000;
   padding: 10px;
-  animation: aparecer .6s linear;
-  .ipadPro__contenedorTexto{
+  animation: aparecer 0.6s linear;
+  .ipadPro__contenedorTexto {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px 5px;
-    .ipadPro__contenedorTexto--titulo{
-      @include titulos(35px , 600);
+    .ipadPro__contenedorTexto--titulo {
+      @include titulos(35px, 600);
       color: $links__menuNavegacion;
-      i{
+      i {
         margin-left: 5px;
       }
     }
-    .ipadPro__contenedorTexto--slogan{
-      @include slogans(25px , 500);
-      color:$links__menuNavegacion;
+    .ipadPro__contenedorTexto--slogan {
+      @include slogans(25px, 500);
+      color: $links__menuNavegacion;
     }
-    .ipadPro__contenedorTexto--btnTienda{
+    .ipadPro__contenedorTexto--btnTienda {
       @include btnCollagePaginas;
     }
   }
-  .ipadPro__contenedorImg{
-    img{
+  .ipadPro__contenedorImg {
+    img {
       width: 100%;
     }
   }
 }
-.ipadAir{
-  .ipadAir__contenedorTexto{
+.ipadAir {
+  .ipadAir__contenedorTexto {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 15px 5px;
-    .ipadAir__contenedorTexto--titulo{
-      @include titulos(35px , 600);
+    .ipadAir__contenedorTexto--titulo {
+      @include titulos(35px, 600);
       color: $negro_opaco;
     }
-    .ipadAir__contenedorTexto--slogan{
-      @include slogans(25px , 500);
+    .ipadAir__contenedorTexto--slogan {
+      @include slogans(25px, 500);
       color: $negro_opaco;
       text-align: center;
     }
-    .ipadAir__contenedorTexto--btnTienda{
+    .ipadAir__contenedorTexto--btnTienda {
       @include btnCollagePaginas;
     }
   }
-  .ipadAir__contenedorImg{
+  .ipadAir__contenedorImg {
     display: flex;
     justify-content: center;
-    img{
+    img {
       width: 65%;
     }
   }
 }
-.ipadMini{
+.ipadMini {
   background-color: #ffffff;
-  .ipadMini__contenedorTexto{
+  .ipadMini__contenedorTexto {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 15px 5px;
-    .ipadMini__contenedorTexto--titulo{
-      @include titulos(35px , 600);
+    .ipadMini__contenedorTexto--titulo {
+      @include titulos(35px, 600);
       color: $negro_opaco;
     }
-    .ipadMini__contenedorTexto--slogan{
-      @include slogans(25px , 500);
+    .ipadMini__contenedorTexto--slogan {
+      @include slogans(25px, 500);
       color: $negro_opaco;
       text-align: center;
     }
-    .ipadMini__contenedorTexto--btnTienda{
+    .ipadMini__contenedorTexto--btnTienda {
       @include btnCollagePaginas;
     }
   }
-  .ipadMini__contenedorImg{
+  .ipadMini__contenedorImg {
     display: flex;
     justify-content: center;
-    img{
+    img {
       width: 100%;
     }
   }
@@ -463,89 +468,89 @@ ESTILOS PARA LA PAGINA DE TABLETS
 /* **************************************************************************************
  ESTILOS PARA LA PAGINA DE APPLE WATCH
 ************************************************************************************** */
-.watchSeries6{
-  animation: aparecer .6s linear;
-  .watchSeries6__contenedor{
-    .watchSeries6__contenedor--Img{
+.watchSeries6 {
+  animation: aparecer 0.6s linear;
+  .watchSeries6__contenedor {
+    .watchSeries6__contenedor--Img {
       display: flex;
       justify-content: center;
-      img{
+      img {
         width: 85%;
       }
     }
-    .watchSeries6__contenedor--Texto{
+    .watchSeries6__contenedor--Texto {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 15px 5px;
-      .watchSeries6__contenedor--titulo{
-        @include titulos(35px , 600);
+      .watchSeries6__contenedor--titulo {
+        @include titulos(35px, 600);
         color: $negro_opaco;
       }
-      .watchSeries6__contenedor--slogan{
-        @include slogans(25px , 500);
+      .watchSeries6__contenedor--slogan {
+        @include slogans(25px, 500);
         color: $negro_opaco;
         text-align: center;
       }
-      .watchSeries6__contenedor--btnTienda{
+      .watchSeries6__contenedor--btnTienda {
         @include btnCollagePaginas;
       }
     }
   }
 }
-.watchse{
-  .watchse__contenedor--Img{
+.watchse {
+  .watchse__contenedor--Img {
     display: flex;
     justify-content: center;
-    img{
+    img {
       width: 85%;
     }
   }
-  .watchse__contenedor--Texto{
+  .watchse__contenedor--Texto {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 15px 5px;
-    .watchse__contenedor--titulo{
-      @include titulos(35px , 600);
+    .watchse__contenedor--titulo {
+      @include titulos(35px, 600);
       color: $negro_opaco;
     }
-    .watchse__contenedor--slogan{
-      @include slogans(25px , 500);
+    .watchse__contenedor--slogan {
+      @include slogans(25px, 500);
       color: $negro_opaco;
       text-align: center;
     }
-    .watchse__contenedor--btnTienda{
+    .watchse__contenedor--btnTienda {
       @include btnCollagePaginas;
     }
   }
 }
-.modelosWatch{
+.modelosWatch {
   background-color: #f1f1f1;
-  .modelosWatch__contenedorTexto{
+  .modelosWatch__contenedorTexto {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 25px;
-    .modelosWatch__contenedorTexto--titulo{
-      @include titulos(35px , 600);
+    .modelosWatch__contenedorTexto--titulo {
+      @include titulos(35px, 600);
       color: $negro_opaco;
     }
-    .modelosWatch__contenedorTexto--slogan{
-      @include slogans(25px , 500);
+    .modelosWatch__contenedorTexto--slogan {
+      @include slogans(25px, 500);
       color: $negro_opaco;
     }
-    .modelosWatch__contenedorTexto--btnTienda{
+    .modelosWatch__contenedorTexto--btnTienda {
       @include btnCollagePaginas;
     }
   }
-  .modelosWatch__contenedorImg{
+  .modelosWatch__contenedorImg {
     display: flex;
     justify-content: center;
-    img{
+    img {
       width: 82.5%;
     }
   }
@@ -555,53 +560,53 @@ ESTILOS PARA LA PAGINA DE TABLETS
 ESTILOS PARA LA PAGINA DE CONTACTO
 **************************************************************************************
  */
-.fondoEncabezado{
-  .fondoEncabezado__contenedorImg{
+.fondoEncabezado {
+  .fondoEncabezado__contenedorImg {
     background-image: url(../img/home/fondo-pag-contacto.jpg);
     background-position: center;
     background-repeat: no-repeat;
     height: 35vh;
-    .fondoEncabezado__contenedorTexto{
+    .fondoEncabezado__contenedorTexto {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 15px 5px;
-      .fondoEncabezado__contenedorTitulo{
-        @include titulos(35px , 600);
+      .fondoEncabezado__contenedorTitulo {
+        @include titulos(35px, 600);
         color: $links__menuNavegacion;
       }
-      .fondoEncabezado__contenedorSlogan{
-        @include slogans(25px , 500);
+      .fondoEncabezado__contenedorSlogan {
+        @include slogans(25px, 500);
         color: $links__menuNavegacion;
         text-align: center;
       }
     }
   }
 }
-.formulario{
+.formulario {
   padding: 10px 5px;
-  .formulario__contenedor{
-    .formulario__contenedor--titulo{
-      @include titulos(35px , 600);
+  .formulario__contenedor {
+    .formulario__contenedor--titulo {
+      @include titulos(35px, 600);
       padding: 10px 10px;
       color: $negro_opaco;
     }
-    .formulario__contenedor--form{
+    .formulario__contenedor--form {
       display: flex;
       flex-direction: column;
       width: 60%;
       padding: 20px 10px;
-      .formulario__contenedor--label{
+      .formulario__contenedor--label {
         width: 70%;
         color: $negro_opaco;
         font-size: 15px;
         font-weight: 600;
-        font-family: 'Roboto';
+        font-family: "Roboto";
         padding: 3px 0px;
         margin: 9px 0;
       }
-      .formulario__contenedor--input{
+      .formulario__contenedor--input {
         width: 70%;
         padding: 7px;
         background-color: #fafafa;
@@ -609,7 +614,7 @@ ESTILOS PARA LA PAGINA DE CONTACTO
         outline: none;
         border-radius: 4px;
       }
-      .formulario__contenedor--inputSubmit{
+      .formulario__contenedor--inputSubmit {
         background-color: $verde_principal;
         color: $links__menuNavegacion;
         border: none;
@@ -618,9 +623,9 @@ ESTILOS PARA LA PAGINA DE CONTACTO
         width: 20%;
         margin-top: 10px;
         padding: 5px 5px;
-        cursor:not-allowed;
+        cursor: not-allowed;
       }
-      .formulario__contenedor--contactoLoadingImg{
+      .formulario__contenedor--contactoLoadingImg {
         background-color: $verde_principal;
         border-radius: 20px;
         opacity: 0.4;
@@ -628,7 +633,7 @@ ESTILOS PARA LA PAGINA DE CONTACTO
       }
     }
   }
-  .formulario__respuesta{
+  .formulario__respuesta {
     position: fixed;
     top: 0;
     right: 0;
@@ -641,7 +646,7 @@ ESTILOS PARA LA PAGINA DE CONTACTO
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
-    .formulario-respuesta--div{
+    .formulario-respuesta--div {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -651,18 +656,18 @@ ESTILOS PARA LA PAGINA DE CONTACTO
       background-color: #fefefefe;
       border-radius: 3px;
       padding: 15px 5px;
-      .formularrio__respuesta--titulo{
-        @include titulos(35px , 600);
+      .formularrio__respuesta--titulo {
+        @include titulos(35px, 600);
         color: $negro_opaco;
         text-align: center;
       }
-      .formulario__respuesta--span{
+      .formulario__respuesta--span {
         font-size: 1rem;
         font-family: "Roboto";
         color: $negro_opaco;
         text-align: center;
       }
-      .formulario__respuesta--btnCerrar{
+      .formulario__respuesta--btnCerrar {
         background-color: #08acaf;
         color: #e9ecef;
         font-family: "Roboto";
@@ -674,11 +679,11 @@ ESTILOS PARA LA PAGINA DE CONTACTO
   }
 }
 /* ESTILOS PARA VALIDAR LOS CAMPOS DEL FORMULARIO DE LA PAGINA CONTACTO */
-.check{
+.check {
   color: #2ad714e0;
   font-size: 20px;
 }
-.noCheck{
+.noCheck {
   color: #eb0b0b;
   font-size: 20px;
 }
@@ -687,29 +692,29 @@ ESTILOS PARA LA PAGINA DE CONTACTO
 SECCION DE SUSCRIPCION
 **************************************************************************************
  */
-.valido{
+.valido {
   border: 1px solid #2ad714e0;
 }
-.noValido{
+.noValido {
   border: 1px solid #eb0b0b;
 }
-.submitDesactivado{
-  opacity: .4;
+.submitDesactivado {
+  opacity: 0.4;
 }
-.suscripcion{
+.suscripcion {
   padding: 50px 0;
   background-image: url(../img/textura.png);
   height: auto;
-  .suscripcion__anuncio{
+  .suscripcion__anuncio {
     padding: 10px;
     height: auto;
-    .suscripcion__anuncio--titulo{
+    .suscripcion__anuncio--titulo {
       @include titulos(40px, 600);
       padding: 5px;
       text-align: center;
       color: #393939;
     }
-    .suscripcion__anuncio--mensaje{
+    .suscripcion__anuncio--mensaje {
       @include slogans(17px, 400);
       margin-bottom: 0;
       padding: 4px 15px;
@@ -717,33 +722,33 @@ SECCION DE SUSCRIPCION
       text-align: center;
     }
   }
-  .suscripcion__formulario{
+  .suscripcion__formulario {
     height: auto;
     align-self: center;
     padding: 15px;
-    .suscripcion__formularioContenedor{
+    .suscripcion__formularioContenedor {
       display: flex;
       flex-direction: column;
       align-items: center;
-      .suscripcion__formulario--input{
+      .suscripcion__formulario--input {
         margin: 5px;
         padding: 5px;
         width: 80%;
         border-radius: 4px;
         outline: none;
       }
-      .suscripcion__formulario--btnEnviar{
+      .suscripcion__formulario--btnEnviar {
         @extend .suscripcion__formulario--input;
         background-color: $verde_principal;
         color: $links__menuNavegacion;
         font-weight: 600;
       }
-      .suscripcion__formulario--loadingImg{
+      .suscripcion__formulario--loadingImg {
         background-color: $verde_principal;
         border-radius: 20px;
         opacity: 0.4;
       }
-      .suscripcion__formulario--suscripcionExitosa{
+      .suscripcion__formulario--suscripcionExitosa {
         @include slogans(14px, 600);
         color: #ff7e7e;
         padding: 7px;
@@ -756,63 +761,63 @@ SECCION DE SUSCRIPCION
 PIE DE PAGINA
 **************************************************************************************
 */
-.footer{
-  .footer__contenedor{
+.footer {
+  .footer__contenedor {
     border-bottom: 1px solid $links__menuNavegacion;
-    div{
+    div {
       height: 200px;
     }
-    .footer__contenedor--img{
+    .footer__contenedor--img {
       background: url(../img/logo.jpeg) no-repeat center/contain;
     }
-    .footer__contenedor--informacion{
+    .footer__contenedor--informacion {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       padding: 15px 8px;
       border-right: 1px solid $links__menuNavegacion;
-      i{
+      i {
         font-size: 15px;
         margin-right: 4px;
         color: $verde_principal;
       }
-      span{
+      span {
         padding: 0 2px;
         font-size: 15px;
         color: $negro_opaco;
       }
     }
-    .footer__contenedor--menu{
+    .footer__contenedor--menu {
       display: flex;
       align-items: center;
       padding: 15px 8px;
-      ul{
+      ul {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         width: 100%;
       }
-      li{
+      li {
         width: 50%;
         padding: 7px 1px;
       }
-      a{
+      a {
         font-size: 15px;
         color: $negro_opaco;
       }
-      a:hover{
-        color:#08acaf;
+      a:hover {
+        color: #08acaf;
       }
     }
   }
 }
-.derechos-autor{
+.derechos-autor {
   padding: 20px 10px;
-  .derechos-autor__contenedor{
+  .derechos-autor__contenedor {
     display: flex;
     justify-content: center;
     padding: 7px;
-    .derechos-autor__contenedor--desarrollador{
+    .derechos-autor__contenedor--desarrollador {
       font-size: 15px;
       color: #393939;
     }
@@ -824,30 +829,30 @@ PIE DE PAGINA
 ESTILOS PARA LA TIENDA
 **************************************************************************************
 */
-.productos{
+.productos {
   height: auto;
-  .productos__categorias{
+  .productos__categorias {
     margin-top: 7px;
-    .productos__categorias--titulo{
+    .productos__categorias--titulo {
       @include titulos(17px, 600);
       font-family: "Roboto";
       padding: 4px 5px;
       border-left: 3px solid $verde_principal;
     }
-    .productos__categorias--form{
+    .productos__categorias--form {
       display: flex;
       flex-direction: column;
-      input[type="radio"]{
+      input[type="radio"] {
         display: none;
       }
-      label{
+      label {
         font-family: "Roboto";
         color: $negro_opaco;
         padding: 5px 15px 5px 45px;
         position: relative;
         cursor: pointer;
       }
-      label:before{
+      label:before {
         content: "";
         width: 15px;
         height: 15px;
@@ -858,54 +863,54 @@ ESTILOS PARA LA TIENDA
         left: 20px;
         bottom: 9px;
       }
-      input[type="radio"]:checked + label:before{
+      input[type="radio"]:checked + label:before {
         background: $verde_principal;
       }
     }
   }
-  .productos__ordenamiento{
+  .productos__ordenamiento {
     display: flex;
     flex-wrap: wrap;
     padding: 11px;
     .productos__ordenamiento--contenedorCuadriculas,
-    .productos__ordenamiento--contenedorCuadricula{
+    .productos__ordenamiento--contenedorCuadricula {
       width: 30px;
       margin-right: 5px;
       cursor: pointer;
       text-align: center;
     }
     .productos__ordenamiento--contenedorCuadriculas:hover,
-    .productos__ordenamiento--contenedorCuadricula:hover{
+    .productos__ordenamiento--contenedorCuadricula:hover {
       border: 1px solid $verde_principal;
     }
-    .productos__ordenamiento--form{
+    .productos__ordenamiento--form {
       display: flex;
       align-items: center;
       margin-left: 15px;
       padding: 3px 3px;
       width: 70%;
       height: 32px;
-      box-shadow: 0px 2px 4px rgba(219 ,219 ,219,0.8);
+      box-shadow: 0px 2px 4px rgba(219, 219, 219, 0.8);
       position: relative;
-      input{
+      input {
         width: 100%;
         outline: none;
         border: none;
         border-radius: 9px;
         text-align: center;
         @include titulos(13px, 600);
-        font-family: 'Roboto';
+        font-family: "Roboto";
       }
-      i{
+      i {
         padding: 5px 0px;
         cursor: pointer;
         color: $negro_opaco;
       }
-      div{
+      div {
         position: absolute;
         top: 4px;
         right: -45px;
-        span{
+        span {
           position: absolute;
           text-align: center;
           top: -15px;
@@ -913,57 +918,57 @@ ESTILOS PARA LA TIENDA
           border-radius: 10px;
           color: #08acaf;
           @include titulos(16px, 600);
-          font-family: 'Roboto';
+          font-family: "Roboto";
         }
       }
     }
   }
-  .productos__contenedor{
+  .productos__contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     padding: 5px 0px;
-    box-shadow: 1px 2px 6px 3px rgba(219,219,219,0.5);
-    .productos__contenedor--seccionError{
+    box-shadow: 1px 2px 6px 3px rgba(219, 219, 219, 0.5);
+    .productos__contenedor--seccionError {
       width: 100%;
       height: 60vh;
       padding: 10px 5px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      div{
+      div {
         display: flex;
         justify-content: center;
       }
-      h3{
-        @include titulos(35px , 600);
+      h3 {
+        @include titulos(35px, 600);
         color: $negro_opaco;
         font-family: "Roboto";
-        i{
+        i {
           margin-left: 3px;
           color: $verde_principal;
           font-size: 35px;
         }
       }
-      span{
-        @include slogans(25px , 500);
+      span {
+        @include slogans(25px, 500);
         font-family: "Roboto";
         color: $negro_opaco;
         padding: 5px 1px;
         text-align: center;
       }
     }
-    .productos__contenedor--article{
-      animation: aparecer .6s linear; 
-      .productos__contenedor--contenedorImg{
+    .productos__contenedor--article {
+      animation: aparecer 0.6s linear;
+      .productos__contenedor--contenedorImg {
         display: flex;
         justify-content: center;
         width: 100%;
-        div{
+        div {
           position: relative;
         }
-        i{
+        i {
           position: absolute;
           font-size: 17px;
           cursor: grab;
@@ -971,23 +976,23 @@ ESTILOS PARA LA TIENDA
           top: -10px;
         }
       }
-      .productos__contenedor--contenedorDescripcion{
+      .productos__contenedor--contenedorDescripcion {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 3px;
         h4,
-        span{
+        span {
           color: $negro_opaco;
           font-weight: 600;
         }
       }
-      .productos__contenedor--contenedorBoton{
+      .productos__contenedor--contenedorBoton {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 10px;
-        button{
+        button {
           padding: 8px;
           border-radius: 5px;
           outline: none;
@@ -997,7 +1002,6 @@ ESTILOS PARA LA TIENDA
           font-size: 17px;
           font-family: "Roboto";
           font-weight: 400;
-
         }
       }
     }
@@ -1008,141 +1012,141 @@ ESTILOS PARA LA TIENDA
 ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
 **************************************************************************************
 */
-.detalle{
+.detalle {
   position: fixed;
-    top: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  .detalle__contenedor {
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 100%;
+    box-shadow: 0px 0px 5px #ffffff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+    animation: aparecer 0.6s linear;
+  }
+  .detalle__btn-cerrar {
+    position: absolute;
     right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
+    top: 0;
+    border: none;
+    background: none;
+    i {
+      font-size: 19px;
+    }
+  }
+  .detalle__imagenContenedor {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.9);
-    .detalle__contenedor{
+    width: 62%;
+    height: 100%;
+    padding: 2px;
+    .detalle__imagenContenedor--imgDiv {
       position: relative;
-      display: flex;
-      width: 80%;
-      height: 100%;
-      box-shadow: 0px 0px 5px #ffffff;
-      border-radius: 5px;
-      background-color: #ffffff;
-      overflow-y: scroll;
-      animation: aparecer .6s linear;
-    }
-    .detalle__btn-cerrar{
-      position: absolute;
-      right: 0;
-      top: 0;
-      border: none;
-      background: none;
-      i{
-        font-size: 19px;
+      width: 55%;
+      i {
+        font-size: 25px;
+      }
+      .detalle__imagenContenedor--spanLeft {
+        position: absolute;
+        left: -20px;
+        top: 130px;
+        cursor: pointer;
+      }
+      .detalle__imagenContenedor--spanRight {
+        position: absolute;
+        right: -20px;
+        top: 130px;
+        cursor: pointer;
       }
     }
-    .detalle__imagenContenedor{
-      display: flex;
-      justify-content: center;
-      width: 62%;
-      height: 100%;
-      padding: 2px;
-      .detalle__imagenContenedor--imgDiv{
-        position: relative;
-        width: 55%;
-        i{
-          font-size: 25px;
-        }
-        .detalle__imagenContenedor--spanLeft{
-          position: absolute;
-          left: -20px;
-          top: 130px;
-          cursor: pointer;
-        }
-        .detalle__imagenContenedor--spanRight{
-          position: absolute;
-          right: -20px;
-          top: 130px;
-          cursor: pointer;
-        }
-      }
-      .detalle__imagenContenedor--img{
-        width: 100%;
-        height: 45%;
+    .detalle__imagenContenedor--img {
+      width: 100%;
+      height: 45%;
+    }
+  }
+  .detalle__descripcionContenedor {
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+    .detalle__contenedorPrecioDiv {
+      width: 100%;
+      padding: 7px;
+      .detalle__contenedorPrecioDiv--spanPrecio {
+        background-color: $verde_principal;
+        color: $links__menuNavegacion;
+        @include titulos(19px, 400);
+        font-family: "Roboto";
+        border-radius: 20px;
+        padding: 6px 10px;
       }
     }
-    .detalle__descripcionContenedor{
-      padding: 20px;
-      width: 50%;
-      height: 100%;
-      .detalle__contenedorPrecioDiv{
-        width: 100%;
-        padding: 7px;
-        .detalle__contenedorPrecioDiv--spanPrecio{
-          background-color: $verde_principal;
-          color: $links__menuNavegacion;
-          @include titulos(19px, 400);
-          font-family: "Roboto";
-          border-radius: 20px;
-          padding: 6px 10px;
-        }
-      }
-      .detalle__contenedorTituloDiv{
-        @extend .detalle__contenedorPrecioDiv;
-        .detalle__contenedorTituloDiv--tituloProducto{
-          padding: 5px;
-          @include titulos(30px, 600);
-          color: $negro_opaco;
-          text-align: center;
-        }
-      }
-      .detalle__contenedorListaDiv{
-        @extend .detalle__contenedorPrecioDiv;
-        ul{
-          padding: 10px 1px;
-        }
-        li{
-          margin: 6px 1px;
-          font-size: 14px;
-          color: $negro_opaco;
-          list-style: inside;
-        }
-        span{
-          font-weight: 600;
-          font-family: "Roboto";
-        }
+    .detalle__contenedorTituloDiv {
+      @extend .detalle__contenedorPrecioDiv;
+      .detalle__contenedorTituloDiv--tituloProducto {
+        padding: 5px;
+        @include titulos(30px, 600);
+        color: $negro_opaco;
+        text-align: center;
       }
     }
+    .detalle__contenedorListaDiv {
+      @extend .detalle__contenedorPrecioDiv;
+      ul {
+        padding: 10px 1px;
+      }
+      li {
+        margin: 6px 1px;
+        font-size: 14px;
+        color: $negro_opaco;
+        list-style: inside;
+      }
+      span {
+        font-weight: 600;
+        font-family: "Roboto";
+      }
+    }
+  }
 }
 /* 
 **************************************************************************************
 ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
 **************************************************************************************
 */
-.carrito{
-  .carrito__carritoVacio{
+.carrito {
+  .carrito__carritoVacio {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 50vh;
-    h3{
-      @include titulos(35px , 600);
+    h3 {
+      @include titulos(35px, 600);
       padding: 10px 5px;
       color: $negro_opaco;
     }
-    i{
-      margin-left: 2px ;
+    i {
+      margin-left: 2px;
     }
-    span{
-      @include slogans(25px , 500);
+    span {
+      @include slogans(25px, 500);
       margin: 10px;
       color: $negro_opaco;
       font-family: "Roboto";
     }
-    a{
+    a {
       background-color: $verde_principal;
       color: $links__menuNavegacion;
       padding: 10px 5px;
@@ -1151,47 +1155,47 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
       text-align: center;
       cursor: pointer;
     }
-    a:hover{
-      opacity: .7;
+    a:hover {
+      opacity: 0.7;
     }
   }
   /* TABLA PARA MOSTRAR PRODUCTOS DEL CARRITO */
-  .carrito__contenedorCompra{
+  .carrito__contenedorCompra {
     display: flex;
     justify-content: center;
-    .carrito__contenedorCompra--tablaCarrito{
+    .carrito__contenedorCompra--tablaCarrito {
       border: 1px solid #eaeaea;
       width: 100%;
-      .carrito__contenedorCompra--thead{
+      .carrito__contenedorCompra--thead {
         background-color: #fafafa;
-        th{
+        th {
           padding: 0.8em;
           font-family: "Roboto";
           color: $negro_opaco;
         }
       }
-      .carrito__contenedorCompra--tbody{
-        tr{
+      .carrito__contenedorCompra--tbody {
+        tr {
           border-bottom: 1px solid #eaeaea;
         }
-        td{
+        td {
           padding: 0.8em;
         }
-        span{
+        span {
           font-family: "Roboto";
           font-weight: 500;
           color: $negro_opaco;
         }
-        img{
+        img {
           width: 2em;
         }
-        input{
+        input {
           width: 3em;
           border: 1px solid #eaeaea;
           color: $negro_opaco;
           text-align: center;
         }
-        button{
+        button {
           background-color: #ffffff;
           border-radius: 20px;
           padding: 0px 8px;
@@ -1200,7 +1204,7 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
           font-family: monospace;
           font-weight: 400;
         }
-        button:hover{
+        button:hover {
           border: 1px solid #000;
           color: #000;
         }
@@ -1208,30 +1212,30 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
     }
   }
   /* TABLA DE MONTO TOTAL */
-  .carrito__contenedorMontoTotal{
+  .carrito__contenedorMontoTotal {
     display: flex;
     justify-content: flex-end;
-    .carrito__contenedorMontoTotal--tablaMontoTotal{
+    .carrito__contenedorMontoTotal--tablaMontoTotal {
       border: 1px solid #eaeaea;
       border-collapse: separate;
-      .carrito__contenedorMontoTotal--thead{
+      .carrito__contenedorMontoTotal--thead {
         background-color: #fafafa;
-        th{
+        th {
           padding: 0.3em;
           font-family: "Roboto";
           color: $negro_opaco;
         }
       }
-      .carrito__contenedorMontoTotal--tbody{
-        td{
+      .carrito__contenedorMontoTotal--tbody {
+        td {
           padding: 0.3em;
         }
-        span{
+        span {
           font-family: "Roboto";
           font-weight: 500;
           color: $negro_opaco;
         }
-        button{
+        button {
           padding: 6px 10px;
           background-color: $verde_principal;
           color: $links__menuNavegacion;
@@ -1240,7 +1244,7 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
           border-radius: 8px;
           border: 1px solid $links__menuNavegacion;
         }
-        .carrito__contenedorMontoTotal--imgLoading{
+        .carrito__contenedorMontoTotal--imgLoading {
           background-color: $verde_principal;
           border-radius: 20px;
           margin-left: 10px;
@@ -1254,19 +1258,19 @@ ESTILOS PARA LA PAGINA DEL CARRITO DE COMPRAS
 Clase para mostrar/quitar elementos segun corresponda
 **************************************************************************************
 */
-.activada{
+.activada {
   display: none !important;
 }
-.cuadriculaMultiple{
+.cuadriculaMultiple {
   width: 47%;
-  img{
+  img {
     width: 190px;
     height: 210px;
   }
 }
-.cuadriculaUnica{
+.cuadriculaUnica {
   width: 100%;
-  img{
+  img {
     width: 250px;
     height: 290px;
   }
@@ -1275,39 +1279,39 @@ Clase para mostrar/quitar elementos segun corresponda
 /* ANIMACIONES */
 /* ******************************************************************************* */
 
-.opacity{
+.opacity {
   opacity: 0;
   transition: all 1s;
 }
 
-.animacion__derecha--izquierda{
+.animacion__derecha--izquierda {
   opacity: 1;
-  animation: animacion__derecha--izquierda .4s linear;
+  animation: animacion__derecha--izquierda 0.4s linear;
 }
-@keyframes animacion__derecha--izquierda{
-  0%{
+@keyframes animacion__derecha--izquierda {
+  0% {
     transform: translateX(300px);
   }
-  100%{
+  100% {
     transform: translateX(0px);
   }
 }
 /* ********************** */
-.animacion__izquierda--derecha{
+.animacion__izquierda--derecha {
   opacity: 1;
-  animation: animacion__izquierda--derecha .4s linear;
+  animation: animacion__izquierda--derecha 0.4s linear;
 }
 
-@keyframes animacion__izquierda--derecha{
-  0%{
+@keyframes animacion__izquierda--derecha {
+  0% {
     transform: translateX(-300px);
   }
-  100%{
+  100% {
     transform: translateX(0px);
   }
 }
 /* ************************************ */
-@keyframes aparecer{
+@keyframes aparecer {
   0% {
     opacity: 0;
   }
@@ -1326,80 +1330,80 @@ Clase para mostrar/quitar elementos segun corresponda
   DE 575PX PARA ARRIBA
 ***************************  
 */
-@media only screen and (min-width: 575px) and (max-width: 767px){
+@media only screen and (min-width: 575px) and (max-width: 767px) {
   /* 
     HOME 
   */
-  .iphone-12pro{
-    .iphone-12pro__img{
+  .iphone-12pro {
+    .iphone-12pro__img {
       height: 52vh;
       background-size: cover;
     }
   }
-  .collageUno{
-    .collageUno__filaUno{
+  .collageUno {
+    .collageUno__filaUno {
       .collageUno__filaUno--AppleWatch,
-      .collageUno__filaUno--Ipad{
+      .collageUno__filaUno--Ipad {
         width: 100%;
       }
       .collageUno__filaUno--appleWatchImg,
-      .collageUno__filaUno--ipadImg{
-        @include collageImg(100% , 52vh);
-      }
-    }
-  }
-  .collageDos{
-    .collageDos__filaDos{
-      .collageDos__filaDos--Iphone11,
-      .collageDos__filaDos--IphoneSE{
-        width: 100%;
-      }
-      .collageDos__filaDos--iphone11Img,
-      .collageDos__filaDos--iphoneSeImg{
+      .collageUno__filaUno--ipadImg {
         @include collageImg(100%, 52vh);
       }
     }
   }
-  .collageTres{
-    .collageTres__contenedorPropaganda{
-      h2{
-        @include titulos(30px , 600);
+  .collageDos {
+    .collageDos__filaDos {
+      .collageDos__filaDos--Iphone11,
+      .collageDos__filaDos--IphoneSE {
+        width: 100%;
       }
-      span{
-        @include slogans(20px , 500);
+      .collageDos__filaDos--iphone11Img,
+      .collageDos__filaDos--iphoneSeImg {
+        @include collageImg(100%, 52vh);
       }
-      i{
+    }
+  }
+  .collageTres {
+    .collageTres__contenedorPropaganda {
+      h2 {
+        @include titulos(30px, 600);
+      }
+      span {
+        @include slogans(20px, 500);
+      }
+      i {
         font-size: 20px;
       }
     }
   }
-    /* 
+  /* 
     SECCION PARA FORMULARIO DE SUSCRIPCION
   */
-  .suscripcion{
+  .suscripcion {
     padding: 40px 0;
-    .suscripcion__anuncio{
-      .suscripcion__anuncio--titulo{
+    .suscripcion__anuncio {
+      .suscripcion__anuncio--titulo {
         @include titulos(30px, 600);
       }
-      .suscripcion__anuncio--mensaje{
+      .suscripcion__anuncio--mensaje {
         @include slogans(16px, 400);
       }
     }
-    .suscripcion__formulario{
-      .suscripcion__formularioContenedor{
-        .suscripcion__formulario--input{
+    .suscripcion__formulario {
+      .suscripcion__formularioContenedor {
+        .suscripcion__formulario--input {
           width: 65%;
         }
       }
     }
   }
-    /* 
+  /* 
     FOOTER
   */
-  .footer{
-    .footer__contenedor{
-      .footer__contenedor--img{
+  .footer {
+    .footer__contenedor {
+      .footer__contenedor--img {
         background-position: left;
       }
     }
@@ -1407,35 +1411,35 @@ Clase para mostrar/quitar elementos segun corresponda
   /* 
     CELULARES
   */
-  .iphone12{
-    .iphone12__imagen{
+  .iphone12 {
+    .iphone12__imagen {
       height: 50vh;
     }
   }
   /* 
     TABLETS
   */
-  .ipadMini{
-    .ipadMini__contenedorImg{
+  .ipadMini {
+    .ipadMini__contenedorImg {
       order: 2;
     }
   }
   /* 
     APPLE WATCH
   */
-  .watchSeries6{
-    .watchSeries6__contenedor{
-      .watchSeries6__contenedor--Img{
+  .watchSeries6 {
+    .watchSeries6__contenedor {
+      .watchSeries6__contenedor--Img {
         order: 2;
       }
     }
   }
-    /* 
+  /* 
     TIENDA
   */
-  .productos{
-    .productos__contenedor{
-      .productos__contenedor--seccionError{
+  .productos {
+    .productos__contenedor {
+      .productos__contenedor--seccionError {
         height: 55vh;
       }
     }
@@ -1443,121 +1447,122 @@ Clase para mostrar/quitar elementos segun corresponda
   /* 
     CONTENEDOR PARA EL DETALLE DEL PRODUCTO
   */
-  .detalle{
+  .detalle {
     padding: 10px;
-    .detalle__contenedor{
+    .detalle__contenedor {
       width: 95%;
     }
-    .detalle__descripcionContenedor{
+    .detalle__descripcionContenedor {
       padding: 5px;
     }
-    .detalle__imagenContenedor{
+    .detalle__imagenContenedor {
       width: 70%;
     }
-}
+  }
 }
 
 /*********************************
   DE 575PX PARA ABAJO 
 **********************************
 */
-@media only screen and (max-width: 575px){
-    /* 
+@media only screen and (max-width: 575px) {
+  /* 
     HOME 
   */
   .menu-secundario {
-  .menu-secundario__contenedor {
-    .menu-secundario__enlaces {
-      font-size: 14px;
+    .menu-secundario__contenedor {
+      .menu-secundario__enlaces {
+        font-size: 14px;
+      }
+    }
+    .menu-secundario__icono {
+      height: 45px;
     }
   }
-  .menu-secundario__icono{
-    height: 45px;
-  }
-}
-  .iphone-12pro{
-    .iphone-12pro__contenedor{
-      .iphone-12pro__titulo{
-        @include titulos(30px , 600);
+  .iphone-12pro {
+    .iphone-12pro__contenedor {
+      .iphone-12pro__titulo {
+        @include titulos(30px, 600);
       }
-      .iphone-12pro__tienda{
-        .iphone-12pro__descripcion{
-          @include slogans(20px , 500);
+      .iphone-12pro__tienda {
+        .iphone-12pro__descripcion {
+          @include slogans(20px, 500);
         }
       }
     }
-    .iphone-12pro__img{
+    .iphone-12pro__img {
       height: 36vh;
     }
   }
-  .collageUno{
-    .collageUno__filaUno{
+  .collageUno {
+    .collageUno__filaUno {
       .collageUno__filaUno--AppleWatch,
-      .collageUno__filaUno--Ipad{
+      .collageUno__filaUno--Ipad {
         width: 100%;
       }
       .collageUno__filaUno--tituloAppleWatch,
-      .collageUno__filaUno--tituloIpad{
+      .collageUno__filaUno--tituloIpad {
         @include titulos(30px, 600);
       }
       .collageUno__filaUno--appleWatchImg,
-      .collageUno__filaUno--ipadImg{
-        @include collageImg(100% , 36vh);
-      }
-    }
-  }
-  .collageDos{
-    .collageDos__filaDos{
-      .collageDos__filaDos--Iphone11,
-      .collageDos__filaDos--IphoneSE{
-        width: 100%;
-      }
-      .collageDos__filaDos--tituloIphone11,
-      .collage__filaDos--tituloIphoneSE{
-        @include titulos(30px, 600);
-      }
-      .collageDos__filaDos--iphone11Img,
-      .collageDos__filaDos--iphoneSeImg{
+      .collageUno__filaUno--ipadImg {
         @include collageImg(100%, 36vh);
       }
     }
   }
-  .collageTres{
-    background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 100% no-repeat;
+  .collageDos {
+    .collageDos__filaDos {
+      .collageDos__filaDos--Iphone11,
+      .collageDos__filaDos--IphoneSE {
+        width: 100%;
+      }
+      .collageDos__filaDos--tituloIphone11,
+      .collage__filaDos--tituloIphoneSE {
+        @include titulos(30px, 600);
+      }
+      .collageDos__filaDos--iphone11Img,
+      .collageDos__filaDos--iphoneSeImg {
+        @include collageImg(100%, 36vh);
+      }
+    }
+  }
+  .collageTres {
+    background: url(../img/home/macbook-portada-1300x731.jpg) center/100% 100%
+      no-repeat;
     padding: 20px;
     height: 260px;
-    .collageTres__contenedorPropaganda{
+    .collageTres__contenedorPropaganda {
       padding: 10px;
-      h2{
-        @include titulos(26px , 600);
+      h2 {
+        @include titulos(26px, 600);
       }
-      span{
-        @include slogans(16px , 500);
+      span {
+        @include slogans(16px, 500);
       }
-      i{
+      i {
         font-size: 16px;
       }
     }
   }
-    /* 
+  /* 
     SECCION PARA FORMULARIO DE SUSCRIPCION
   */
-    /* 
+  /* 
     SECCION PARA FORMULARIO DE SUSCRIPCION
   */
-  .suscripcion{
+  .suscripcion {
     padding: 20px 0;
-    .suscripcion__anuncio{
-      .suscripcion__anuncio--titulo{
+    .suscripcion__anuncio {
+      .suscripcion__anuncio--titulo {
         @include titulos(25px, 600);
       }
-      .suscripcion__anuncio--mensaje{
+      .suscripcion__anuncio--mensaje {
         @include slogans(15px, 400);
       }
     }
-    .suscripcion__formulario{
-      .suscripcion__formularioContenedor{
-        .suscripcion__formulario--input{
+    .suscripcion__formulario {
+      .suscripcion__formularioContenedor {
+        .suscripcion__formulario--input {
           width: 65%;
         }
       }
@@ -1567,31 +1572,31 @@ Clase para mostrar/quitar elementos segun corresponda
   /* 
     FOOTER
   */
-  .footer{
-    .footer__contenedor{
-      .footer__contenedor--img{
+  .footer {
+    .footer__contenedor {
+      .footer__contenedor--img {
         background: url(../img/logo.jpeg) left/contain no-repeat;
       }
-      .footer__contenedor--informacion{
-        i{
+      .footer__contenedor--informacion {
+        i {
           font-size: 14px;
         }
-        span{
+        span {
           padding: 0 2px;
           font-size: 15px;
           color: $negro_opaco;
         }
       }
-      .footer__contenedor--menu{
-        a{
+      .footer__contenedor--menu {
+        a {
           font-size: 14px;
         }
       }
     }
   }
-  .derechos-autor{
-    .derechos-autor__contenedor{
-      .derechos-autor__contenedor--desarrollador{
+  .derechos-autor {
+    .derechos-autor__contenedor {
+      .derechos-autor__contenedor--desarrollador {
         font-size: 14px;
         text-align: center;
       }
@@ -1600,52 +1605,53 @@ Clase para mostrar/quitar elementos segun corresponda
   /* 
     CELULARES
   */
-  .iphone12{
-    .iphone12__contenedorTexto{
+  .iphone12 {
+    .iphone12__contenedorTexto {
       padding: 20px 5px;
-      .iphone12__contenedorTexto--titulo{
-        @include titulos(30px , 600);
+      .iphone12__contenedorTexto--titulo {
+        @include titulos(30px, 600);
         text-align: center;
       }
-      .iphone12__contenedorTexto--slogan{
-        @include slogans(20px , 500);
+      .iphone12__contenedorTexto--slogan {
+        @include slogans(20px, 500);
       }
-      .iphone12__contenedorTexto--btnTienda{
+      .iphone12__contenedorTexto--btnTienda {
         @include btnCollagePaginas;
         padding: 5px 15px;
       }
     }
-    .iphone12__imagen{
+    .iphone12__imagen {
       height: 40vh;
     }
   }
-  .iphone12pro{
-    .iphone12pro__img{
+  .iphone12pro {
+    .iphone12pro__img {
       height: 60vh;
-      background: url(../img/home/1586965934_242736_1586966124_sumario_normal.jpg) center/contain no-repeat;
+      background: url(../img/home/1586965934_242736_1586966124_sumario_normal.jpg)
+        center/contain no-repeat;
     }
   }
-  .cuotas{
-    .cuotas__contenedorImg{
-      img{
+  .cuotas {
+    .cuotas__contenedorImg {
+      img {
         width: 95%;
       }
     }
   }
-  .modelos{
+  .modelos {
     padding: 10px 2px;
-    .modelos__contenedor{
-      .modelos__contenedor--img{
-        h2{
-          @include titulos(30px , 600);
+    .modelos__contenedor {
+      .modelos__contenedor--img {
+        h2 {
+          @include titulos(30px, 600);
           text-align: center;
         }
-        img{
+        img {
           width: 100%;
         }
-        .modelos__contenedor--botones{
+        .modelos__contenedor--botones {
           width: 100%;
-          a{
+          a {
             font-size: 13px;
             padding: 5px 6px;
           }
@@ -1656,95 +1662,95 @@ Clase para mostrar/quitar elementos segun corresponda
   /* 
     TABLETS
   */
-  .ipadPro{
-    .ipadPro__contenedorTexto{
-      .ipadPro__contenedorTexto--titulo{
-        @include titulos(30px , 600);
-        i{
+  .ipadPro {
+    .ipadPro__contenedorTexto {
+      .ipadPro__contenedorTexto--titulo {
+        @include titulos(30px, 600);
+        i {
           font-size: 30px;
         }
       }
-      .ipadPro__contenedorTexto--slogan{
-        @include slogans(20px , 500);
+      .ipadPro__contenedorTexto--slogan {
+        @include slogans(20px, 500);
         text-align: center;
       }
     }
   }
-  .ipadAir{
-    .ipadAir__contenedorTexto{
-      .ipadAir__contenedorTexto--titulo{
-        @include titulos(30px , 600);
+  .ipadAir {
+    .ipadAir__contenedorTexto {
+      .ipadAir__contenedorTexto--titulo {
+        @include titulos(30px, 600);
       }
-      .ipadAir__contenedorTexto--slogan{
-        @include slogans(20px , 500);
+      .ipadAir__contenedorTexto--slogan {
+        @include slogans(20px, 500);
       }
     }
-    .ipadAir__contenedorImg{
-      img{
+    .ipadAir__contenedorImg {
+      img {
         width: 85%;
       }
     }
   }
-  .ipadMini{
-    .ipadMini__contenedorTexto{
-      .ipadMini__contenedorTexto--titulo{
-        @include titulos(30px , 600);
+  .ipadMini {
+    .ipadMini__contenedorTexto {
+      .ipadMini__contenedorTexto--titulo {
+        @include titulos(30px, 600);
       }
-      .ipadMini__contenedorTexto--slogan{
-        @include slogans(20px , 500);
+      .ipadMini__contenedorTexto--slogan {
+        @include slogans(20px, 500);
       }
     }
   }
   /* 
     APPLE WATCH
   */
-  .watchSeries6{
-    .watchSeries6__contenedor{
-      .watchSeries6__contenedor--Img{
+  .watchSeries6 {
+    .watchSeries6__contenedor {
+      .watchSeries6__contenedor--Img {
         order: 2;
-        img{
+        img {
           width: 95%;
         }
       }
-      .watchSeries6__contenedor--Texto{
-        .watchSeries6__contenedor--titulo{
-          @include titulos(30px , 600);
+      .watchSeries6__contenedor--Texto {
+        .watchSeries6__contenedor--titulo {
+          @include titulos(30px, 600);
         }
-        .watchSeries6__contenedor--slogan{
-          @include slogans(20px , 500);
+        .watchSeries6__contenedor--slogan {
+          @include slogans(20px, 500);
         }
       }
     }
   }
-  .watchse{
-    .watchse__contenedor--Img{
-      img{
+  .watchse {
+    .watchse__contenedor--Img {
+      img {
         width: 95%;
       }
     }
-    .watchse__contenedor--Texto{
-      .watchse__contenedor--titulo{
-        @include titulos(30px , 600);
+    .watchse__contenedor--Texto {
+      .watchse__contenedor--titulo {
+        @include titulos(30px, 600);
       }
-      .watchse__contenedor--slogan{
-        @include slogans(20px , 500);
+      .watchse__contenedor--slogan {
+        @include slogans(20px, 500);
       }
     }
   }
-  .modelosWatch{
-    .modelosWatch__contenedorTexto{
-      .modelosWatch__contenedorTexto--titulo{
-        @include titulos(30px , 600);
+  .modelosWatch {
+    .modelosWatch__contenedorTexto {
+      .modelosWatch__contenedorTexto--titulo {
+        @include titulos(30px, 600);
         text-align: center;
       }
-      .modelosWatch__contenedorTexto--slogan{
-        @include slogans(20px , 500);
+      .modelosWatch__contenedorTexto--slogan {
+        @include slogans(20px, 500);
         color: $negro_opaco;
         text-align: center;
       }
     }
-    .modelosWatch__contenedorImg{
-      img{
+    .modelosWatch__contenedorImg {
+      img {
         width: 100%;
       }
     }
@@ -1752,78 +1758,78 @@ Clase para mostrar/quitar elementos segun corresponda
   /* 
     TIENDA
   */
-  .productos{
-    .productos__categorias{
+  .productos {
+    .productos__categorias {
       margin-top: 0px;
-      .productos__categorias--titulo{
+      .productos__categorias--titulo {
         @include titulos(15px, 600);
       }
-      .productos__categorias--form{
+      .productos__categorias--form {
         font-size: 14px;
-        label:before{
+        label:before {
           width: 12px;
           height: 12px;
         }
       }
     }
-    .productos__ordenamiento{
+    .productos__ordenamiento {
       display: flex;
       flex-wrap: wrap;
       padding: 11px;
       .productos__ordenamiento--contenedorCuadriculas,
-      .productos__ordenamiento--contenedorCuadricula{
+      .productos__ordenamiento--contenedorCuadricula {
         width: 30px;
         margin-right: 5px;
         cursor: pointer;
         text-align: center;
       }
       .productos__ordenamiento--contenedorCuadriculas:hover,
-      .productos__ordenamiento--contenedorCuadricula:hover{
+      .productos__ordenamiento--contenedorCuadricula:hover {
         border: 1px solid $verde_principal;
       }
-      .productos__ordenamiento--form{
+      .productos__ordenamiento--form {
         margin-left: 0px;
         width: 90%;
-        input{
+        input {
           @include titulos(11px, 600);
         }
-        div{
+        div {
           right: -33px;
         }
       }
     }
-    .productos__contenedor{
-      .productos__contenedor--seccionError{
+    .productos__contenedor {
+      .productos__contenedor--seccionError {
         height: 55vh;
-        div{
+        div {
           display: flex;
           justify-content: center;
         }
-        h3{
-          @include titulos(30px , 600);
-          i{
+        h3 {
+          @include titulos(30px, 600);
+          i {
             font-size: 30px;
           }
         }
-        span{
-          @include slogans(20px , 500);
+        span {
+          @include slogans(20px, 500);
           text-align: center;
         }
       }
-      .productos__contenedor--article{
-        .productos__contenedor--contenedorImg{
-          i{
+      .productos__contenedor--article {
+        .productos__contenedor--contenedorImg {
+          i {
             font-size: 19px;
             right: -11px;
           }
         }
-        .productos__contenedor--contenedorDescripcion{
+        .productos__contenedor--contenedorDescripcion {
           display: flex;
           flex-direction: column;
           align-items: center;
           padding: 3px;
           h4,
-          span{
+          span {
             color: $negro_opaco;
             font-weight: 600;
           }
@@ -1831,9 +1837,9 @@ Clase para mostrar/quitar elementos segun corresponda
       }
     }
   }
-  .cuadriculaMultiple{
+  .cuadriculaMultiple {
     width: 100%;
-    img{
+    img {
       width: 200px;
       height: 230px;
     }
@@ -1841,46 +1847,127 @@ Clase para mostrar/quitar elementos segun corresponda
   /* 
     CONTENEDOR PARA EL DETALLE DEL PRODUCTO
   */
-  .detalle{
-      padding: 10px;
-      .detalle__contenedor{
-        flex-direction: column;
-        width: 95%;
+  .detalle {
+    padding: 10px;
+    .detalle__contenedor {
+      flex-direction: column;
+      width: 95%;
+    }
+    .detalle__btn-cerrar {
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: none;
+      background: none;
+      i {
+        font-size: 19px;
       }
-      .detalle__btn-cerrar{
-        position: absolute;
-        right: 0;
-        top: 0;
-        border: none;
-        background: none;
-        i{
-          font-size: 19px;
+    }
+    .detalle__imagenContenedor {
+      align-items: center;
+      width: 100%;
+      .detalle__imagenContenedor--imgDiv {
+        position: relative;
+        width: 48%;
+        i {
+          font-size: 25px;
+        }
+        .detalle__imagenContenedor--spanLeft,
+        .detalle__imagenContenedor--spanRight {
+          top: 100px;
         }
       }
-      .detalle__imagenContenedor{
-        align-items: center;
-        width: 100%;
-        .detalle__imagenContenedor--imgDiv{
-          position: relative;
-          width: 48%;
-          i{
-            font-size: 25px;
+    }
+    .detalle__descripcionContenedor {
+      padding: 5px;
+      width: 100%;
+      margin-top: 15px;
+      .detalle__contenedorPrecioDiv {
+        .detalle__contenedorPrecioDiv--spanPrecio {
+          @include titulos(17px, 600);
+        }
+      }
+    }
+  }
+  /* TABLA PARA MOSTRAR PRODUCTOS DEL CARRITO */
+
+  .carrito {
+    .carrito__carritoVacio {
+      height: 50vh;
+      h3 {
+        @include titulos(27px, 600);
+      }
+      i {
+        margin-left: 2px;
+      }
+      span {
+        @include slogans(17px, 500);
+        text-align: center;
+      }
+      a {
+        width: 55%;
+        border-radius: 14px;
+      }
+    }
+    /* TABLA DEL CARRITO DE COMPRAS */
+    .carrito__contenedorCompra {
+      .carrito__contenedorCompra--tablaCarrito {
+        .carrito__contenedorCompra--thead {
+          th {
+            padding: 0.4em;
+            font-size: 12px;
           }
-          .detalle__imagenContenedor--spanLeft,
-          .detalle__imagenContenedor--spanRight{
-            top: 100px;
+        }
+        .carrito__contenedorCompra--tbody {
+          td {
+            padding: 0.4em;
+          }
+          span {
+            font-size: 11px;
+          }
+          img {
+            width: 2.5em;
+          }
+          input {
+            font-size: 11px;
+          }
+          button {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 0px 8px;
+            border: 1px solid #bbb;
+            color: #bbb;
+            font-family: monospace;
+            font-weight: 400;
           }
         }
       }
-      .detalle__descripcionContenedor{
-        padding: 5px;
-        width: 100%;
-        margin-top: 15px;
-        .detalle__contenedorPrecioDiv{
-          .detalle__contenedorPrecioDiv--spanPrecio{
-            @include titulos(17px, 600);
+    }
+    /* TABLA DE MONTO TOTAL */
+    .carrito__contenedorMontoTotal {
+      .carrito__contenedorMontoTotal--tablaMontoTotal {
+        .carrito__contenedorMontoTotal--thead {
+          th {
+            font-size: 12px;
+          }
+        }
+        .carrito__contenedorMontoTotal--tbody {
+          td {
+            padding: 0.3em;
+          }
+          span {
+            font-family: "Roboto";
+            font-weight: 500;
+            color: $negro_opaco;
+            font-size: 12px;
+          }
+          .carrito__contenedorMontoTotal--imgLoading {
+            background-color: $verde_principal;
+            border-radius: 20px;
+            margin-left: 10px;
           }
         }
       }
+    }
   }
 }
