@@ -12,7 +12,7 @@
         3) Mensaje para el usuario
         */
     const carritoVacio = ( alerta, claseDelIcono ,mensaje ) => {
-        /* $(contenedorCarrito).removeClass("activada"); */
+        $(contenedorCarrito).removeClass("activada");
         $(contenedorCarrito).empty();
         $(contenedorCarrito).fadeIn();
       $(contenedorCarrito).append(`
@@ -45,8 +45,8 @@
         let sumarPrecios = 0;
         let ordenDeCompra__contenedor = $("#orden-de-compra");
         let ordenDeCompra;
-        /* $(contenedorCarrito).removeClass("activada"); */
-        $(contenedorCarrito).show();
+        $(contenedorCarrito).removeClass("activada");
+        /* $(contenedorCarrito).show(); */
         $.each(listadoDeProductos, (indice, valor) => {
             sumarPrecios += parseInt(valor.precio);
             $(carritoDeCompras).prepend(`
@@ -72,7 +72,7 @@
             `);
           });
           montoTotal.text(`$${sumarPrecios}`);
-          ordenDeCompra = Math.floor(Math.random() * (30000000 - 5000000)) + 5000000; // con esto simulo un numero de ticket u orden de compra
+          ordenDeCompra = Math.floor(Math.random() * (30_000_000 - 5_000_000)) + 5_000_000; // con esto simulo un numero de ticket u orden de compra
           ordenDeCompra__contenedor.text(`Orden de compra #${ordenDeCompra}`);
           /* contenedorMontoTotal.removeClass("activada"); */
           contenedorMontoTotal.show();

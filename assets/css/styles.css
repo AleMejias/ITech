@@ -389,8 +389,11 @@ ESTILOS PARA LA PAGINA DE TABLETS
 ************************************************************************************** */
 .watchSeries6 {
   animation: aparecer .6s linear; }
-  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Img img {
-    width: 85%; }
+  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Img {
+    display: flex;
+    justify-content: center; }
+    .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Img img {
+      width: 85%; }
   .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto {
     display: flex;
     flex-direction: column;
@@ -413,8 +416,11 @@ ESTILOS PARA LA PAGINA DE TABLETS
       margin-top: 7px;
       border-radius: 15px; }
 
-.watchse .watchse__contenedor--Img img {
-  width: 85%; }
+.watchse .watchse__contenedor--Img {
+  display: flex;
+  justify-content: center; }
+  .watchse .watchse__contenedor--Img img {
+    width: 85%; }
 
 .watchse .watchse__contenedor--Texto {
   display: flex;
@@ -709,10 +715,10 @@ ESTILOS PARA LA TIENDA
   .productos .productos__categorias {
     margin-top: 7px; }
     .productos .productos__categorias .productos__categorias--titulo {
-      padding: 4px 5px;
-      font-family: "Roboto";
       font-size: 17px;
       font-weight: 600;
+      font-family: "Roboto";
+      padding: 4px 5px;
       border-left: 3px solid #08acaf; }
     .productos .productos__categorias .productos__categorias--form {
       display: flex;
@@ -743,13 +749,10 @@ ESTILOS PARA LA TIENDA
     padding: 11px; }
     .productos .productos__ordenamiento .productos__ordenamiento--contenedorCuadriculas,
     .productos .productos__ordenamiento .productos__ordenamiento--contenedorCuadricula {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 30px;
-      height: 30px;
       margin-right: 5px;
-      cursor: pointer; }
+      cursor: pointer;
+      text-align: center; }
     .productos .productos__ordenamiento .productos__ordenamiento--contenedorCuadriculas:hover,
     .productos .productos__ordenamiento .productos__ordenamiento--contenedorCuadricula:hover {
       border: 1px solid #08acaf; }
@@ -798,7 +801,7 @@ ESTILOS PARA LA TIENDA
     box-shadow: 1px 2px 6px 3px rgba(219, 219, 219, 0.5); }
     .productos .productos__contenedor .productos__contenedor--seccionError {
       width: 100%;
-      height: 200px;
+      height: 60vh;
       padding: 10px 5px;
       display: flex;
       flex-direction: column;
@@ -888,7 +891,8 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
     box-shadow: 0px 0px 5px #ffffff;
     border-radius: 5px;
     background-color: #ffffff;
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    animation: aparecer .6s linear; }
   .detalle .detalle__btn-cerrar {
     position: absolute;
     right: 0;
@@ -900,7 +904,7 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
   .detalle .detalle__imagenContenedor {
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 62%;
     height: 100%;
     padding: 2px; }
     .detalle .detalle__imagenContenedor .detalle__imagenContenedor--imgDiv {
@@ -920,7 +924,7 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
         cursor: pointer; }
     .detalle .detalle__imagenContenedor .detalle__imagenContenedor--img {
       width: 100%;
-      height: 42%; }
+      height: 45%; }
   .detalle .detalle__descripcionContenedor {
     padding: 20px;
     width: 50%;
@@ -931,9 +935,9 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
       .detalle .detalle__descripcionContenedor .detalle__contenedorPrecioDiv .detalle__contenedorPrecioDiv--spanPrecio, .detalle .detalle__descripcionContenedor .detalle__contenedorTituloDiv .detalle__contenedorPrecioDiv--spanPrecio, .detalle .detalle__descripcionContenedor .detalle__contenedorListaDiv .detalle__contenedorPrecioDiv--spanPrecio {
         background-color: #08acaf;
         color: #e9ecef;
-        font-family: "Roboto";
         font-size: 19px;
         font-weight: 400;
+        font-family: "Roboto";
         border-radius: 20px;
         padding: 6px 10px; }
     .detalle .detalle__descripcionContenedor .detalle__contenedorTituloDiv .detalle__contenedorTituloDiv--tituloProducto {
@@ -1174,7 +1178,33 @@ Clase para mostrar/quitar elementos segun corresponda
     CELULARES
   */
   .iphone12 .iphone12__imagen {
-    height: 50vh; } }
+    height: 50vh; }
+  /* 
+    TABLETS
+  */
+  .ipadMini .ipadMini__contenedorImg {
+    order: 2; }
+  /* 
+    APPLE WATCH
+  */
+  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Img {
+    order: 2; }
+  /* 
+    TIENDA
+  */
+  .productos .productos__contenedor .productos__contenedor--seccionError {
+    height: 55vh; }
+  /* 
+    CONTENEDOR PARA EL DETALLE DEL PRODUCTO
+  */
+  .detalle {
+    padding: 10px; }
+    .detalle .detalle__contenedor {
+      width: 95%; }
+    .detalle .detalle__descripcionContenedor {
+      padding: 5px; }
+    .detalle .detalle__imagenContenedor {
+      width: 70%; } }
 
 /*********************************
   DE 575PX PARA ABAJO 
@@ -1196,6 +1226,9 @@ Clase para mostrar/quitar elementos segun corresponda
     font-weight: 500; }
   .iphone-12pro .iphone-12pro__img {
     height: 36vh; }
+  .collageUno .collageUno__filaUno .collageUno__filaUno--AppleWatch,
+  .collageUno .collageUno__filaUno .collageUno__filaUno--Ipad {
+    width: 100%; }
   .collageUno .collageUno__filaUno .collageUno__filaUno--tituloAppleWatch,
   .collageUno .collageUno__filaUno .collageUno__filaUno--tituloIpad {
     font-size: 30px;
@@ -1204,6 +1237,9 @@ Clase para mostrar/quitar elementos segun corresponda
   .collageUno .collageUno__filaUno .collageUno__filaUno--ipadImg {
     width: 100%;
     height: 36vh; }
+  .collageDos .collageDos__filaDos .collageDos__filaDos--Iphone11,
+  .collageDos .collageDos__filaDos .collageDos__filaDos--IphoneSE {
+    width: 100%; }
   .collageDos .collageDos__filaDos .collageDos__filaDos--tituloIphone11,
   .collageDos .collageDos__filaDos .collage__filaDos--tituloIphoneSE {
     font-size: 30px;
@@ -1229,13 +1265,24 @@ Clase para mostrar/quitar elementos segun corresponda
   /* 
     SECCION PARA FORMULARIO DE SUSCRIPCION
   */
+  /* 
+    SECCION PARA FORMULARIO DE SUSCRIPCION
+  */
   .suscripcion {
     padding: 20px 0; }
+    .suscripcion .suscripcion__anuncio .suscripcion__anuncio--titulo {
+      font-size: 25px;
+      font-weight: 600; }
+    .suscripcion .suscripcion__anuncio .suscripcion__anuncio--mensaje {
+      font-size: 15px;
+      font-weight: 400; }
+    .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--input, .suscripcion .suscripcion__formulario .suscripcion__formularioContenedor .suscripcion__formulario--btnEnviar {
+      width: 65%; }
   /* 
     FOOTER
   */
   .footer .footer__contenedor .footer__contenedor--img {
-    background: url(../img/logo.jpeg) no-repeat contain; }
+    background: url(../img/logo.jpeg) left/contain no-repeat; }
   .footer .footer__contenedor .footer__contenedor--informacion i {
     font-size: 14px; }
   .footer .footer__contenedor .footer__contenedor--informacion span {
@@ -1297,4 +1344,149 @@ Clase para mostrar/quitar elementos segun corresponda
   .ipadPro .ipadPro__contenedorTexto .ipadPro__contenedorTexto--slogan {
     font-size: 20px;
     font-weight: 500;
-    text-align: center; } }
+    text-align: center; }
+  .ipadAir .ipadAir__contenedorTexto .ipadAir__contenedorTexto--titulo {
+    font-size: 30px;
+    font-weight: 600; }
+  .ipadAir .ipadAir__contenedorTexto .ipadAir__contenedorTexto--slogan {
+    font-size: 20px;
+    font-weight: 500; }
+  .ipadAir .ipadAir__contenedorImg img {
+    width: 85%; }
+  .ipadMini .ipadMini__contenedorTexto .ipadMini__contenedorTexto--titulo {
+    font-size: 30px;
+    font-weight: 600; }
+  .ipadMini .ipadMini__contenedorTexto .ipadMini__contenedorTexto--slogan {
+    font-size: 20px;
+    font-weight: 500; }
+  /* 
+    APPLE WATCH
+  */
+  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Img {
+    order: 2; }
+    .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Img img {
+      width: 95%; }
+  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto .watchSeries6__contenedor--titulo {
+    font-size: 30px;
+    font-weight: 600; }
+  .watchSeries6 .watchSeries6__contenedor .watchSeries6__contenedor--Texto .watchSeries6__contenedor--slogan {
+    font-size: 20px;
+    font-weight: 500; }
+  .watchse .watchse__contenedor--Img img {
+    width: 95%; }
+  .watchse .watchse__contenedor--Texto .watchse__contenedor--titulo {
+    font-size: 30px;
+    font-weight: 600; }
+  .watchse .watchse__contenedor--Texto .watchse__contenedor--slogan {
+    font-size: 20px;
+    font-weight: 500; }
+  .modelosWatch .modelosWatch__contenedorTexto .modelosWatch__contenedorTexto--titulo {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center; }
+  .modelosWatch .modelosWatch__contenedorTexto .modelosWatch__contenedorTexto--slogan {
+    font-size: 20px;
+    font-weight: 500;
+    color: #393939;
+    text-align: center; }
+  .modelosWatch .modelosWatch__contenedorImg img {
+    width: 100%; }
+  /* 
+    TIENDA
+  */
+  .productos .productos__categorias {
+    margin-top: 0px; }
+    .productos .productos__categorias .productos__categorias--titulo {
+      font-size: 15px;
+      font-weight: 600; }
+    .productos .productos__categorias .productos__categorias--form {
+      font-size: 14px; }
+      .productos .productos__categorias .productos__categorias--form label:before {
+        width: 12px;
+        height: 12px; }
+  .productos .productos__ordenamiento {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 11px; }
+    .productos .productos__ordenamiento .productos__ordenamiento--contenedorCuadriculas,
+    .productos .productos__ordenamiento .productos__ordenamiento--contenedorCuadricula {
+      width: 30px;
+      margin-right: 5px;
+      cursor: pointer;
+      text-align: center; }
+    .productos .productos__ordenamiento .productos__ordenamiento--contenedorCuadriculas:hover,
+    .productos .productos__ordenamiento .productos__ordenamiento--contenedorCuadricula:hover {
+      border: 1px solid #08acaf; }
+    .productos .productos__ordenamiento .productos__ordenamiento--form {
+      margin-left: 0px;
+      width: 90%; }
+      .productos .productos__ordenamiento .productos__ordenamiento--form input {
+        font-size: 11px;
+        font-weight: 600; }
+      .productos .productos__ordenamiento .productos__ordenamiento--form div {
+        right: -33px; }
+  .productos .productos__contenedor .productos__contenedor--seccionError {
+    height: 55vh; }
+    .productos .productos__contenedor .productos__contenedor--seccionError div {
+      display: flex;
+      justify-content: center; }
+    .productos .productos__contenedor .productos__contenedor--seccionError h3 {
+      font-size: 30px;
+      font-weight: 600; }
+      .productos .productos__contenedor .productos__contenedor--seccionError h3 i {
+        font-size: 30px; }
+    .productos .productos__contenedor .productos__contenedor--seccionError span {
+      font-size: 20px;
+      font-weight: 500;
+      text-align: center; }
+  .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorImg i {
+    font-size: 19px;
+    right: -11px; }
+  .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px; }
+    .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion h4,
+    .productos .productos__contenedor .productos__contenedor--article .productos__contenedor--contenedorDescripcion span {
+      color: #393939;
+      font-weight: 600; }
+  .cuadriculaMultiple {
+    width: 100%; }
+    .cuadriculaMultiple img {
+      width: 200px;
+      height: 230px; }
+  /* 
+    CONTENEDOR PARA EL DETALLE DEL PRODUCTO
+  */
+  .detalle {
+    padding: 10px; }
+    .detalle .detalle__contenedor {
+      flex-direction: column;
+      width: 95%; }
+    .detalle .detalle__btn-cerrar {
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: none;
+      background: none; }
+      .detalle .detalle__btn-cerrar i {
+        font-size: 19px; }
+    .detalle .detalle__imagenContenedor {
+      align-items: center;
+      width: 100%; }
+      .detalle .detalle__imagenContenedor .detalle__imagenContenedor--imgDiv {
+        position: relative;
+        width: 48%; }
+        .detalle .detalle__imagenContenedor .detalle__imagenContenedor--imgDiv i {
+          font-size: 25px; }
+        .detalle .detalle__imagenContenedor .detalle__imagenContenedor--imgDiv .detalle__imagenContenedor--spanLeft,
+        .detalle .detalle__imagenContenedor .detalle__imagenContenedor--imgDiv .detalle__imagenContenedor--spanRight {
+          top: 100px; }
+    .detalle .detalle__descripcionContenedor {
+      padding: 5px;
+      width: 100%;
+      margin-top: 15px; }
+      .detalle .detalle__descripcionContenedor .detalle__contenedorPrecioDiv .detalle__contenedorPrecioDiv--spanPrecio, .detalle .detalle__descripcionContenedor .detalle__contenedorTituloDiv .detalle__contenedorPrecioDiv--spanPrecio, .detalle .detalle__descripcionContenedor .detalle__contenedorListaDiv .detalle__contenedorPrecioDiv--spanPrecio {
+        font-size: 17px;
+        font-weight: 600; } }

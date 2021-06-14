@@ -159,22 +159,6 @@
       });
     });
 
-    /* ORDENAMIENTO MEDIANTE LA ETIQUETA SELECT */
-    /* const ordenarProductos = (tipoDeOrden,arrProductos) => {
-      console.log(tipoDeOrden)
-  
-      if(tipoDeOrden == "menor"){
-          arrProductos.sort((a,b) => a.precio - b.precio);
-      }else if(tipoDeOrden == "mayor"){
-          arrProductos.sort((a,b) => b.precio - a.precio);
-      }
-  };
-  let select = document.querySelector("#ordenamiento");
-  select.addEventListener("change",(e) => {
-      ordenarProductos(e.target.value,DATA);
-  }); 
-   */
-
     /* EVENTO PARA CAPTURAR LOS VALORES DE LA BARRA DE BUSQUEDA */
     let form = document.querySelector("#form");
     let iconoBusqueda = document.querySelector("#buscar");

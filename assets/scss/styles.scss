@@ -467,6 +467,8 @@ ESTILOS PARA LA PAGINA DE TABLETS
   animation: aparecer .6s linear;
   .watchSeries6__contenedor{
     .watchSeries6__contenedor--Img{
+      display: flex;
+      justify-content: center;
       img{
         width: 85%;
       }
@@ -494,6 +496,8 @@ ESTILOS PARA LA PAGINA DE TABLETS
 }
 .watchse{
   .watchse__contenedor--Img{
+    display: flex;
+    justify-content: center;
     img{
       width: 85%;
     }
@@ -825,10 +829,9 @@ ESTILOS PARA LA TIENDA
   .productos__categorias{
     margin-top: 7px;
     .productos__categorias--titulo{
-      padding: 4px 5px;
+      @include titulos(17px, 600);
       font-family: "Roboto";
-      font-size: 17px;
-      font-weight: 600;
+      padding: 4px 5px;
       border-left: 3px solid $verde_principal;
     }
     .productos__categorias--form{
@@ -866,13 +869,10 @@ ESTILOS PARA LA TIENDA
     padding: 11px;
     .productos__ordenamiento--contenedorCuadriculas,
     .productos__ordenamiento--contenedorCuadricula{
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 30px;
-      height: 30px;
       margin-right: 5px;
       cursor: pointer;
+      text-align: center;
     }
     .productos__ordenamiento--contenedorCuadriculas:hover,
     .productos__ordenamiento--contenedorCuadricula:hover{
@@ -893,8 +893,7 @@ ESTILOS PARA LA TIENDA
         border: none;
         border-radius: 9px;
         text-align: center;
-        font-size: 13px;
-        font-weight: 600;
+        @include titulos(13px, 600);
         font-family: 'Roboto';
       }
       i{
@@ -913,8 +912,7 @@ ESTILOS PARA LA TIENDA
           right: -8px;
           border-radius: 10px;
           color: #08acaf;
-          font-size: 16px;
-          font-weight: 600;
+          @include titulos(16px, 600);
           font-family: 'Roboto';
         }
       }
@@ -929,7 +927,7 @@ ESTILOS PARA LA TIENDA
     box-shadow: 1px 2px 6px 3px rgba(219,219,219,0.5);
     .productos__contenedor--seccionError{
       width: 100%;
-      height: 200px;
+      height: 60vh;
       padding: 10px 5px;
       display: flex;
       flex-direction: column;
@@ -1033,6 +1031,7 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
       border-radius: 5px;
       background-color: #ffffff;
       overflow-y: scroll;
+      animation: aparecer .6s linear;
     }
     .detalle__btn-cerrar{
       position: absolute;
@@ -1047,7 +1046,7 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
     .detalle__imagenContenedor{
       display: flex;
       justify-content: center;
-      width: 50%;
+      width: 62%;
       height: 100%;
       padding: 2px;
       .detalle__imagenContenedor--imgDiv{
@@ -1071,7 +1070,7 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
       }
       .detalle__imagenContenedor--img{
         width: 100%;
-        height: 42%;
+        height: 45%;
       }
     }
     .detalle__descripcionContenedor{
@@ -1084,9 +1083,8 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
         .detalle__contenedorPrecioDiv--spanPrecio{
           background-color: $verde_principal;
           color: $links__menuNavegacion;
+          @include titulos(19px, 400);
           font-family: "Roboto";
-          font-size: 19px;
-          font-weight: 400;
           border-radius: 20px;
           padding: 6px 10px;
         }
@@ -1095,9 +1093,8 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
         @extend .detalle__contenedorPrecioDiv;
         .detalle__contenedorTituloDiv--tituloProducto{
           padding: 5px;
-          font-size: 30px;
-          font-weight: 600;
-          color: #393939;
+          @include titulos(30px, 600);
+          color: $negro_opaco;
           text-align: center;
         }
       }
@@ -1109,7 +1106,7 @@ ESTILOS PARA EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO
         li{
           margin: 6px 1px;
           font-size: 14px;
-          color: #393939;
+          color: $negro_opaco;
           list-style: inside;
         }
         span{
@@ -1415,6 +1412,49 @@ Clase para mostrar/quitar elementos segun corresponda
       height: 50vh;
     }
   }
+  /* 
+    TABLETS
+  */
+  .ipadMini{
+    .ipadMini__contenedorImg{
+      order: 2;
+    }
+  }
+  /* 
+    APPLE WATCH
+  */
+  .watchSeries6{
+    .watchSeries6__contenedor{
+      .watchSeries6__contenedor--Img{
+        order: 2;
+      }
+    }
+  }
+    /* 
+    TIENDA
+  */
+  .productos{
+    .productos__contenedor{
+      .productos__contenedor--seccionError{
+        height: 55vh;
+      }
+    }
+  }
+  /* 
+    CONTENEDOR PARA EL DETALLE DEL PRODUCTO
+  */
+  .detalle{
+    padding: 10px;
+    .detalle__contenedor{
+      width: 95%;
+    }
+    .detalle__descripcionContenedor{
+      padding: 5px;
+    }
+    .detalle__imagenContenedor{
+      width: 70%;
+    }
+}
 }
 
 /*********************************
@@ -1452,6 +1492,10 @@ Clase para mostrar/quitar elementos segun corresponda
   }
   .collageUno{
     .collageUno__filaUno{
+      .collageUno__filaUno--AppleWatch,
+      .collageUno__filaUno--Ipad{
+        width: 100%;
+      }
       .collageUno__filaUno--tituloAppleWatch,
       .collageUno__filaUno--tituloIpad{
         @include titulos(30px, 600);
@@ -1464,6 +1508,10 @@ Clase para mostrar/quitar elementos segun corresponda
   }
   .collageDos{
     .collageDos__filaDos{
+      .collageDos__filaDos--Iphone11,
+      .collageDos__filaDos--IphoneSE{
+        width: 100%;
+      }
       .collageDos__filaDos--tituloIphone11,
       .collage__filaDos--tituloIphoneSE{
         @include titulos(30px, 600);
@@ -1494,8 +1542,26 @@ Clase para mostrar/quitar elementos segun corresponda
     /* 
     SECCION PARA FORMULARIO DE SUSCRIPCION
   */
+    /* 
+    SECCION PARA FORMULARIO DE SUSCRIPCION
+  */
   .suscripcion{
     padding: 20px 0;
+    .suscripcion__anuncio{
+      .suscripcion__anuncio--titulo{
+        @include titulos(25px, 600);
+      }
+      .suscripcion__anuncio--mensaje{
+        @include slogans(15px, 400);
+      }
+    }
+    .suscripcion__formulario{
+      .suscripcion__formularioContenedor{
+        .suscripcion__formulario--input{
+          width: 65%;
+        }
+      }
+    }
   }
 
   /* 
@@ -1504,7 +1570,7 @@ Clase para mostrar/quitar elementos segun corresponda
   .footer{
     .footer__contenedor{
       .footer__contenedor--img{
-        background: url(../img/logo.jpeg) no-repeat contain;
+        background: url(../img/logo.jpeg) left/contain no-repeat;
       }
       .footer__contenedor--informacion{
         i{
@@ -1603,5 +1669,218 @@ Clase para mostrar/quitar elementos segun corresponda
         text-align: center;
       }
     }
+  }
+  .ipadAir{
+    .ipadAir__contenedorTexto{
+      .ipadAir__contenedorTexto--titulo{
+        @include titulos(30px , 600);
+      }
+      .ipadAir__contenedorTexto--slogan{
+        @include slogans(20px , 500);
+      }
+    }
+    .ipadAir__contenedorImg{
+      img{
+        width: 85%;
+      }
+    }
+  }
+  .ipadMini{
+    .ipadMini__contenedorTexto{
+      .ipadMini__contenedorTexto--titulo{
+        @include titulos(30px , 600);
+      }
+      .ipadMini__contenedorTexto--slogan{
+        @include slogans(20px , 500);
+      }
+    }
+  }
+  /* 
+    APPLE WATCH
+  */
+  .watchSeries6{
+    .watchSeries6__contenedor{
+      .watchSeries6__contenedor--Img{
+        order: 2;
+        img{
+          width: 95%;
+        }
+      }
+      .watchSeries6__contenedor--Texto{
+        .watchSeries6__contenedor--titulo{
+          @include titulos(30px , 600);
+        }
+        .watchSeries6__contenedor--slogan{
+          @include slogans(20px , 500);
+        }
+      }
+    }
+  }
+  .watchse{
+    .watchse__contenedor--Img{
+      img{
+        width: 95%;
+      }
+    }
+    .watchse__contenedor--Texto{
+      .watchse__contenedor--titulo{
+        @include titulos(30px , 600);
+      }
+      .watchse__contenedor--slogan{
+        @include slogans(20px , 500);
+      }
+    }
+  }
+  .modelosWatch{
+    .modelosWatch__contenedorTexto{
+      .modelosWatch__contenedorTexto--titulo{
+        @include titulos(30px , 600);
+        text-align: center;
+      }
+      .modelosWatch__contenedorTexto--slogan{
+        @include slogans(20px , 500);
+        color: $negro_opaco;
+        text-align: center;
+      }
+    }
+    .modelosWatch__contenedorImg{
+      img{
+        width: 100%;
+      }
+    }
+  }
+  /* 
+    TIENDA
+  */
+  .productos{
+    .productos__categorias{
+      margin-top: 0px;
+      .productos__categorias--titulo{
+        @include titulos(15px, 600);
+      }
+      .productos__categorias--form{
+        font-size: 14px;
+        label:before{
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+    .productos__ordenamiento{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 11px;
+      .productos__ordenamiento--contenedorCuadriculas,
+      .productos__ordenamiento--contenedorCuadricula{
+        width: 30px;
+        margin-right: 5px;
+        cursor: pointer;
+        text-align: center;
+      }
+      .productos__ordenamiento--contenedorCuadriculas:hover,
+      .productos__ordenamiento--contenedorCuadricula:hover{
+        border: 1px solid $verde_principal;
+      }
+      .productos__ordenamiento--form{
+        margin-left: 0px;
+        width: 90%;
+        input{
+          @include titulos(11px, 600);
+        }
+        div{
+          right: -33px;
+        }
+      }
+    }
+    .productos__contenedor{
+      .productos__contenedor--seccionError{
+        height: 55vh;
+        div{
+          display: flex;
+          justify-content: center;
+        }
+        h3{
+          @include titulos(30px , 600);
+          i{
+            font-size: 30px;
+          }
+        }
+        span{
+          @include slogans(20px , 500);
+          text-align: center;
+        }
+      }
+      .productos__contenedor--article{
+        .productos__contenedor--contenedorImg{
+          i{
+            font-size: 19px;
+            right: -11px;
+          }
+        }
+        .productos__contenedor--contenedorDescripcion{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 3px;
+          h4,
+          span{
+            color: $negro_opaco;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .cuadriculaMultiple{
+    width: 100%;
+    img{
+      width: 200px;
+      height: 230px;
+    }
+  }
+  /* 
+    CONTENEDOR PARA EL DETALLE DEL PRODUCTO
+  */
+  .detalle{
+      padding: 10px;
+      .detalle__contenedor{
+        flex-direction: column;
+        width: 95%;
+      }
+      .detalle__btn-cerrar{
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+        background: none;
+        i{
+          font-size: 19px;
+        }
+      }
+      .detalle__imagenContenedor{
+        align-items: center;
+        width: 100%;
+        .detalle__imagenContenedor--imgDiv{
+          position: relative;
+          width: 48%;
+          i{
+            font-size: 25px;
+          }
+          .detalle__imagenContenedor--spanLeft,
+          .detalle__imagenContenedor--spanRight{
+            top: 100px;
+          }
+        }
+      }
+      .detalle__descripcionContenedor{
+        padding: 5px;
+        width: 100%;
+        margin-top: 15px;
+        .detalle__contenedorPrecioDiv{
+          .detalle__contenedorPrecioDiv--spanPrecio{
+            @include titulos(17px, 600);
+          }
+        }
+      }
   }
 }
