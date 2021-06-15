@@ -562,9 +562,7 @@ ESTILOS PARA LA PAGINA DE CONTACTO
  */
 .fondoEncabezado {
   .fondoEncabezado__contenedorImg {
-    background-image: url(../img/home/fondo-pag-contacto.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url(../img/home/fondo-pag-contacto.jpg) center no-repeat;
     height: 35vh;
     .fondoEncabezado__contenedorTexto {
       display: flex;
@@ -656,13 +654,13 @@ ESTILOS PARA LA PAGINA DE CONTACTO
       background-color: #fefefefe;
       border-radius: 3px;
       padding: 15px 5px;
-      .formularrio__respuesta--titulo {
-        @include titulos(35px, 600);
+      .formulario__respuesta--titulo {
+        @include titulos(27px, 600);
         color: $negro_opaco;
         text-align: center;
       }
       .formulario__respuesta--span {
-        font-size: 1rem;
+        @include slogans(17px, 500);
         font-family: "Roboto";
         color: $negro_opaco;
         text-align: center;
@@ -693,10 +691,10 @@ SECCION DE SUSCRIPCION
 **************************************************************************************
  */
 .valido {
-  border: 1px solid #2ad714e0;
+  border: 1px solid #2ad714e0   !important;
 }
 .noValido {
-  border: 1px solid #eb0b0b;
+  border: 1px solid #eb0b0b !important;
 }
 .submitDesactivado {
   opacity: 0.4;
@@ -1459,6 +1457,22 @@ Clase para mostrar/quitar elementos segun corresponda
       width: 70%;
     }
   }
+  /* 
+    FORMULARIO DE CONTACTO 
+  */
+  .formulario {
+    .formulario__contenedor {
+      .formulario__contenedor--form {
+        width: 100%;
+        .formulario__contenedor--input {
+          width: 95%;
+        }
+        .formulario__contenedor--inputSubmit {
+          width: 40%;
+        }
+      }
+    }
+  }
 }
 
 /*********************************
@@ -1966,6 +1980,53 @@ Clase para mostrar/quitar elementos segun corresponda
             border-radius: 20px;
             margin-left: 10px;
           }
+        }
+      }
+    }
+  }
+  /* 
+    FORMULARIO DE CONTACTO
+  */
+  .fondoEncabezado {
+    .fondoEncabezado__contenedorImg {
+      height: 30vh;
+      .fondoEncabezado__contenedorTexto {
+        .fondoEncabezado__contenedorTitulo {
+          @include titulos(30px, 600);
+        }
+        .fondoEncabezado__contenedorSlogan {
+          @include slogans(20px, 500);
+        }
+      }
+    }
+  }
+  .formulario {
+    .formulario__contenedor {
+      .formulario__contenedor--titulo {
+        @include titulos(30px, 600);
+        text-align: center;
+      }
+      .formulario__contenedor--form {
+        width: 100%;
+        .formulario__contenedor--label {
+          width: 95%;
+        }
+        .formulario__contenedor--input {
+          width: 95%;
+        }
+        .formulario__contenedor--inputSubmit {
+          width: 40%;
+        }
+      }
+    }
+    .formulario__respuesta {
+      .formulario-respuesta--div {
+        width: 90%;
+        .formulario__respuesta--titulo {
+          @include titulos(22px, 600);
+        }
+        .formulario__respuesta--span {
+          @include slogans(12px, 500);
         }
       }
     }

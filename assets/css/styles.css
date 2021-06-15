@@ -481,9 +481,7 @@ ESTILOS PARA LA PAGINA DE CONTACTO
 **************************************************************************************
  */
 .fondoEncabezado .fondoEncabezado__contenedorImg {
-  background-image: url(../img/home/fondo-pag-contacto.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(../img/home/fondo-pag-contacto.jpg) center no-repeat;
   height: 35vh; }
   .fondoEncabezado .fondoEncabezado__contenedorImg .fondoEncabezado__contenedorTexto {
     display: flex;
@@ -566,13 +564,14 @@ ESTILOS PARA LA PAGINA DE CONTACTO
       background-color: #fefefefe;
       border-radius: 3px;
       padding: 15px 5px; }
-      .formulario .formulario__respuesta .formulario-respuesta--div .formularrio__respuesta--titulo {
-        font-size: 35px;
+      .formulario .formulario__respuesta .formulario-respuesta--div .formulario__respuesta--titulo {
+        font-size: 27px;
         font-weight: 600;
         color: #393939;
         text-align: center; }
       .formulario .formulario__respuesta .formulario-respuesta--div .formulario__respuesta--span {
-        font-size: 1rem;
+        font-size: 17px;
+        font-weight: 500;
         font-family: "Roboto";
         color: #393939;
         text-align: center; }
@@ -599,10 +598,10 @@ SECCION DE SUSCRIPCION
 **************************************************************************************
  */
 .valido {
-  border: 1px solid #2ad714e0; }
+  border: 1px solid #2ad714e0   !important; }
 
 .noValido {
-  border: 1px solid #eb0b0b; }
+  border: 1px solid #eb0b0b !important; }
 
 .submitDesactivado {
   opacity: 0.4; }
@@ -1207,7 +1206,16 @@ Clase para mostrar/quitar elementos segun corresponda
     .detalle .detalle__descripcionContenedor {
       padding: 5px; }
     .detalle .detalle__imagenContenedor {
-      width: 70%; } }
+      width: 70%; }
+  /* 
+    FORMULARIO DE CONTACTO 
+  */
+  .formulario .formulario__contenedor .formulario__contenedor--form {
+    width: 100%; }
+    .formulario .formulario__contenedor .formulario__contenedor--form .formulario__contenedor--input {
+      width: 95%; }
+    .formulario .formulario__contenedor .formulario__contenedor--form .formulario__contenedor--inputSubmit {
+      width: 40%; } }
 
 /*********************************
   DE 575PX PARA ABAJO 
@@ -1542,4 +1550,35 @@ Clase para mostrar/quitar elementos segun corresponda
     .carrito .carrito__contenedorMontoTotal .carrito__contenedorMontoTotal--tablaMontoTotal .carrito__contenedorMontoTotal--tbody .carrito__contenedorMontoTotal--imgLoading {
       background-color: #08acaf;
       border-radius: 20px;
-      margin-left: 10px; } }
+      margin-left: 10px; }
+  /* 
+    FORMULARIO DE CONTACTO
+  */
+  .fondoEncabezado .fondoEncabezado__contenedorImg {
+    height: 30vh; }
+    .fondoEncabezado .fondoEncabezado__contenedorImg .fondoEncabezado__contenedorTexto .fondoEncabezado__contenedorTitulo {
+      font-size: 30px;
+      font-weight: 600; }
+    .fondoEncabezado .fondoEncabezado__contenedorImg .fondoEncabezado__contenedorTexto .fondoEncabezado__contenedorSlogan {
+      font-size: 20px;
+      font-weight: 500; }
+  .formulario .formulario__contenedor .formulario__contenedor--titulo {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center; }
+  .formulario .formulario__contenedor .formulario__contenedor--form {
+    width: 100%; }
+    .formulario .formulario__contenedor .formulario__contenedor--form .formulario__contenedor--label {
+      width: 95%; }
+    .formulario .formulario__contenedor .formulario__contenedor--form .formulario__contenedor--input {
+      width: 95%; }
+    .formulario .formulario__contenedor .formulario__contenedor--form .formulario__contenedor--inputSubmit {
+      width: 40%; }
+  .formulario .formulario__respuesta .formulario-respuesta--div {
+    width: 90%; }
+    .formulario .formulario__respuesta .formulario-respuesta--div .formulario__respuesta--titulo {
+      font-size: 22px;
+      font-weight: 600; }
+    .formulario .formulario__respuesta .formulario-respuesta--div .formulario__respuesta--span {
+      font-size: 12px;
+      font-weight: 500; } }

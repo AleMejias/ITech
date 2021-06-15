@@ -1,6 +1,6 @@
 (() => {
   $(document).ready(() => {
-    let productosCargadosArr = JSON.parse(localStorage.getItem("ListaDeCompra"));
+    let productosCargadosArr = JSON.parse(localStorage.getItem("ListaDeCompra")); // RECUPERO LOS PRODUCTOS DEL STORAGE
     let contenedorCarrito = $("#contenedor-carrito");
     let carritoDeCompras = $("#carrito-de-compras"); // CUERPO O TBODY DE MI TABLA DONDE SE ALMACENAN LOS PRODUCTOS DEL CARRITO
     let contenedorMontoTotal = $("#contenedor-montoTotal"); // Muestro la tabla que almacena los datos de la compra
@@ -12,18 +12,18 @@
         3) Mensaje para el usuario
         */
     const carritoVacio = ( alerta, claseDelIcono ,mensaje ) => {
-        $(contenedorCarrito).removeClass("activada");
-        $(contenedorCarrito).empty();
-        $(contenedorCarrito).fadeIn();
-      $(contenedorCarrito).append(`
-        <section class = "carrito__carritoVacio">
-            <div>
-                <h3>${alerta}<i class="${claseDelIcono}"></i></h3>
-            </div>
-            <span>${mensaje}</span>
-            <a href = "../pages/tienda.html">Volver a la tienda</a>
-        </section>
-    `);
+        $(contenedorCarrito).removeClass("activada")
+                                .empty()
+                                    .fadeIn()
+                                        .append(`
+                                                    <section class = "carrito__carritoVacio">
+                                                        <div>
+                                                            <h3>${alerta}<i class="${claseDelIcono}"></i></h3>
+                                                        </div>
+                                                        <span>${mensaje}</span>
+                                                        <a href = "../pages/tienda.html">Volver a la tienda</a>
+                                                    </section>
+                                                `);
     };
     /* ESTA FUNCION SE ENCARGA DE CALCULAR EL MONTO TOTAL A RAIZ DE UN EVENTO CHANGE
        Cosiste en recorrer cada input para tomar su valor y el contenido de la etiqueta data la cual almacena el precio para su posterior sumatoria   
@@ -32,6 +32,10 @@
     const calcularMontoTotal = () => {
         let inputCantidad = $(".inputCantidad");
         let sumatoriaTotal = 0;
+        /* 
+            Calculo el monto total del carrito de compras, recorro los input de cantidad y tomo su valor cantidad y su atributo data con el precio
+            para posteriormente sumar y sumar al contenedorMontoTotal dicha sumatoria
+        */
         $.each(inputCantidad,(indice,valor)=> {
             let precioDelProducto = parseInt($(valor).val());
             let cantidadDelProducto = parseInt($(valor).attr("data-precio"));
@@ -77,12 +81,15 @@
 
           let form = $(".formulario");
           $(form).change(() => {
+              $(form).submit((e) => {
+                  e.preventDefault();
+              });
             montoTotal.text(`$${calcularMontoTotal()}`);
           })  ;
           
           /* ELIMINAR ELEMENTOS DEL CARRITO CON UNA PEQUEÑA ANIMACION */
           let btnEliminarProducto = $(".btn-eliminar");
-          let elementosEnCarrito = $(btnEliminarProducto).length;
+          let elementosEnCarrito = $(btnEliminarProducto).length; // Segun la cantidad de botones eliminar que existan, seran equivalentes a la cantidad de productos cargardos al carrito
           $.each(btnEliminarProducto,(indice,valor) => {
               $(valor).click(() => {
                   let eliminarFila = $(".filas")[indice];
@@ -119,11 +126,12 @@
     let btn__finalizarCompra = $("#finalizar-compra");
     $(btn__finalizarCompra).click(() => {
         let imgLoading = $("#loadingImg-ordenDeCompra");
-        $(imgLoading).removeClass("activada");
-        $(imgLoading).show();
+        $(imgLoading).removeClass("activada")
+                     .show();
+        /* SIMULO LA FINALIZACION DE LA COMPRA MOSTRANDO UN MENSAJE 2,2 SEGUNDOS DESPUES */
         setTimeout(() => {
-            $(imgLoading).addClass("activada");
-            $(imgLoading).hide();
+            $(imgLoading).addClass("activada")
+                         .hide();
             carritoVacio("FELICITACIONES","far fa-check-circle","TU COMPRA HA SIDO REGISTRADA CON ÉXITO");
             localStorage.clear();
         },2200);

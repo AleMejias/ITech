@@ -1,5 +1,5 @@
 (() => {
-  let DATA = [];
+  let DATA = []; // AQUI RECIBO Y ALMACENO MIS OBJETOS PRODUCTO DESDE EL DATA.JSON
   $.getJSON("../data/data.json", (respuesta, status) => {
     /* SI RECUPERO LOS DATOS SATISFACTORIA MENTE, CARGO LOS DATOS EN EL ARRAY DATA PARA QUE SEA UTILIZADO */
     status == "success" ? DATA = respuesta : "";
@@ -14,8 +14,8 @@
       }
     }
     /* Array y contador de productos para el carrito de compras */
-    let arrProductos = [];
-    let contadorProductos = 0;
+    let arrProductos = []; // Array que se convertira en un OBJETO de tipo carrito
+    let contadorProductos = 0; // Contador de productos agregados al carrito
 
     const crearPlantilla = (producto) => {
       contenedorProductos.innerHTML += `
@@ -108,6 +108,7 @@
             arrProductos.push(new Carrito(contadorProductos, nombre, precio, ruta));
           }
         });
+        /* EVENTO PARA GUARDAR EL ARRAY DE PRODUCTOS EN EL LOCAL STORAGE PARA SU POSTERIOR MANIPULACION */
         let guardarCompra = document.querySelector("#icono-carrito");
         guardarCompra.addEventListener("click", () => {
           localStorage.setItem("ListaDeCompra", JSON.stringify(arrProductos));
@@ -132,13 +133,15 @@
         }
       }
       if (banderaDeError && contenedorProductos.innerHTML == "") {
-        /* AQUI SE LLAMARA A LA FUNCION QUE PINTARA ERROR EN LA PANTALLA */
         mensajeError();
       }
     };
     /* LLAMO A ESTE FUNCION PARA QUE ME CARGUE LAS CARDS LA PRIMERA VEZ */
     cargarPlantilla(DATA,"todos"); 
 
+    /*
+      esta funcion me permite pintar un mensaje de error en caso de que al manipular la barra de busqueda se pretenda buscar un producto que no exista
+     */
     const mensajeError = () => {
       contenedorProductos.innerHTML += `
       <section class = "productos__contenedor--seccionError">
@@ -170,7 +173,6 @@
         let inputBusqueda = document.querySelector("#barra-busqueda").value.toLowerCase();
         contenedorProductos.innerHTML = "";
         if (inputBusqueda == "") {
-          /* AQUI SE LLAMARA A LA FUNCION QUE PINTARA ERROR EN LA PANTALLA */
           mensajeError();
         } else {
           cargarPlantilla(DATA, inputBusqueda);
@@ -178,6 +180,9 @@
       });
     });
 
+    /* 
+      IMPRIMO EL CONTENEDOR PARA EL DETALLE DEL PRODUCTO DEPENDIENDO SU CATEGORIA( APPLE WATCH TIENE ESPECIFICACIONES DIFERENTES)
+    */
     const imprimirDetalleProducto = (producto) => {
       let contenedorSeccionDetalle = document.querySelector("#seccion-detalle");
       if (producto.categoria == "Apple Watch") {

@@ -1,9 +1,9 @@
 (() => {
   $(document).ready(() => {
     const formulario = $("#formulario");
-    let contadorCamposValidados = 0;
+    let contadorCamposValidados = 0; // Me permitira contar los campos validados del formulario para que se habilite el boton de enviar
     const validarFormulario = (identificador, contenido) => {
-      let inputPorValidar;
+      let inputPorValidar; // Retornara FALSE o TRUE SEGUN EL "CONTENIDO" RECIBIDO
       switch (identificador) {
         case "nombre":
           inputPorValidar = new RegExp(/^([A-Za-z ñáéíóú]{3,60})$/i);
@@ -49,7 +49,7 @@
                   
       `);
     };
-    imprimirFormulario();
+    imprimirFormulario(); // IMPRIMO MI FORMULARIO CUANDO CARGUE LA PAGINA
     const btnEnviar = $("#enviarFormulario");
     $(formulario).change((respuesta) => {
       let identificador = $(respuesta.target).attr("id");
@@ -60,7 +60,6 @@
       if (validarFormulario(identificador, input.val()) && !input.hasClass("valido")) {
         noEsValido.addClass("activada");
         input.addClass("valido");
-        input.css("border", "1px solid #2ad714e0");
         esValido.removeClass("activada");
         input.removeClass("noValido");
         contadorCamposValidados++;
@@ -68,31 +67,28 @@
         if (input.hasClass("valido")) {
           esValido.addClass("activada");
           input.removeClass("valido");
-          input.css("border", "1px solid #eb0b0b");
           noEsValido.removeClass("activada");
           input.addClass("noValido");
           contadorCamposValidados--;
-        } else if ( contadorCamposValidados > -1 && contadorCamposValidados < 4) {
+        } else if (contadorCamposValidados > -1 && contadorCamposValidados < 4) {
           esValido.addClass("activada");
           input.removeClass("valido");
-          input.css("border", "1px solid #eb0b0b");
           noEsValido.removeClass("activada");
           input.addClass("noValido");
         } else if (!input.hasClass("noValido")) {
           esValido.addClass("activada");
           input.removeClass("valido");
-          input.css("border", "1px solid #eb0b0b");
           noEsValido.removeClass("activada");
           input.addClass("noValido");
           contadorCamposValidados--;
         }
       }
       if (contadorCamposValidados == 4) {
-        $(btnEnviar).removeAttr("disabled");
-        $(btnEnviar).css("cursor", "pointer");
+        $(btnEnviar).removeAttr("disabled")
+                    .css("cursor", "pointer");
       } else {
-        $(btnEnviar).attr("disabled", "disabled");
-        $(btnEnviar).css("cursor", "not-allowed");
+        $(btnEnviar).attr("disabled", "disabled")
+                    .css("cursor", "not-allowed");
       }
     });
     $(btnEnviar).click((e) => {
@@ -112,8 +108,8 @@
         success: (respuesta) => {
           const formularioRespuesta = $("#formulario-respuesta");
           $(loadingImg).addClass("activada");
-          $(formularioRespuesta).removeClass("activada");
-          $(formularioRespuesta).append(`
+          $(formularioRespuesta).removeClass("activada")
+                                .append(`
                       <div class="col-md-12 formulario-respuesta--div">
                           <h4 class="formulario__respuesta--titulo">Tu consulta fue procesada correctamente ${respuesta.nombre}</h4>
                           <span class="formulario__respuesta--span">Te contactaremos mediante ${respuesta.mail} lo antes posible</span>
@@ -123,11 +119,10 @@
 
           const cerrarRespuestaFormulario = $("#cerrar-respuesta-formulario");
           $(cerrarRespuestaFormulario).click(() => {
-            /* $(formulario)[0].reset(); */
             $(formulario).empty();
             contadorCamposValidados = 0;
-            $(formularioRespuesta).empty();
-            $(formularioRespuesta).addClass("activada");
+            $(formularioRespuesta).empty()
+                                  .addClass("activada");
             window.location.reload();
             imprimirFormulario();
           });
